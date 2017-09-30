@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="taskmanagement:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/taskmanagement_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="taskmanagement/web/Web" />
+    </root>
+  </artifact>
+</component>
