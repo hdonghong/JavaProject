@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
+<!--Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，当设置成trace时，你会看到log4j2内部各种详细输出-->
+<!--monitorInterval：Log4j能够自动检测修改配置 文件和重新配置本身，设置间隔秒数-->
+<configuration status="WARN">
+    <properties>
+        <property name="testLog">F:/git_repository/javaproject/taskmanagement/log/test.log</property>
+        <property name="errorLog">F:/git_repository/javaproject/taskmanagement/logs/error.log</property>
+        <property name="webLog">F:/git_repository/javaproject/taskmanagement/logs/web.log</property>
+    </properties>
+<!--     先定义所有的appender -->  
+    <appenders>  
+<!--         输出到控制台  -->  
+        <Console name="Console" target="SYSTEM_OUT">  
+<!--             控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch） -->  
+            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+<!--             输出日志的格式 -->  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+        </Console>  
+
+<!--         文件会打印出所有信息，存储在当前项目下，这个log每次运行程序会自动清空，由append属性决定，适合临时测试用 -->  
+<!--         append为TRUE表示消息增加到指定文件中，false表示消息覆盖指定的文件内容，默认值是true -->  
+        <File name="log" fileName="${testLog}" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+        </File>  
+
+<!--          添加过滤器ThresholdFilter,可以有选择的输出某个级别以上的类别  onMatch="ACCEPT" onMismatch="DENY"意思是匹配就接受,否则直接拒绝  -->  
+        <File name="ERROR" fileName="${errorLog}">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>  
+            <PatternLayout pattern="%d{yyyy.MM.dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+        </File>  
+
+<!--         这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 -->  
+        <RollingFile name="RollingFile" fileName="${webLog}"
+                     filePattern="logs/$${date:yyyy-MM}/web-%d{MM-dd-yyyy}-%i.log.gz">  
+            <PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+            <SizeBasedTriggeringPolicy size="2MB"/>
+        </RollingFile>  
+    </appenders>  
+
+<!--     然后定义logger，只有定义了logger并引入的appender，appender才会生效 -->  
+    <loggers>  
+<!--         建立一个默认的root的logger -->  
+        <root level="trace">  
+            <appender-ref ref="RollingFile"/>  
+            <appender-ref ref="Console"/>  
+            <appender-ref ref="ERROR" />  
+            <appender-ref ref="log"/>  
+        </root>  
+
+    </loggers>  
+</configuration>  
