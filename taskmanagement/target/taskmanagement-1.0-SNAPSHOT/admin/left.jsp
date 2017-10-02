@@ -26,18 +26,17 @@
 		d.add('01',-1,'系统菜单树');
 		
 		d.add('0102','01','用户管理','','','mainFrame');
-		d.add('010201','0102','所有用户','${pageContext.request.contextPath}/adminUser?method=findUsers&currPage=1&begin=&end=&username=','','mainFrame');
-		d.add('010202','0102','正常状态用户','${pageContext.request.contextPath}/adminUser?method=findUsers&currPage=1&begin=&end=&username=&state=0','','mainFrame');
-		d.add('010203','0102','锁定状态用户','${pageContext.request.contextPath}/adminUser?method=findUsers&currPage=1&begin=&end=&username=&state=1','','mainFrame');
-		d.add('010204','0102','申请解锁用户','${pageContext.request.contextPath}/adminUser?method=findUsers&currPage=1&begin=&end=&username=&state=2','','mainFrame');
+		d.add('010201','0102','所有用户','${pageContext.request.contextPath}/adminUser?method=getUsers&currPage=1&stuid=&name=&category=','','mainFrame');
 		
-		d.add('0103','01','账单管理');
-		d.add('010301','0103','所有账单','${pageContext.request.contextPath}/adminBill?method=findBills&currPage=1&begin=&end=&username=','','mainFrame');
-		d.add('010302','0103','支出账单','${pageContext.request.contextPath}/adminBill?method=findBills&currPage=1&begin=&end=&username=&flag=1','','mainFrame');
-		d.add('010303','0103','收入账单','${pageContext.request.contextPath}/adminBill?method=findBills&currPage=1&begin=&end=&username=&flag=2','','mainFrame');
+		d.add('0103','01','任务管理');
+		d.add('010301','0103','所有任务','${pageContext.request.contextPath}/adminBill?method=findBills&currPage=1&begin=&end=&username=','','mainFrame');
 		
-		d.add('0105','01','挂失记录管理');
+		d.add('0105','01','任务记录管理');
 		d.add('010501','0105','所有记录','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
+		d.add('010502','0105','任务进行中','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
+		d.add('010503','0105','任务审核中','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
+		d.add('010504','0105','任务已完成','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
+		d.add('010505','0105','任务失败','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
 		document.write(d);
 	</script>
 </div>	

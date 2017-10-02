@@ -61,6 +61,15 @@
     <url-pattern>/record</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>AdminUserServlet</servlet-name>
+    <servlet-class>pers.hdh.web.servlet.AdminUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUserServlet</servlet-name>
+    <url-pattern>/adminUser</url-pattern>
+  </servlet-mapping>
+
 </web-app>
 
         

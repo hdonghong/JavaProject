@@ -8,3 +8,7 @@
 2017.10.02 at 11:48:30 CST ERROR pers.hdh.web.servlet.TaskServlet 23 getTasks - user为空
 2017.10.02 at 11:48:47 CST ERROR pers.hdh.web.servlet.TaskServlet 23 getTasks - user为空
 2017.10.02 at 11:48:49 CST ERROR pers.hdh.web.servlet.TaskServlet 23 getTasks - user为空
+2017.10.02 at 20:26:12 CST ERROR pers.hdh.web.servlet.AdminUserServlet 42 getUsers - 查询user表所有记录失败
+2017.10.02 at 20:27:47 CST ERROR pers.hdh.web.servlet.AdminUserServlet 42 getUsers - 查询user表所有记录失败
+2017.10.02 at 20:29:47 CST ERROR pers.hdh.web.servlet.AdminUserServlet 42 getUsers - 查询user表所有记录失败
+2017.10.02 at 20:31:48 CST ERROR pers.hdh.web.servlet.AdminUserServlet 42 getUsers - 查询user表所有记录失败

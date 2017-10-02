@@ -25,6 +25,10 @@ public class EncodingFilter implements Filter {
     }
 
 }
+
+/**
+ * 增强HttpServletRequest获取参数的方法，解决从客户端传到服务器端的编码问题
+ */
 class MyRequest extends HttpServletRequestWrapper {
     private HttpServletRequest request;
     private boolean flag=true;

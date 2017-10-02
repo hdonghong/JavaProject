@@ -80,7 +80,7 @@ TH {
 												width="6" height="18">
 										</td>
 										<td width="155" valign="bottom" background="${pageContext.request.contextPath}/images/mis_05b.jpg">
-											用户名：${admin.username }
+											管理员：${admin.username }
 											<font color="blue"></font>
 										</td>
 										<td width="10" align="right"

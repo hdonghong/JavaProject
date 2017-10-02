@@ -1,4 +1,3 @@
-<%@page import="team.xg2.domain.User"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -10,21 +9,12 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/layer/layer.js"></script>
 		<script type="text/javascript">
-		    function chageStateTo(state){ //改变用户状态
-		    	var td = document.getElementById("tdId");
-				td.innerHTML = "";
-				if (state == 1) { //改为锁定状态
-					td.innerHTML = "<a title='解锁' onclick='chageStateTo(0)' style='color: red;' >锁定状态</a>";				
-				} else if (state == 0) {
-					td.innerHTML = "<a title='锁定' onclick='chageStateTo(1)' >正常状态</a>";
-				}
-				td.innerHTML += "<input type='hidden' name='state' value="+state+" />";
-		    }
+
 		</script>
 	</HEAD>
 	<body>
 		<br>
-		<form id="Form1" name="Form1" action="${pageContext.request.contextPath}/adminUser?method=edit" method="post">
+		<form id="Form1" name="Form1" action="${pageContext.request.contextPath}/adminUser?method=update" method="post">
 			<table style="width: 100%;text-align: center;">
 				<TBODY>
 					<tr>
@@ -53,28 +43,27 @@
 									<th align="center" width="10%">
 										姓名
 									</th>
+									<th align="center" width="12%">
+										学院
+									</th>
+									<th align="center" width="12%">
+										专业
+									</th>
+									<th align="center" width="5%">
+										年级
+									</th>
 									<th align="center" width="10%">
 										Email
 									</th>
-									<th align="center" width="10%">
-										出生日期
+									<th align="center" width="10%" >
+										主攻方向
 									</th>
-									<th align="center" width="5%">
-										性别
-									</th>
-									<th align="center" width="10%">
-										余额
-									</th>
-									<th align="center" >
+									<th align="center" width="10%" >
 										创建时间
 									</th>
-									<th align="center" width="5%">
-										状态
-									</th>
-									<th align="center" width="10%" colspan="2">
+									<th align="center" width="6%" colspan="2">
 										操作
 									</th>
-									
 								</tr>
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
@@ -82,7 +71,7 @@
 										<input type="hidden" name="uid" value="${user.uid }" size="5" >
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="username" type="text" value="${user.username }" size="15" required="required" />
+										<input name="stuid" type="text" value="${user.stuid }" size="15" required="required" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<input name="password" type="text" value="${user.password }" size="15" required="required" />
@@ -91,48 +80,34 @@
 										<input name="name" type="text" value="${user.name }" size="15" required="required" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										<input name="institute" type="text" value="${user.institute }" size="19" required="required" />
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										<input name="major" type="text" value="${user.major }" size="19" />
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										<input name="grade" type="text" value="${user.grade }" size="4" />
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<input name="email" type="email" value="${user.email }" size="15" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="birthday" type="date" value="${user.birthday }" style="width:130" />
+										<input name="category" type="text" value="${user.category }" size="15" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="sex" type="text" value="${user.sex }" size="5" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="balance" type="text" value="${user.balance }" size="5" />元
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<fmt:formatDate var="time" value="${user.time }" pattern="yyyy-MM-dd HH:mm:ss"/>${time }
-										<input type="hidden" name="time" value="${user.time }" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" id="tdId" >
-										<%
-											int state = ((User)request.getAttribute("user")).getState();
-											if (state == 0) {
-										%>
-												<a title="锁定" onclick="chageStateTo(1)" >正常状态</a>
-										<%
-											} else if (state == 1) {
-										%>
-												<a title="解锁" onclick="chageStateTo(0)" style="color: red" >锁定状态</a>
-										<%
-											} else if (state == 2) {
-										%>
-												<a title="解锁" onclick="chageStateTo(0)" style="color: green" >申请解锁</a>
-										<%
-											}
-										%>
-										<input type="hidden" name="state" value="${user.state }" />
+										<jsp:useBean id="dateValue" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
+										<jsp:setProperty name="dateValue" property="time" value="${user.create_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->
+										<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd HH:mm:ss"/> <!-- 转换格式 -->
+										<%--<input type="hidden" name="create_at" value="${user.create_at }" />--%>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<a href="javascript:void(0)" >
-											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="编辑" alt="编辑" style="CURSOR: hand">
+											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="您正在编辑" alt="编辑" style="CURSOR: hand">
 										</a>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<a href="javascript:void(0)" >
-											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="注销" alt="注销" style="CURSOR: hand">
+											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="此时无法注销用户" alt="注销" style="CURSOR: hand">
 										</a>
 									</td>
 								</tr>

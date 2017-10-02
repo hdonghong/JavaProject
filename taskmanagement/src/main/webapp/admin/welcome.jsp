@@ -1,4 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
+
 <html>
 	<head>
 		<meta http-equiv="Content-Language" content="zh-cn">
@@ -34,7 +36,10 @@ BODY {SCROLLBAR-FACE-COLOR: #cccccc; SCROLLBAR-HIGHLIGHT-COLOR: #ffffFF; SCROLLB
 
 		<tr>
 			<td width="65%" height="84" align="center" valign="top" >
-				<span class="Style1">登录成功！</span>
+				<span class="Style1">
+					<c:if test="${empty admin}">请先登录</c:if>
+					<c:if test="${not empty admin}">登录成功！</c:if>
+				</span>
 			</td>
 		</tr>
 		<tr><td height=2></td></tr>

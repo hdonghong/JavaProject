@@ -1,5 +1,6 @@
+<%@ page import="java.util.Date" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+		 pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -54,43 +55,29 @@
 					</thead>
 					<tbody>
 						<c:forEach items="${pageBean.list }" var="item" varStatus="i">
-							<c:if test="${i.count%2!=0 }">
-								<tr class="warning">
-									<td>${i.count+pageBean.pageSize*(pageBean.currPage-1) }</td>
-									<td>${item.category }</td>
-									<td>${item.desc }</td>
-									<td>${item.create_at}</td>
-									<td>
-										<c:if test="${item.state == 0 }"><a title="点击领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer" >未领取</a></c:if>
-										<c:if test="${item.state == 1 }">
-											<a title="点击提交任务" onclick="chageStateTo(2, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: yellowgreen">进行中</a>
-											<a title="点击放弃任务,将视为失败" onclick="chageStateTo(4, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: brown">(放弃)</a>
-										</c:if>
-										<c:if test="${item.state == 2 }"><a title="等待管理员审核..." href="javascript:void(0)" style="cursor: pointer;color: deepskyblue;">审核中</a></c:if>
-										<c:if test="${item.state == 3 }"><a title="您已完成任务" href="javascript:void(0)" style="cursor: pointer;color: springgreen">已完成</a></c:if>
-										<c:if test="${item.state == 4 }"><a title="点击重新领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: red">失败</a></c:if>
-									</td>
-									</td>
-								</tr>
-							</c:if>
-							<c:if test="${i.count%2==0 }">
-								<tr class="success">
-									<td>${i.count+pageBean.pageSize*(pageBean.currPage-1) }</td>
-									<td>${item.category }</td>
-									<td>${item.desc }</td>
-									<td>${item.create_at}</td>
-									<td>
-										<c:if test="${item.state == 0 }"><a title="点击领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer" >未领取</a></c:if>
-										<c:if test="${item.state == 1 }">
-											<a title="点击提交任务" onclick="chageStateTo(2, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: yellowgreen">进行中</a>
-											<a title="点击放弃任务,将视为失败" onclick="chageStateTo(4, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: brown">(放弃)</a>
-										</c:if>
-										<c:if test="${item.state == 2 }"><a title="等待管理员审核..." href="javascript:void(0)" style="cursor: pointer;color: deepskyblue;">审核中</a></c:if>
-										<c:if test="${item.state == 3 }"><a title="您已完成任务" href="javascript:void(0)" style="cursor: pointer;color: green">已完成</a></c:if>
-										<c:if test="${item.state == 4 }"><a title="点击重新领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: red">失败</a></c:if>
-									</td>
-								</tr>
-							</c:if>
+							<tr
+								<c:if test="${i.count%2!=0 }">class="warning" </c:if>
+								<c:if test="${i.count%2==0 }">class="success" </c:if>
+							>
+								<td>${i.count+pageBean.pageSize*(pageBean.currPage-1) }</td>
+								<td>${item.category }</td>
+								<td>${item.desc }</td>
+								<td>
+									<jsp:useBean id="dateValue" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
+									<jsp:setProperty name="dateValue" property="time" value="${item.create_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->
+									<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd HH:mm:ss"/> <!-- 转换格式 -->
+								</td>
+								<td>
+									<c:if test="${item.state == 0 }"><a title="点击领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer" >未领取</a></c:if>
+									<c:if test="${item.state == 1 }">
+										<a title="点击提交任务" onclick="chageStateTo(2, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: yellowgreen">进行中</a>
+										<a title="点击放弃任务,将视为失败" onclick="chageStateTo(4, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: brown">(放弃)</a>
+									</c:if>
+									<c:if test="${item.state == 2 }"><a title="等待管理员审核..." href="javascript:void(0)" style="cursor: pointer;color: deepskyblue;">审核中</a></c:if>
+									<c:if test="${item.state == 3 }"><a title="您已完成任务" href="javascript:void(0)" style="cursor: pointer;color: green">已完成</a></c:if>
+									<c:if test="${item.state == 4 }"><a title="放弃的任务或被管理员否决的任务，点击重新领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: red">失败</a></c:if>
+								</td>
+							</tr>
 						</c:forEach>
 					</tbody>
 				</table>

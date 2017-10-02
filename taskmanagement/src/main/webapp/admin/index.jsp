@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     	<meta name="renderer" content="webkit">
-		<title>校园卡管理系统—登录页面</title>
+		<title>任务管理系统—登录页面</title>
 	    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/font-awesome.css">
 	    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css">
@@ -28,7 +28,7 @@
 		    <div class="container">
 		        <div class="row">
 		            <div class="col-sm-12 text">
-		                <h1 style="text-align: center;">校园卡查询系统</h1>
+		                <h1 style="text-align: center;font-weight: 800">任务管理系统</h1>
 		            </div>
 		        </div>
 		
@@ -48,11 +48,11 @@
 		                            	<div style="color: #DD4444;text-align: center;font-size: 20px;">${msg }</div>
 		                            	<div class="form-group">
 		                                    <label class="sr-only" for="form-username">请输入账号</label>
-		                                    <input type="text" name="adusername" required="required" aria-required="true" placeholder="请输入账号" class="form-username form-control" id="form-username">
+		                                    <input type="text" name="username" required="required" aria-required="true" placeholder="请输入账号" class="form-username form-control" id="form-username">
 		                                </div>
 		                                <div class="form-group">
 		                                    <label class="sr-only" for="form-password">请输入密码</label>
-		                                    <input type="password" name="adpassword" required="required" aria-required="true" placeholder="请输入密码" class="form-password form-control" id="form-password">
+		                                    <input type="password" name="password" required="required" aria-required="true" placeholder="请输入密码" class="form-password form-control" id="form-password">
 		                                </div>
 		                                <input type="submit" class="btn btn-success btn-block" value="登录"> <!-- onclick="validate()" -->
 										<div  style="float: left;color: #DD4444;">推荐您使用谷歌浏览器访问网站</div>
@@ -67,7 +67,7 @@
 		        </div>
 		        <div class="row">
 		            <div class="signup-footer col-sm-6 col-sm-offset-3 form-box">
-		                <div style="margin-top: 20px; text-align: center;">© 2017-？校园卡管理系统 保留所有版权.</div>
+		                <div style="margin-top: 20px; text-align: center;">© 2017-？任务管理系统 保留所有版权.</div>
 		            </div>
 		        </div>
 		    </div>

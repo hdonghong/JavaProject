@@ -46,6 +46,7 @@ public class UserServlet extends BaseServlet {
             user = service.getByStuidAndPWD(stuid, password);
         } catch (SQLException e){
             logger.error("user表查询记录失败");
+            // 登录失败，跳转回到登录页面
             return "/";
         }
 
@@ -54,6 +55,7 @@ public class UserServlet extends BaseServlet {
             return "/";
         } else {
             request.getSession().setAttribute("user", user);
+            // 登录成功，跳转到主页面——任务列表，同时查询数据库，展示所有任务
             response.sendRedirect(request.getContextPath() + "/task?method=getTasks&currPage=1&category=&desc=&state=");
             return null;
         }
@@ -88,10 +90,11 @@ public class UserServlet extends BaseServlet {
         } catch (SQLException e){
             e.printStackTrace();
             logger.error("user表添加记录失败");
+            // 重定向，提示注册失败
             response.sendRedirect(request.getContextPath() + "/jsp/registError.jsp");
             return null;
         }
-        // 重定向
+        // 重定向，提示注册成功
         response.sendRedirect(request.getContextPath() + "/jsp/registSuccess.jsp");
         return null;
     }
@@ -104,7 +107,9 @@ public class UserServlet extends BaseServlet {
      * @throws Exception
      */
     public String logout(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // 销毁session
         request.getSession().invalidate();
+        // 重定向回到登录页面
         response.sendRedirect(request.getContextPath());
         return null;
     }
@@ -130,6 +135,7 @@ public class UserServlet extends BaseServlet {
             throw e;
         }
 
+        // 将新的user bean对象放入域中，更新数据
         request.getSession().setAttribute("user", user);
         response.sendRedirect(request.getContextPath() + "/jsp/user_info.jsp");
         return null;

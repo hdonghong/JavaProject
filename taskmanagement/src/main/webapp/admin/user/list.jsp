@@ -9,18 +9,15 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/layer/layer.js"></script>
 		<script type="text/javascript">
-			/*
+
 			function showByPage(currPage) { //提交查询条件和当前页码
-				var begin = document.getElementById("begin");
-				var end = document.getElementById("end");
-				var username = document.getElementById("username");
+				var stuid = document.getElementById("stuid");
+				var name = document.getElementById("name");
+				var category = document.getElementById("category");
 				
-				location.href="${pageContext.request.contextPath }/adminUser?method=findUsers&currPage="+currPage+
-						"&begin="+begin.value+"&end="+end.value+"&username="+username.value+"&state=${state}";
+				location.href="${pageContext.request.contextPath }/adminUser?method=getUsers&currPage="+currPage+
+						"&stuid="+stuid.value+"&name="+name.value+"&category="+category.value;
 			}
-		    function chageStateTo(state, uid, adesc){ //改变用户状态
-		    	location.href="${pageContext.request.contextPath}/adminApply?method=add&state="+state+"&uid="+uid+"&adesc="+adesc;
-		    }*/
 		</script>
 	</HEAD>
 	<body>
@@ -35,9 +32,9 @@
 					</tr>
 					<tr>
 						<td class="ta_01">
-							查询日期 起：<input type="date" id="begin" name="begin" value="${begin }" >
-							至：<input type="date" id="end" name="end" value="${end }" >
-							用户名：<input name="username" id="username" value="${username }" />
+							学号：<input id="stuid" name="stuid" value="${stuid }" style="margin-right: 20px;" />
+							姓名：<input  id="name" name="name" value="${name }" style="margin-right: 20px;" />
+							主攻方向：<input name="category" id="category" value="${category }" style="margin-right: 20px;" />
 							<input type="button" onclick="showByPage(1)" value="查询" /></td>
 					</tr>
 					<tr>
@@ -57,25 +54,25 @@
 									<th align="center" width="10%">
 										姓名
 									</th>
+									<th align="center" width="12%">
+										学院
+									</th>
+									<th align="center" width="12%">
+										专业
+									</th>
+									<th align="center" width="5%">
+										年级
+									</th>
 									<th align="center" width="10%">
 										Email
 									</th>
-									<th align="center" width="10%">
-										出生日期
+									<th align="center" width="10%" >
+										主攻方向
 									</th>
-									<th align="center" width="5%">
-										性别
-									</th>
-									<th align="center" width="10%">
-										余额
-									</th>
-									<th align="center" >
+									<th align="center" width="10%" >
 										创建时间
 									</th>
-									<th align="center" width="5%">
-										状态
-									</th>
-									<th align="center" width="10%" colspan="2">
+									<th align="center" width="6%" colspan="2">
 										操作
 									</th>
 									
@@ -86,8 +83,8 @@
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										${i.count+(pageBean.currPage-1)*pageBean.pageSize }
 									</td>
-									<td style="CURSOR: hand; HEIGHT: 25px" align="center" >
-										${item.username }
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										${item.stuid }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										${item.password }
@@ -96,27 +93,30 @@
 										${item.name }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										${item.institute }
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										${item.major }
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										<c:if test="${item.grade==1 }">大一</c:if>
+										<c:if test="${item.grade==2 }">大二</c:if>
+										<c:if test="${item.grade==3 }">大三</c:if>
+										<c:if test="${item.grade==4 }">大四</c:if>
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										${item.email }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.birthday }
+										${item.category}
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.sex }
+										<jsp:useBean id="dateValue" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
+										<jsp:setProperty name="dateValue" property="time" value="${item.create_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->
+										<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd HH:mm:ss"/> <!-- 转换格式 -->
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.balance }元
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<fmt:formatDate var="time" value="${item.time }" pattern="yyyy-MM-dd HH:mm:ss"/>${time }
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<c:if test="${item.state==0 }"> <a title="锁定" onclick="chageStateTo(1, '${item.uid }', '管理员锁定该用户')" >正常状态</a> </c:if>
-										<c:if test="${item.state==1 }"> <a title="解锁" onclick="chageStateTo(0, '${item.uid }', '管理员解锁该用户')" style="color: red" onclick="test()" >锁定状态</a> </c:if>
-										<c:if test="${item.state==2 }"> <a title="解锁" onclick="chageStateTo(0, '${item.uid }', '管理员解锁该用户')" style="color: green" onclick="chageState(1, '${item.uid }')" >申请解锁</a> </c:if>
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<a href="${ pageContext.request.contextPath }/adminUser?method=findByUid&uid=${item.uid}">
+										<a href="${ pageContext.request.contextPath }/adminUser?method=getByUid&uid=${item.uid}" style="cursor: pointer">
 											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="编辑" alt="编辑" style="CURSOR: hand">
 										</a>
 									</td>
