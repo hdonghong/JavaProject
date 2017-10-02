@@ -9,7 +9,8 @@ public class Task {
     private String desc;    // 任务要求
     private Long create_at; // 任务发布时间
     private Long update_at; // 任务修改时间
-    private Integer state;  // 额外字段，代表个人对此任务的状态。0:未领取 1进行中 2审核中 3已完成 4已失败
+    private Integer state=0;// 额外字段，代表个人对此任务的状态。0:未领取 1进行中 2审核中 3已完成 4已失败
+    private User user;      // 额外字段
 
     public String getTid() {
         return tid;
@@ -50,10 +51,20 @@ public class Task {
     public void setUpdate_at(Long update_at) {
         this.update_at = update_at;
     }
+
     public Integer getState() {
         return state;
     }
+
     public void setState(Integer state) {
         this.state = state;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

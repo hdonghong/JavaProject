@@ -29,19 +29,27 @@
 				<c:if test="${not empty user }">
 				<table class="table table-hover" style="width: 60%; margin: 0 auto; text-align: center;">
 					<caption style="text-align: center;">
-						<form action="${pageContext.request.contextPath }/bill?method=findBills&currPage=1" method="post">
-							任务类型：<input name="category" id="category" value="${category }" />
+						<form action="${pageContext.request.contextPath }/task?method=getTasks&currPage=1" method="post">
+							任务类型：<input name="category" id="category" value="${category }" />&nbsp;&nbsp;
 							任务内容：<input name="desc" id="desc" value="${desc }" />&nbsp;&nbsp;
-							<input type="submit" style="margin-right: 50px;"/>
+							任务状态：<select name="state" id="state" >
+										<option value="" selected>未选择</option>
+										<option value="0">未领取</option>
+										<option value="1">进行中</option>
+										<option value="2">审核中</option>
+										<option value="3">已完成</option>
+										<option value="4">失败</option>
+									</select>
+							<input type="submit" value="查询" style="margin-left: 20px;"/>
 						</form>
 					</caption>
 					<thead>
 						<tr>
 							<th style="width: 10%; text-align: center;">序号</th>
-							<th style="width: 20%; text-align: center;">任务类型</th>
+							<th style="width: 15%; text-align: center;">任务类型</th>
 							<th style="width: 35%; text-align: center;">任务内容</th>
 							<th style="width: 25%; text-align: center;">发布时间</th>
-							<th style="width: 10%; text-align: center;">状态</th>
+							<th style="width: 15%; text-align: center;">任务状态</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -52,7 +60,17 @@
 									<td>${item.category }</td>
 									<td>${item.desc }</td>
 									<td>${item.create_at}</td>
-									<td></td>
+									<td>
+										<c:if test="${item.state == 0 }"><a title="点击领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer" >未领取</a></c:if>
+										<c:if test="${item.state == 1 }">
+											<a title="点击提交任务" onclick="chageStateTo(2, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: yellowgreen">进行中</a>
+											<a title="点击放弃任务,将视为失败" onclick="chageStateTo(4, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: brown">(放弃)</a>
+										</c:if>
+										<c:if test="${item.state == 2 }"><a title="等待管理员审核..." href="javascript:void(0)" style="cursor: pointer;color: deepskyblue;">审核中</a></c:if>
+										<c:if test="${item.state == 3 }"><a title="您已完成任务" href="javascript:void(0)" style="cursor: pointer;color: springgreen">已完成</a></c:if>
+										<c:if test="${item.state == 4 }"><a title="点击重新领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: red">失败</a></c:if>
+									</td>
+									</td>
 								</tr>
 							</c:if>
 							<c:if test="${i.count%2==0 }">
@@ -61,7 +79,16 @@
 									<td>${item.category }</td>
 									<td>${item.desc }</td>
 									<td>${item.create_at}</td>
-									<td></td>>
+									<td>
+										<c:if test="${item.state == 0 }"><a title="点击领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer" >未领取</a></c:if>
+										<c:if test="${item.state == 1 }">
+											<a title="点击提交任务" onclick="chageStateTo(2, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: yellowgreen">进行中</a>
+											<a title="点击放弃任务,将视为失败" onclick="chageStateTo(4, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: brown">(放弃)</a>
+										</c:if>
+										<c:if test="${item.state == 2 }"><a title="等待管理员审核..." href="javascript:void(0)" style="cursor: pointer;color: deepskyblue;">审核中</a></c:if>
+										<c:if test="${item.state == 3 }"><a title="您已完成任务" href="javascript:void(0)" style="cursor: pointer;color: green">已完成</a></c:if>
+										<c:if test="${item.state == 4 }"><a title="点击重新领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: red">失败</a></c:if>
+									</td>
 								</tr>
 							</c:if>
 						</c:forEach>
@@ -129,15 +156,18 @@
 		    $('#menu_1').addClass("active");
 		};
 
-		/*
+
 		function showByPage(currPage) {
-			var begin = document.getElementById("begin");
-			var end = document.getElementById("end");
-			var condition = document.getElementById("condition");
+			var category = document.getElementById("category");
+			var desc = document.getElementById("desc");
+			var state = document.getElementById("state");
 			
-			location.href="${pageContext.request.contextPath }/bill?method=findBills&currPage="+currPage+
-					"&begin="+begin.value+"&end="+end.value+"&condition="+condition.value;
+			location.href="${pageContext.request.contextPath }/task?method=getTasks&currPage="+currPage+
+					"&category="+category.value+"&desc="+desc.value+"&state="+state.value;
 		}
-		*/
+
+        function chageStateTo(state, uid, tid){ //改变用户状态
+            location.href="${pageContext.request.contextPath}/record?method=update&state="+state+"&uid="+uid+"&tid="+tid;
+        }
 	</script>
 </html>

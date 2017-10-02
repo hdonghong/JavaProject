@@ -9,6 +9,7 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/layer/layer.js"></script>
 		<script type="text/javascript">
+			/*
 			function showByPage(currPage) { //提交查询条件和当前页码
 				var begin = document.getElementById("begin");
 				var end = document.getElementById("end");
@@ -19,7 +20,7 @@
 			}
 		    function chageStateTo(state, uid, adesc){ //改变用户状态
 		    	location.href="${pageContext.request.contextPath}/adminApply?method=add&state="+state+"&uid="+uid+"&adesc="+adesc;
-		    }
+		    }*/
 		</script>
 	</HEAD>
 	<body>

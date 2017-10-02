@@ -3,6 +3,9 @@
 	<bean id="UserService" class="pers.hdh.service.impl.UserServiceImpl"/>
 	<bean id="UserDao" class="pers.hdh.dao.impl.UserDaoImpl"/>
 
-	<bean id="UserService" class="pers.hdh.service.impl.TaskServiceImpl"/>
-	<bean id="UserDao" class="pers.hdh.dao.impl.TaskDaoImpl"/>
+	<bean id="TaskService" class="pers.hdh.service.impl.TaskServiceImpl"/>
+	<bean id="TaskDao" class="pers.hdh.dao.impl.TaskDaoImpl"/>
+
+	<bean id="RecordService" class="pers.hdh.service.impl.RecordServiceImpl"/>
+	<bean id="RecordDao" class="pers.hdh.dao.impl.RecordDaoImpl"/>
 </beans>

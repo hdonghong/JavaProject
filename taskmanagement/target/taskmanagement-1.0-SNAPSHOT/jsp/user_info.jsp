@@ -23,7 +23,7 @@
 	        	时间：2017-10-01 19:05:35
 	        	描述：查看个人信息
 	        -->
-			<
+
 			<div class="container-fluid"  style="margin-bottom: 100px; padding-top: 50px;">
 			<c:if test="${empty user }">
 				<h1 align="center">请先登录</h1>

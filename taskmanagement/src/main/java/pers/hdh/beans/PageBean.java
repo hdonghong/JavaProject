@@ -46,14 +46,14 @@ public class PageBean<E> {
     }
 
     public Integer getTotalPage() {
-        return  (int)(Math.ceil(totalCount*1.0)/totalPage);
+        return (int)Math.ceil(totalCount*1.0/pageSize);
     }
 
     public PageBean() {
         super();
     }
 
-    public PageBean(List<E> list, Integer currPage, Integer pageSize, Integer totalCount, Integer totalPage) {
+    public PageBean(List<E> list, Integer currPage, Integer pageSize, Integer totalCount) {
         this.list = list;
         this.currPage = currPage;
         this.pageSize = pageSize;

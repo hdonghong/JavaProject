@@ -1,2 +1,420 @@
 2017-10-02 at 00:06:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
 2017-10-02 at 00:06:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:05:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:05:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:05:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:05:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：login
+2017-10-02 at 09:07:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：getTasks
+2017-10-02 at 09:07:24 CST ERROR pers.hdh.web.servlet.BaseServlet 51 service - 方法名为空或者其它情况操作
+2017-10-02 at 09:09:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:09:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:10:03 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：login
+2017-10-02 at 09:10:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：getTasks
+2017-10-02 at 09:10:05 CST ERROR pers.hdh.web.servlet.BaseServlet 51 service - 方法名为空或者其它情况操作
+2017-10-02 at 09:12:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:12:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:12:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：login
+2017-10-02 at 09:12:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：getTasks
+2017-10-02 at 09:12:33 CST ERROR pers.hdh.web.servlet.BaseServlet 51 service - 方法名为空或者其它情况操作
+2017-10-02 at 09:14:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:14:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：login
+2017-10-02 at 09:14:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：getTasks
+2017-10-02 at 09:14:10 CST ERROR pers.hdh.web.servlet.BaseServlet 51 service - 方法名为空或者其它情况操作
+2017-10-02 at 09:14:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:14:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：loginUI
+2017-10-02 at 09:14:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：login
+2017-10-02 at 09:14:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 34 service - 执行的方法：getTasks
+2017-10-02 at 09:52:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 09:52:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 09:52:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 09:52:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 09:58:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 09:58:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 09:58:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 09:58:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 09:59:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 09:59:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 09:59:18 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 09:59:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 09:59:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 09:59:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 09:59:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 09:59:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:01:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:01:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:01:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:01:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:05:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 10:05:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:05:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:05:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:12:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:12:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:12:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:12:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:12:13 CST ERROR pers.hdh.web.servlet.TaskServlet 34 getTasks - task表查询记录失败
+2017-10-02 at 10:12:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:12:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:12:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:12:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:13:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 10:13:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:13:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:13:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:13:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 10:13:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:13:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:13:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:15:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:15:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:15:52 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:15:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:16:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:16:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:16:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:16:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:16:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:16:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:16:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 10:16:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:16:52 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:16:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:29:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:29:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:29:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:30:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:30:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:30:13 CST ERROR pers.hdh.web.servlet.TaskServlet 35 getTasks - task表查询记录失败
+2017-10-02 at 10:30:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:31:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:31:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:32:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:32:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:32:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:32:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:33:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:36:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:36:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:36:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:36:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:36:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:36:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:36:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:36:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:37:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:37:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:37:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:37:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:37:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:38:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:38:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:38:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:38:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:42:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:42:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:42:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:42:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:42:30 CST ERROR pers.hdh.web.servlet.TaskServlet 35 getTasks - task表查询记录失败
+2017-10-02 at 10:44:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:44:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:44:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:44:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:44:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:44:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:44:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:44:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:45:03 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:46:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:46:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:46:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:46:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:46:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:46:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:46:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 10:46:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:46:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:47:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:47:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:48:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:48:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:48:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:48:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:48:45 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0
+2017-10-02 at 10:50:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:50:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:50:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:50:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:50:16 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :0: 10
+2017-10-02 at 10:51:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:51:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:51:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:51:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:51:56 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :0: 10
+2017-10-02 at 10:54:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:54:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:54:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:54:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:54:16 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :2: 10
+2017-10-02 at 10:56:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:56:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:56:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:56:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:56:59 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 10:57:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:57:27 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 10:57:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:57:43 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :0: 10
+2017-10-02 at 10:57:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:57:49 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :1: 10
+2017-10-02 at 10:57:52 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:57:52 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :1: 10
+2017-10-02 at 10:57:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:57:59 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :0: 10
+2017-10-02 at 10:58:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:58:23 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :1: 10
+2017-10-02 at 10:58:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:58:29 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :1: 10
+2017-10-02 at 10:58:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:58:33 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :0: 10
+2017-10-02 at 10:58:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:58:37 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :1: 10
+2017-10-02 at 10:59:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:59:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 10:59:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 10:59:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 10:59:58 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:00:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:00:02 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :1: 10
+2017-10-02 at 11:00:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:00:05 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :1: 10
+2017-10-02 at 11:00:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:00:11 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:04:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:04:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:04:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 11:04:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:04:47 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:04:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:04:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 11:04:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:04:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 11:05:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:05:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:07:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:07:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:07:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 11:07:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:07:42 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:07:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:07:53 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:07:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:07:56 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :0: 10
+2017-10-02 at 11:07:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:07:59 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 0 :0: 10
+2017-10-02 at 11:08:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:08:01 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:08:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:08:06 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:09:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 11:09:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:09:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 11:09:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:09:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:10:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 11:10:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:10:01 CST DEBUG pers.hdh.web.servlet.TaskServlet 34 getTasks - 1 :2: 10
+2017-10-02 at 11:45:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:45:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:47:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:48:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:48:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:48:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:48:30 CST ERROR pers.hdh.web.servlet.TaskServlet 23 getTasks - user为空
+2017-10-02 at 11:48:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:48:47 CST ERROR pers.hdh.web.servlet.TaskServlet 23 getTasks - user为空
+2017-10-02 at 11:48:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:48:49 CST ERROR pers.hdh.web.servlet.TaskServlet 23 getTasks - user为空
+2017-10-02 at 11:50:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:50:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:50:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:51:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:51:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 11:51:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 11:51:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:51:07 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :8: 10
+2017-10-02 at 11:51:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:51:15 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :7: 10
+2017-10-02 at 11:51:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:51:19 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :8: 10
+2017-10-02 at 11:51:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:51:26 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :2: 10
+2017-10-02 at 11:51:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:51:31 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :8: 10
+2017-10-02 at 11:52:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:52:56 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :9: 10
+2017-10-02 at 11:52:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:52:58 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :9: 10
+2017-10-02 at 11:53:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:53:01 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :9: 10
+2017-10-02 at 11:55:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:55:28 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :9: 10
+2017-10-02 at 11:55:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 11:55:31 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :9: 10
+2017-10-02 at 12:28:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 12:28:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 12:29:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 12:29:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:04 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:06 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:08 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:11 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:12 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:34 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:35 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:36 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:37 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:39 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:29:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:29:40 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:30:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:30:29 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:30:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:30:43 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:30:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:30:44 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:30:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:30:55 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 0 :0: 10
+2017-10-02 at 12:30:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:30:59 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 1 :3: 10
+2017-10-02 at 12:31:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:31:22 CST DEBUG pers.hdh.web.servlet.TaskServlet 39 getTasks - 2 :16: 10
+2017-10-02 at 12:46:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 12:46:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 12:46:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 12:46:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:46:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:46:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:46:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:47:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:47:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:47:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:48:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:53:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 12:53:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 12:53:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 12:53:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:53:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:53:18 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:54:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:54:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-02 at 12:54:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 12:54:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 12:54:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:54:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:55:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:58:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 12:58:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:02:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 13:02:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 13:02:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 13:02:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:03:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 13:03:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 13:03:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 13:03:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:06:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 13:06:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 13:06:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 13:06:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:07:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:07:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:07:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:08:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:10:18 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:10:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:10:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:10:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:11:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 13:11:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 14:48:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 14:48:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 14:48:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 14:48:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 14:48:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 14:48:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 14:48:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 14:52:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:32:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 15:32:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 15:32:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 15:32:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:34:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 15:34:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 15:34:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 15:34:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:34:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-02 at 15:35:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 15:35:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-02 at 15:35:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-02 at 15:35:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:35:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-02 at 15:35:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:35:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:35:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:35:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-02 at 15:35:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:35:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-02 at 15:36:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-02 at 15:36:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:36:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:37:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-02 at 15:37:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:37:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:37:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:37:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:37:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:39:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:40:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:42:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:42:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:42:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:43:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:43:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:44:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:44:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:45:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:45:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:45:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:46:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:46:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:47:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:47:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:47:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:47:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:47:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:47:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:48:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:49:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:49:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:50:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:50:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:50:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:50:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:50:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-02 at 15:50:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks

@@ -18,7 +18,6 @@ import java.lang.reflect.Method;;
 //@WebServlet(urlPatterns = {"/base"})
 public class BaseServlet extends HttpServlet {
     protected Logger logger = LogManager.getLogger(this.getClass());
-    protected String msg = "方法名为空或者其它情况操作";
 
     /**
      * 通过反射执行指定的方法，返回响应
@@ -33,22 +32,26 @@ public class BaseServlet extends HttpServlet {
         String methodName = req.getParameter("method");
         logger.debug("执行的方法：" + methodName);
 
-        // 获取方法对象
-        Class<? extends BaseServlet> cls = this.getClass();
         try {
-            Method method = cls.getMethod(methodName, HttpServletRequest.class, HttpServletResponse.class);
-
-            // 执行方法，获取返回值(返回值是内部路径)
-            if (method != null) {
-                String result = (String) method.invoke(this, req, resp);
-                if (result != null) { // 请求转发
-                    req.getRequestDispatcher(result).forward(req, resp);
+            // 获取方法对象
+            Class<? extends BaseServlet> cls = this.getClass();
+            if (cls != null) {
+                Method method = cls.getMethod(methodName, HttpServletRequest.class, HttpServletResponse.class);
+                // 执行方法，获取返回值(返回值是内部路径)
+                if (method != null) {
+                    String result = (String) method.invoke(this, req, resp);
+                    if (result != null) { // 请求转发
+                        req.getRequestDispatcher(result).forward(req, resp);
+                    }
+                } else {
+                    logger.error("获取不到Method对象");
                 }
+            } else {
+                logger.error("获取不到Class对象");
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error(msg);
             req.setAttribute("msg", "操作错误");
             req.getRequestDispatcher("jsp/message.jsp").forward(req, resp);
         }

@@ -45,7 +45,7 @@ public class UserServlet extends BaseServlet {
             UserService service = (UserService) BeanFactory.getBean("UserService");
             user = service.getByStuidAndPWD(stuid, password);
         } catch (SQLException e){
-            msg = "user表查询记录失败";
+            logger.error("user表查询记录失败");
             return "/";
         }
 
@@ -54,7 +54,7 @@ public class UserServlet extends BaseServlet {
             return "/";
         } else {
             request.getSession().setAttribute("user", user);
-            response.sendRedirect(request.getContextPath() + "/jsp/task_list.jsp");
+            response.sendRedirect(request.getContextPath() + "/task?method=getTasks&currPage=1&category=&desc=&state=");
             return null;
         }
     }
@@ -87,7 +87,7 @@ public class UserServlet extends BaseServlet {
             service.add(user);
         } catch (SQLException e){
             e.printStackTrace();
-            msg = "user表添加记录失败";
+            logger.error("user表添加记录失败");
             response.sendRedirect(request.getContextPath() + "/jsp/registError.jsp");
             return null;
         }
@@ -126,7 +126,7 @@ public class UserServlet extends BaseServlet {
             UserService service = (UserService) BeanFactory.getBean("UserService");
             service.update(user);
         } catch (SQLException e) {
-            msg = "user表修改记录失败";
+            logger.error("user表修改记录失败");
             throw e;
         }
 

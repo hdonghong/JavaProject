@@ -52,6 +52,15 @@
     <url-pattern>/task</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>RecordServlet</servlet-name>
+    <servlet-class>pers.hdh.web.servlet.RecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RecordServlet</servlet-name>
+    <url-pattern>/record</url-pattern>
+  </servlet-mapping>
+
 </web-app>
 
         

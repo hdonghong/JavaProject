@@ -50,7 +50,9 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav" id="menuId">
-							<li id="menu_1"><a href="${pageContext.request.contextPath }/jsp/task_list.jsp">任务列表</a></li>
+							<li id="menu_1"><a href="${pageContext.request.contextPath }/task?method=getTasks&currPage=1&category=&desc=&state=">任务列表</a></li>
+							<li id="menu_2"><a href="${pageContext.request.contextPath }/jsp/user_info.jsp">个人信息</a></li>
+							<%--
         					<li class="dropdown" id="menu_2">
 					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人信息<span class="caret"></span></a>
 					          <ul class="dropdown-menu">
@@ -59,6 +61,7 @@
 					            <li><a href="${pageContext.request.contextPath}/jsp/">我的任务</a></li>
 					          </ul>
 					        </li>
+					        --%>
 
 						</ul>
 						<p class="navbar-text navbar-right" style="color: white;">
