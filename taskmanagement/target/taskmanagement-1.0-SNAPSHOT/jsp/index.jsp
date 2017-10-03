@@ -22,6 +22,11 @@
 	            padding: 10px 10px 0;
 	        }
 	    </style>
+		<script type="text/javascript">
+            function selectAll(obj) {
+                document.getElementById("saveStuid").checked = obj.checked;
+            }
+		</script>
 	</head>
 	<body class="signin">
 		<div class="signinpanel" style="position: relative;">
@@ -48,12 +53,16 @@
 		                            	<div style="color: #DD4444;text-align: center;font-size: 20px;">${msg }</div>
 		                            	<div class="form-group">
 		                                    <label class="sr-only" for="form-stuid">请输入账号</label>
-		                                    <input type="text" name="stuid" required="required" aria-required="true" placeholder="请输入账号" class="form-username form-control" id="form-stuid">
+		                                    <input type="text" name="stuid" required="required" aria-required="true" value="${cookie.saveStuid.value}" placeholder="请输入账号" class="form-username form-control" id="form-stuid">
 		                                </div>
 		                                <div class="form-group">
 		                                    <label class="sr-only" for="form-password">请输入密码</label>
-		                                    <input type="password" name="password" required="required" aria-required="true" placeholder="请输入密码" class="form-password form-control" id="form-password">
+		                                    <input type="password" name="password" required="required" aria-required="true" value="${cookie.savePwd.value}" placeholder="请输入密码" class="form-password form-control" id="form-password">
 		                                </div>
+										<div style="color: black;" align="center">
+											<input type="checkbox" style="position: relative;top: 3px;" name="save" id="saveStuid" /> 记住账号
+											<input type="checkbox" style="position: relative;top: 3px;margin-left: 25%;" name="save" id="savePwd" onclick="selectAll(this)"/> 记住密码
+										</div>
 		                                <input type="submit" class="btn btn-success btn-block" value="登录">
 										<div  style="float: left;color: #DD4444;">推荐您使用谷歌浏览器访问网站</div>
 										<div style="float: right;">

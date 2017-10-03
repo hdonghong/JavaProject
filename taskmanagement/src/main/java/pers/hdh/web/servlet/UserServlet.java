@@ -10,6 +10,7 @@ import pers.hdh.utils.UUIDUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -50,10 +51,28 @@ public class UserServlet extends BaseServlet {
             return "/";
         }
 
-        if (user == null) {
+        if (user == null) { // 用户为空，查询不到用户
             request.setAttribute("msg", "不存在的账户或密码错误");
             return "/";
-        } else {
+        } else { // 非空
+            String[] saveArr = request.getParameterValues("save"); // 获取保存用户信息的请求
+            if (saveArr != null ) { // 非空说明要求保存
+                switch (saveArr.length) {
+                    case 2: // 2个参数代表保存账号和密码
+                        Cookie c = new Cookie("savePwd", password);
+                        c.setPath(request.getContextPath()+"/");
+                        c.setMaxAge(3600*24);
+                        response.addCookie(c);
+                    case 1: // 1个参数代表保存账号
+                        c = new Cookie("saveStuid", stuid);
+                        c.setPath(request.getContextPath()+"/");
+                        c.setMaxAge(3600*24); // 保存一天
+                        response.addCookie(c);
+
+                }
+            }
+
+            // user放入session域中
             request.getSession().setAttribute("user", user);
             // 登录成功，跳转到主页面——任务列表，同时查询数据库，展示所有任务
             response.sendRedirect(request.getContextPath() + "/task?method=getTasks&currPage=1&category=&desc=&state=");
