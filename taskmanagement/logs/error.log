@@ -12,3 +12,11 @@
 2017.10.02 at 20:27:47 CST ERROR pers.hdh.web.servlet.AdminUserServlet 42 getUsers - 查询user表所有记录失败
 2017.10.02 at 20:29:47 CST ERROR pers.hdh.web.servlet.AdminUserServlet 42 getUsers - 查询user表所有记录失败
 2017.10.02 at 20:31:48 CST ERROR pers.hdh.web.servlet.AdminUserServlet 42 getUsers - 查询user表所有记录失败
+2017.10.03 at 09:16:35 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 45 getTasks - 管理员：查询task表所有记录失败
+2017.10.03 at 09:20:57 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 45 getTasks - 管理员：查询task表所有记录失败
+2017.10.03 at 09:22:59 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 45 getTasks - 管理员：查询task表所有记录失败
+2017.10.03 at 10:05:22 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 105 update - 管理员:修改task表数据失败
+2017.10.03 at 10:07:30 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 105 update - 管理员:修改task表数据失败
+2017.10.03 at 10:08:39 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 105 update - 管理员:修改task表数据失败
+2017.10.03 at 10:09:27 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 105 update - 管理员:修改task表数据失败
+2017.10.03 at 10:29:42 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 148 add - 管理员:添加记录到task表失败

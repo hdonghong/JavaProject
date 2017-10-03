@@ -10,12 +10,11 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/layer/layer.js"></script>
 		<script type="text/javascript">
 			function showByPage(currPage) {
-				var begin = document.getElementById("begin");
-				var end = document.getElementById("end");
-				var username = document.getElementById("username");
+				var category = document.getElementById("category");
+				var desc = document.getElementById("desc");
 				
-				location.href="${pageContext.request.contextPath }/adminBill?method=findBills&currPage="+currPage+
-						"&begin="+begin.value+"&end="+end.value+"&username="+username.value+"&flag=${flag}";
+				location.href="${pageContext.request.contextPath }/adminTask?method=getTasks&currPage="+currPage+
+						"&category="+category.value+"&desc="+desc.value;
 			}
 		</script>
 	</HEAD>
@@ -27,14 +26,18 @@
 					<tr>
 						<td class="ta_01" align="center" bgColor="#afd1f3">
 							<strong>账单列表</strong>
-						</TD>
+						</td>
 					</tr>
 					<tr>
 						<td class="ta_01">
-							查询日期 起：<input type="date" id="begin" name="begin" value="${begin }" >
-							至：<input type="date" id="end" name="end" value="${end }" >
-							用户名：<input name="username" id="username" value="${username }" />
-							<input type="button" onclick="showByPage(1)" value="查询" /></td>
+							任务类型：<input type="text" id="category" name="category" value="${category }" style="margin-right: 20px;" >
+							任务内容：<input type="text" id="desc" name="desc" value="${desc }" style="margin-right: 20px;" >
+							<input type="button" onclick="showByPage(1)" value="查询" />
+							<a href="${ pageContext.request.contextPath }/adminTask?method=addUI" >
+								<input type="button" value="发布任务" style="float: right;"/>
+							</a>
+							<label style="float: right;margin-right: 10px;margin-top: 5px;">当前任务数量：${pageBean.totalCount}</label>
+						</td>
 					</tr>
 					<tr>
 						<td class="ta_01" align="center" bgColor="#f5fafe">
@@ -44,19 +47,19 @@
 									<th align="center" width="5%">
 										序号
 									</th>
-									<th align="center" width="20%">
-										用户名
+									<th align="center" width="15%">
+										任务类型
 									</th>
-									<th align="center" width="30%">
-										描述
+									<th align="center">
+										任务内容
 									</th>
-									<th align="center" width="10%">
-										金额
+									<th align="center" width="15%">
+										发布时间
 									</th>
-									<th align="center" width="25%">
-										创建时间
+									<th align="center" width="15%">
+										修改时间
 									</th>
-									<th align="center" width="10%" colspan="2">
+									<th align="center" width="6%" colspan="2">
 										操作
 									</th>
 									
@@ -68,25 +71,33 @@
 										${i.count+(pageBean.currPage-1)*pageBean.pageSize }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 25px" align="center" >
-										${item.username }
+										${item.category }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.bdesc }
+										${item.desc }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.money }元
+										<jsp:useBean id="dateValue_1" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
+										<jsp:setProperty name="dateValue_1" property="time" value="${item.create_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->
+										<fmt:formatDate value="${dateValue_1}" pattern="yyyy-MM-dd HH:mm:ss"/> <!-- 转换格式 -->
+									</td>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<fmt:formatDate var="time" value="${item.time }" pattern="yyyy-MM-dd HH:mm:ss"/>${time }
+										<c:if test="${not empty item.update_at}">
+											<jsp:useBean id="dateValue_2" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
+											<jsp:setProperty name="dateValue_2" property="time" value="${item.update_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->
+											<fmt:formatDate value="${dateValue_2}" pattern="yyyy-MM-dd HH:mm:ss"/> <!-- 转换格式 -->
+										</c:if>
+									</td>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<a href="${ pageContext.request.contextPath }/adminBill?method=findByBid&bid=${item.bid}">
-											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="编辑" alt="编辑" style="CURSOR: hand">
+										<a href="${ pageContext.request.contextPath }/adminTask?method=getByTid&tid=${item.tid}">
+											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="编辑任务" alt="编辑" style="CURSOR: hand">
 										</a>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<a href="${ pageContext.request.contextPath }/adminBill?method=delete&bid=${item.bid}" >
-											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="删除" alt="删除" style="CURSOR: hand">
+										<a href="${ pageContext.request.contextPath }/adminTask?method=delete&tid=${item.tid}" >
+											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="删除任务" alt="删除" style="CURSOR: hand">
 										</a>
 									</td>
 								</tr>

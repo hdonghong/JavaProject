@@ -69,6 +69,7 @@ public class AdminUserServlet extends BaseServlet {
      * @throws Exception
      */
     public String getByUid(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // 获取参数
         String uid = request.getParameter("uid");
 
         UserService service = (UserService) BeanFactory.getBean("UserService");

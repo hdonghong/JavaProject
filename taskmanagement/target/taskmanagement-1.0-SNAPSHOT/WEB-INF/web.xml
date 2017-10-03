@@ -70,6 +70,14 @@
     <url-pattern>/adminUser</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>AdminTaskServlet</servlet-name>
+    <servlet-class>pers.hdh.web.servlet.AdminTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminTaskServlet</servlet-name>
+    <url-pattern>/adminTask</url-pattern>
+  </servlet-mapping>
 </web-app>
 
         

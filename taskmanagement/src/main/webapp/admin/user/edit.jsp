@@ -102,7 +102,7 @@
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<a href="javascript:void(0)" >
-											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="您正在编辑" alt="编辑" style="CURSOR: hand">
+											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="正在编辑用户" alt="编辑" style="CURSOR: hand">
 										</a>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >

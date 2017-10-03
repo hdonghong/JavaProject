@@ -8,18 +8,15 @@
 		<link href="${pageContext.request.contextPath}/css/Style1.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/layer/layer.js"></script>
-		<script type="text/javascript">
-
-		</script>
 	</HEAD>
 	<body>
 		<br>
-		<form id="Form1" name="Form1" action="${pageContext.request.contextPath}/adminUser?method=update" method="post">
+		<form id="Form1" name="Form1" action="${pageContext.request.contextPath}/adminTask?method=add" method="post">
 			<table style="width: 100%;text-align: center;">
 				<TBODY>
 					<tr>
 						<td class="ta_01" align="center" bgColor="#afd1f3">
-							<strong>编辑用户</strong>
+							<strong>发布任务</strong>
 						</TD>
 					</tr>
 					<tr>
@@ -32,34 +29,19 @@
 							<table border="1" id="DataGrid1" style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
 								<tr style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 									<th align="center" width="5%">
-										序号
+
 									</th>
 									<th align="center" width="10%">
-										账号
+										任务类型
+									</th>
+									<th align="center">
+										任务内容
 									</th>
 									<th align="center" width="10%">
-										密码
+										发布时间
 									</th>
 									<th align="center" width="10%">
-										姓名
-									</th>
-									<th align="center" width="12%">
-										学院
-									</th>
-									<th align="center" width="12%">
-										专业
-									</th>
-									<th align="center" width="5%">
-										年级
-									</th>
-									<th align="center" width="10%">
-										Email
-									</th>
-									<th align="center" width="10%" >
-										主攻方向
-									</th>
-									<th align="center" width="10%" >
-										创建时间
+										修改时间
 									</th>
 									<th align="center" width="6%" colspan="2">
 										操作
@@ -68,46 +50,28 @@
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input type="hidden" name="uid" value="${user.uid }" size="5" >
+
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="stuid" type="text" value="${user.stuid }" size="15" required="required" />
+										<input name="category" type="text" size="15" required="required" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="password" type="text" value="${user.password }" size="15" required="required" />
+										<input name="desc" type="text" size="60" required="required" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="name" type="text" value="${user.name }" size="15" required="required" />
+
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="institute" type="text" value="${user.institute }" size="19" required="required" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="major" type="text" value="${user.major }" size="19" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="grade" type="text" value="${user.grade }" size="4" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="email" type="email" value="${user.email }" size="15" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<input name="category" type="text" value="${user.category }" size="15" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<jsp:useBean id="dateValue" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
-										<jsp:setProperty name="dateValue" property="time" value="${user.create_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->
-										<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd HH:mm:ss"/> <!-- 转换格式 -->
-										<%--<input type="hidden" name="create_at" value="${user.create_at }" />--%>
+
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<a href="javascript:void(0)" >
-											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="正在编辑用户" alt="编辑" style="CURSOR: hand">
+											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="无法编辑任务" alt="编辑" style="CURSOR: hand">
 										</a>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<a href="javascript:void(0)" >
-											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="此时无法注销用户" alt="注销" style="CURSOR: hand">
+											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="无法删除任务" alt="删除" style="CURSOR: hand">
 										</a>
 									</td>
 								</tr>

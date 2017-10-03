@@ -29,7 +29,7 @@
 		d.add('010201','0102','所有用户','${pageContext.request.contextPath}/adminUser?method=getUsers&currPage=1&stuid=&name=&category=','','mainFrame');
 		
 		d.add('0103','01','任务管理');
-		d.add('010301','0103','所有任务','${pageContext.request.contextPath}/adminBill?method=findBills&currPage=1&begin=&end=&username=','','mainFrame');
+		d.add('010301','0103','所有任务','${pageContext.request.contextPath}/adminTask?method=getTasks&currPage=1&category=&desc=','','mainFrame');
 		
 		d.add('0105','01','任务记录管理');
 		d.add('010501','0105','所有记录','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
