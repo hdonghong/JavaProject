@@ -16,7 +16,7 @@
 				var category = document.getElementById("category");
 				
 				location.href="${pageContext.request.contextPath }/adminUser?method=getUsers&currPage="+currPage+
-						"&stuid="+stuid.value+"&name="+name.value+"&category="+category.value;
+						"&stuid="+stuid.value+"&name="+encodeURI(encodeURI(name.value))+"&category="+encodeURI(encodeURI(category.value));
 			}
 		</script>
 	</HEAD>

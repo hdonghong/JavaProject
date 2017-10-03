@@ -17,7 +17,8 @@
                 var state = document.getElementById("state");
 
                 location.href="${pageContext.request.contextPath }/adminRecord?method=getRecords&currPage="+currPage+
-                    "&category="+category.value+"&desc="+desc.value+"&stuid="+stuid.value+"&state="+state.value;
+                    "&category="+encodeURI(encodeURI(category.value))+"&desc="+encodeURI(encodeURI(desc.value))+
+					"&stuid="+stuid.value+"&state="+state.value;
             }
 			/* 改变用户状态 */
             function chageStateTo(state, rid){

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Map;
 
 public class EncodingFilter implements Filter {
@@ -65,21 +66,22 @@ class MyRequest extends HttpServletRequestWrapper {
         //获取请求方式
         String requestMethod = request.getMethod();
 
-        if ("post".equalsIgnoreCase(requestMethod)) {
+        if ("post".equalsIgnoreCase(requestMethod)) { // post请求
             try {
                 request.setCharacterEncoding("utf-8");
                 return super.getParameterMap();
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
-        } else if ("get".equalsIgnoreCase(requestMethod)) {
+        } else if ("get".equalsIgnoreCase(requestMethod)) { // get请求
             Map<String,String[]> map = super.getParameterMap();
             if (flag) {
                 for (String key : map.keySet()) {
                     String[] arr = map.get(key);
                     for (int i = 0; i < arr.length; i++) {
                         try {
-                            arr[i] = new String(arr[i].getBytes("iso8859-1"), "utf-8");
+                            //arr[i] = new String(arr[i].getBytes("iso8859-1"), "utf-8");
+                            arr[i] = URLDecoder.decode(arr[i], "UTF-8");
                         } catch (UnsupportedEncodingException e) {
                             e.printStackTrace();
                         }

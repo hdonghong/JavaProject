@@ -14,7 +14,7 @@
 				var desc = document.getElementById("desc");
 				
 				location.href="${pageContext.request.contextPath }/adminTask?method=getTasks&currPage="+currPage+
-						"&category="+category.value+"&desc="+desc.value;
+						"&category="+encodeURI(encodeURI(category.value))+"&desc="+encodeURI(encodeURI(desc.value));
 			}
 		</script>
 	</HEAD>

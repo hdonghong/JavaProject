@@ -150,7 +150,8 @@
 			var state = document.getElementById("state");
 			
 			location.href="${pageContext.request.contextPath }/task?method=getTasks&currPage="+currPage+
-					"&category="+category.value+"&desc="+desc.value+"&state="+state.value;
+					"&category="+encodeURI(encodeURI(category.value))+"&desc="+encodeURI(encodeURI(desc.value))+
+					"&state="+state.value;
 		}
 
         function chageStateTo(state, uid, tid){ //改变用户状态
