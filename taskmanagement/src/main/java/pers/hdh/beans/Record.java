@@ -11,6 +11,35 @@ public class Record {
     private User user;      // 外键
     private Task task;      // 外键
 
+    // 额外提供三个javabean属性，方便获取数据，没想到更好的办法，做个标记 TODO
+    private String category;
+    private String desc;
+    private String stuid;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getStuid() {
+        return stuid;
+    }
+
+    public void setStuid(String stuid) {
+        this.stuid = stuid;
+    }
+
     public Record() {
         state = 0;
         user = new User();

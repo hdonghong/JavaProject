@@ -35,7 +35,9 @@
 							学号：<input id="stuid" name="stuid" value="${stuid }" style="margin-right: 20px;" />
 							姓名：<input  id="name" name="name" value="${name }" style="margin-right: 20px;" />
 							主攻方向：<input name="category" id="category" value="${category }" style="margin-right: 20px;" />
-							<input type="button" onclick="showByPage(1)" value="查询" /></td>
+							<input type="button" onclick="showByPage(1)" value="查询"/>
+							<label style="float: right;margin-right: 10px;margin-top: 5px;">当前用户数量：${pageBean.totalCount}</label>
+						</td>
 					</tr>
 					<tr>
 						<td class="ta_01" align="center" bgColor="#f5fafe">

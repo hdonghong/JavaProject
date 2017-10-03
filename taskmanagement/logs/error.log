@@ -20,3 +20,7 @@
 2017.10.03 at 10:08:39 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 105 update - 管理员:修改task表数据失败
 2017.10.03 at 10:09:27 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 105 update - 管理员:修改task表数据失败
 2017.10.03 at 10:29:42 CST ERROR pers.hdh.web.servlet.AdminTaskServlet 148 add - 管理员:添加记录到task表失败
+2017.10.03 at 14:00:46 CST ERROR pers.hdh.web.servlet.AdminRecordServlet 49 getRecords - 管理员：查询record表失败
+2017.10.03 at 15:20:46 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
+2017.10.03 at 15:29:28 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
+2017.10.03 at 15:29:44 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败

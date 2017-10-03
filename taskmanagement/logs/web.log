@@ -831,3 +831,419 @@
 2017-10-03 at 10:39:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
 2017-10-03 at 10:39:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
 2017-10-03 at 10:39:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:00:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:00:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:00:46 CST ERROR pers.hdh.web.servlet.AdminRecordServlet 49 getRecords - 管理员：查询record表失败
+2017-10-03 at 14:02:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:02:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:02:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:03:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:05:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:05:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:05:21 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 0:[]
+2017-10-03 at 14:08:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:08:58 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 0:[]
+2017-10-03 at 14:11:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:11:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:11:50 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[]
+2017-10-03 at 14:12:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:12:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:12:50 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 0:[]
+2017-10-03 at 14:13:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:13:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:13:42 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[]
+2017-10-03 at 14:15:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:15:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:15:39 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 9:[]
+2017-10-03 at 14:17:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:17:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:17:43 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@2669a00d, pers.hdh.beans.Record@34cb6314, pers.hdh.beans.Record@2eb05a6d, pers.hdh.beans.Record@385dd796, pers.hdh.beans.Record@53df6158, pers.hdh.beans.Record@3ce37bf4, pers.hdh.beans.Record@102c3d37, pers.hdh.beans.Record@469bb9c3, pers.hdh.beans.Record@6ee6c5e9]
+2017-10-03 at 14:17:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:17:45 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@2c19bb07, pers.hdh.beans.Record@707f6cf9, pers.hdh.beans.Record@4ea2db2, pers.hdh.beans.Record@4da9df2b, pers.hdh.beans.Record@2c89941a, pers.hdh.beans.Record@279a3dd6, pers.hdh.beans.Record@7248132a, pers.hdh.beans.Record@711bdacf, pers.hdh.beans.Record@11d2a9b2, pers.hdh.beans.Record@67d052d3, pers.hdh.beans.Record@55b3cc40, pers.hdh.beans.Record@7a51b99b, pers.hdh.beans.Record@7e4a005a, pers.hdh.beans.Record@1be9838a]
+2017-10-03 at 14:20:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:20:35 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@a770f41, pers.hdh.beans.Record@5b92194a, pers.hdh.beans.Record@47a15614, pers.hdh.beans.Record@9f0a47b, pers.hdh.beans.Record@3bcfaf03, pers.hdh.beans.Record@70dcb979, pers.hdh.beans.Record@3d805080, pers.hdh.beans.Record@31dff837, pers.hdh.beans.Record@772eeeb8, pers.hdh.beans.Record@62ac9655, pers.hdh.beans.Record@5d97ced0, pers.hdh.beans.Record@13c79b15, pers.hdh.beans.Record@131cecfb, pers.hdh.beans.Record@1504def3]
+2017-10-03 at 14:20:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:20:49 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@741bfaf9, pers.hdh.beans.Record@2c4b6a4, pers.hdh.beans.Record@7bd1f5da, pers.hdh.beans.Record@71bd449a, pers.hdh.beans.Record@5adab466, pers.hdh.beans.Record@7d0c480f, pers.hdh.beans.Record@9871d51, pers.hdh.beans.Record@1285016f, pers.hdh.beans.Record@1df3fedd]
+2017-10-03 at 14:20:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:20:54 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@85c908d, pers.hdh.beans.Record@72c0246e]
+2017-10-03 at 14:20:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:20:55 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@4ae93ca2]
+2017-10-03 at 14:20:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:20:56 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@1befddeb, pers.hdh.beans.Record@4dee629d]
+2017-10-03 at 14:20:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:20:57 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@21d2d4b, pers.hdh.beans.Record@989b787, pers.hdh.beans.Record@28df4678, pers.hdh.beans.Record@75c4ccb2, pers.hdh.beans.Record@1e58d034, pers.hdh.beans.Record@5a2969f7, pers.hdh.beans.Record@817084c, pers.hdh.beans.Record@5b65e4a0, pers.hdh.beans.Record@3644688, pers.hdh.beans.Record@1213e1c2, pers.hdh.beans.Record@2276cea4, pers.hdh.beans.Record@56427eae, pers.hdh.beans.Record@77b332e8, pers.hdh.beans.Record@7aa3d02d]
+2017-10-03 at 14:21:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:21:05 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@43f9d0ee]
+2017-10-03 at 14:21:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:21:07 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@8abfb82, pers.hdh.beans.Record@57eee7eb]
+2017-10-03 at 14:21:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:21:07 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@21e64d9c, pers.hdh.beans.Record@56b533b6, pers.hdh.beans.Record@5fc6c14e, pers.hdh.beans.Record@51d23179, pers.hdh.beans.Record@42cb0c72, pers.hdh.beans.Record@3d9caf1e, pers.hdh.beans.Record@5439d552, pers.hdh.beans.Record@14207f55, pers.hdh.beans.Record@e92493f]
+2017-10-03 at 14:21:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:21:09 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@4d1185a6, pers.hdh.beans.Record@df56bb9]
+2017-10-03 at 14:21:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:21:10 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@2a7d588c, pers.hdh.beans.Record@6623e9b, pers.hdh.beans.Record@2f93d40f, pers.hdh.beans.Record@7c9bf02f, pers.hdh.beans.Record@3c626e08, pers.hdh.beans.Record@2be309f9, pers.hdh.beans.Record@1a618326, pers.hdh.beans.Record@395812cd, pers.hdh.beans.Record@16e529c0]
+2017-10-03 at 14:21:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:21:15 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@18aa46dc, pers.hdh.beans.Record@1f590a7b, pers.hdh.beans.Record@29213f3d, pers.hdh.beans.Record@5fa6fac7, pers.hdh.beans.Record@15f0cb49, pers.hdh.beans.Record@42ad015e, pers.hdh.beans.Record@62d516e1, pers.hdh.beans.Record@acda8be, pers.hdh.beans.Record@1974802d, pers.hdh.beans.Record@3379d5ac, pers.hdh.beans.Record@79d1bf3c, pers.hdh.beans.Record@1e3e60e0, pers.hdh.beans.Record@23f6fee2, pers.hdh.beans.Record@5e5f8b85]
+2017-10-03 at 14:22:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:22:54 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@e998d27, pers.hdh.beans.Record@587db41e, pers.hdh.beans.Record@4e9cfae4, pers.hdh.beans.Record@752f7d4e, pers.hdh.beans.Record@371d2679, pers.hdh.beans.Record@2f5b9c0, pers.hdh.beans.Record@2b9728a0, pers.hdh.beans.Record@25dce591, pers.hdh.beans.Record@7b2c31bd]
+2017-10-03 at 14:22:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:22:54 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@330643ac, pers.hdh.beans.Record@67193861, pers.hdh.beans.Record@404b798f, pers.hdh.beans.Record@693ed2b9, pers.hdh.beans.Record@6824e711, pers.hdh.beans.Record@46d00044, pers.hdh.beans.Record@5dcc8e10, pers.hdh.beans.Record@42f8240a, pers.hdh.beans.Record@dab5f2b, pers.hdh.beans.Record@4bbfacfa, pers.hdh.beans.Record@72ba0793, pers.hdh.beans.Record@71e1a5ba, pers.hdh.beans.Record@26e4eeaa, pers.hdh.beans.Record@100a5ef0]
+2017-10-03 at 14:28:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:28:41 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@1a081aad, pers.hdh.beans.Record@69d720dc, pers.hdh.beans.Record@4c59b510, pers.hdh.beans.Record@d61aa5c, pers.hdh.beans.Record@57e6142f, pers.hdh.beans.Record@7e71fcf, pers.hdh.beans.Record@697db16, pers.hdh.beans.Record@624b2d2, pers.hdh.beans.Record@61849955, pers.hdh.beans.Record@5ea2fbcd, pers.hdh.beans.Record@66d5c464, pers.hdh.beans.Record@4544484e, pers.hdh.beans.Record@cf2f82, pers.hdh.beans.Record@497ac0c5]
+2017-10-03 at 14:31:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:31:22 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@5a60554b, pers.hdh.beans.Record@31cda4db, pers.hdh.beans.Record@72c9ae78, pers.hdh.beans.Record@e50ff52, pers.hdh.beans.Record@56c229de, pers.hdh.beans.Record@af5a4a1, pers.hdh.beans.Record@35f071e9, pers.hdh.beans.Record@3c53a26a, pers.hdh.beans.Record@7b18e0e7, pers.hdh.beans.Record@5c6f9389, pers.hdh.beans.Record@6a26ced4, pers.hdh.beans.Record@4b476108, pers.hdh.beans.Record@77e4bf5f, pers.hdh.beans.Record@57b799f1]
+2017-10-03 at 14:31:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:31:42 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 14:[pers.hdh.beans.Record@2f3d4236, pers.hdh.beans.Record@26c5079c, pers.hdh.beans.Record@4412920e, pers.hdh.beans.Record@7bbbc1c2, pers.hdh.beans.Record@3e520071, pers.hdh.beans.Record@302519c0, pers.hdh.beans.Record@60776f28, pers.hdh.beans.Record@45e70735, pers.hdh.beans.Record@6b18d670, pers.hdh.beans.Record@736b39ca, pers.hdh.beans.Record@28be16a0, pers.hdh.beans.Record@551d722d, pers.hdh.beans.Record@789b95a8, pers.hdh.beans.Record@52144618]
+2017-10-03 at 14:32:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 14:32:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:32:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:32:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:32:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:32:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:32:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:32:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:32:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:32:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:33:03 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 14:33:03 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:33:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 14:33:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:33:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:33:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:34:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:34:14 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@cc8444e, pers.hdh.beans.Record@24f46d93, pers.hdh.beans.Record@ccde3f4, pers.hdh.beans.Record@554a42d4, pers.hdh.beans.Record@1bee9607, pers.hdh.beans.Record@1c71f81c, pers.hdh.beans.Record@7f406a25, pers.hdh.beans.Record@781bcbfb, pers.hdh.beans.Record@172a2451, pers.hdh.beans.Record@4089fb0, pers.hdh.beans.Record@78e5cc56, pers.hdh.beans.Record@5e8784a2, pers.hdh.beans.Record@18493b8f, pers.hdh.beans.Record@58fcd229, pers.hdh.beans.Record@ead221c]
+2017-10-03 at 14:34:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:34:47 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@35619bf8, pers.hdh.beans.Record@1e9524bb, pers.hdh.beans.Record@4b201183, pers.hdh.beans.Record@4f59c7c6, pers.hdh.beans.Record@76de2b8e, pers.hdh.beans.Record@41596912, pers.hdh.beans.Record@abec4b3, pers.hdh.beans.Record@b5855d5, pers.hdh.beans.Record@c5d9d6b]
+2017-10-03 at 14:34:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:34:49 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@3c06c95d, pers.hdh.beans.Record@4ce43e3, pers.hdh.beans.Record@3a188264]
+2017-10-03 at 14:34:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:34:50 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@45ddecfa]
+2017-10-03 at 14:34:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:34:51 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@525c4d8e, pers.hdh.beans.Record@6d9add7d]
+2017-10-03 at 14:34:52 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:34:52 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@ccfcef4, pers.hdh.beans.Record@43733d6d, pers.hdh.beans.Record@174f1c34, pers.hdh.beans.Record@363eeeac, pers.hdh.beans.Record@44742ef1, pers.hdh.beans.Record@1e36eb47, pers.hdh.beans.Record@7177ea09, pers.hdh.beans.Record@307d2105, pers.hdh.beans.Record@559b825d, pers.hdh.beans.Record@7cde277a, pers.hdh.beans.Record@3237bd4a, pers.hdh.beans.Record@6b9bc700, pers.hdh.beans.Record@621b3944, pers.hdh.beans.Record@6ff3378a, pers.hdh.beans.Record@60a11ad3]
+2017-10-03 at 14:39:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:39:22 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@6dc4299e, pers.hdh.beans.Record@4117f521, pers.hdh.beans.Record@5c9ee240, pers.hdh.beans.Record@6a8a705c, pers.hdh.beans.Record@264e2c4a, pers.hdh.beans.Record@580e6b5f, pers.hdh.beans.Record@73291efc, pers.hdh.beans.Record@4a188855, pers.hdh.beans.Record@1d63d120, pers.hdh.beans.Record@369c1540, pers.hdh.beans.Record@d792391, pers.hdh.beans.Record@3ad484b, pers.hdh.beans.Record@4473cf, pers.hdh.beans.Record@56245092, pers.hdh.beans.Record@1205946c]
+2017-10-03 at 14:39:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:39:35 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@4c18c3f6, pers.hdh.beans.Record@4032e97, pers.hdh.beans.Record@22d8af71, pers.hdh.beans.Record@715965d3, pers.hdh.beans.Record@7bd40f7d, pers.hdh.beans.Record@66bee106, pers.hdh.beans.Record@17a6987, pers.hdh.beans.Record@3b37e386, pers.hdh.beans.Record@6043ac7a]
+2017-10-03 at 14:42:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:42:08 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@f2ed2b7, pers.hdh.beans.Record@4875c99c, pers.hdh.beans.Record@a25157, pers.hdh.beans.Record@ddb7fa6, pers.hdh.beans.Record@7499afc0, pers.hdh.beans.Record@12c6a1e6, pers.hdh.beans.Record@fc7200, pers.hdh.beans.Record@560c0bf6, pers.hdh.beans.Record@6fd24958, pers.hdh.beans.Record@48bc1cd5, pers.hdh.beans.Record@2bb31bb0, pers.hdh.beans.Record@1dd6e68b, pers.hdh.beans.Record@60b3e4e0, pers.hdh.beans.Record@48c10697, pers.hdh.beans.Record@7b9cfaa4]
+2017-10-03 at 14:42:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:42:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:42:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:42:25 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@4afe483c, pers.hdh.beans.Record@6db8fd3e, pers.hdh.beans.Record@547deaae, pers.hdh.beans.Record@6108aa1f, pers.hdh.beans.Record@598fa1aa, pers.hdh.beans.Record@73f4e6a8, pers.hdh.beans.Record@48e74ae2, pers.hdh.beans.Record@6c1b59b3, pers.hdh.beans.Record@483d276b, pers.hdh.beans.Record@1ca85962, pers.hdh.beans.Record@6eeaa04f, pers.hdh.beans.Record@588abae0, pers.hdh.beans.Record@79add8e5, pers.hdh.beans.Record@2710edfb, pers.hdh.beans.Record@1cc3d98e]
+2017-10-03 at 14:42:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:42:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:42:29 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@16a69a3f, pers.hdh.beans.Record@514defd7, pers.hdh.beans.Record@3208fdd1, pers.hdh.beans.Record@43959764, pers.hdh.beans.Record@61c09a4b, pers.hdh.beans.Record@5f4de2f3, pers.hdh.beans.Record@2ade7abe, pers.hdh.beans.Record@459fe636, pers.hdh.beans.Record@20683e0c]
+2017-10-03 at 14:42:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:42:30 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@49f9babe, pers.hdh.beans.Record@7030a1de, pers.hdh.beans.Record@34a9f317, pers.hdh.beans.Record@6af2dfb0, pers.hdh.beans.Record@6edaa41a, pers.hdh.beans.Record@1b91d64e, pers.hdh.beans.Record@605bbf60, pers.hdh.beans.Record@1c28e384, pers.hdh.beans.Record@27e96e6f, pers.hdh.beans.Record@32dfef7a, pers.hdh.beans.Record@fc2f6fe, pers.hdh.beans.Record@54ad1041, pers.hdh.beans.Record@385b86ad, pers.hdh.beans.Record@75320ae3, pers.hdh.beans.Record@6ddf77bd]
+2017-10-03 at 14:43:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:43:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:43:16 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@5928f0e7, pers.hdh.beans.Record@4234466f, pers.hdh.beans.Record@7ff9b3b9, pers.hdh.beans.Record@639c114f, pers.hdh.beans.Record@7dad7a13, pers.hdh.beans.Record@1d4a5cf7, pers.hdh.beans.Record@2f9c409c, pers.hdh.beans.Record@2c092a49, pers.hdh.beans.Record@3ae2b039, pers.hdh.beans.Record@7500ee76, pers.hdh.beans.Record@38d5c8ea, pers.hdh.beans.Record@5debe6db, pers.hdh.beans.Record@7227e627, pers.hdh.beans.Record@a6c54b, pers.hdh.beans.Record@1622df2d]
+2017-10-03 at 14:43:18 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:43:18 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[]
+2017-10-03 at 14:43:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:43:31 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[]
+2017-10-03 at 14:43:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:43:41 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@603adb8d, pers.hdh.beans.Record@7ec7f91d, pers.hdh.beans.Record@3f35a4fc, pers.hdh.beans.Record@2b8957e0, pers.hdh.beans.Record@1dd917af, pers.hdh.beans.Record@5c170a18, pers.hdh.beans.Record@4e174722, pers.hdh.beans.Record@2fc03f57, pers.hdh.beans.Record@7a71316f]
+2017-10-03 at 14:43:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:43:43 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@2abaf9e9, pers.hdh.beans.Record@fd67c74, pers.hdh.beans.Record@49d4de56, pers.hdh.beans.Record@4710051e, pers.hdh.beans.Record@3a18c9a4, pers.hdh.beans.Record@611274f, pers.hdh.beans.Record@69586fb5, pers.hdh.beans.Record@2ea7af75, pers.hdh.beans.Record@520e06ec, pers.hdh.beans.Record@5daa78bd, pers.hdh.beans.Record@7725817a, pers.hdh.beans.Record@646a54ec, pers.hdh.beans.Record@467117eb, pers.hdh.beans.Record@4890f008, pers.hdh.beans.Record@13e58631]
+2017-10-03 at 14:43:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:43:43 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@2cad4b46, pers.hdh.beans.Record@45fec3f5, pers.hdh.beans.Record@36169cc6]
+2017-10-03 at 14:43:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:43:44 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[]
+2017-10-03 at 14:44:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:44:44 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@22ffa633, pers.hdh.beans.Record@5172534a, pers.hdh.beans.Record@7610812e, pers.hdh.beans.Record@31c9cd47, pers.hdh.beans.Record@6ed83b73, pers.hdh.beans.Record@2d73cde1, pers.hdh.beans.Record@5f983090, pers.hdh.beans.Record@20446dd1, pers.hdh.beans.Record@f68c909, pers.hdh.beans.Record@3c4711c0, pers.hdh.beans.Record@22c5ba68, pers.hdh.beans.Record@21ec6104, pers.hdh.beans.Record@6885d4b1, pers.hdh.beans.Record@6c481170, pers.hdh.beans.Record@63d1e06b]
+2017-10-03 at 14:44:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:44:46 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@77eae1dd, pers.hdh.beans.Record@2faa7e08, pers.hdh.beans.Record@670ea17e, pers.hdh.beans.Record@b99c168, pers.hdh.beans.Record@2b5d3dcf, pers.hdh.beans.Record@57fb4c92, pers.hdh.beans.Record@456c1242, pers.hdh.beans.Record@bb1906, pers.hdh.beans.Record@424aff9b, pers.hdh.beans.Record@4f58a49c, pers.hdh.beans.Record@6a035137, pers.hdh.beans.Record@32281658, pers.hdh.beans.Record@270b91a1, pers.hdh.beans.Record@2dfdad98, pers.hdh.beans.Record@5d87dbf9]
+2017-10-03 at 14:44:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:44:54 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 0:[pers.hdh.beans.Record@17f4b9e3, pers.hdh.beans.Record@f949620, pers.hdh.beans.Record@4aefd961, pers.hdh.beans.Record@6d28b584, pers.hdh.beans.Record@5fa13263, pers.hdh.beans.Record@74af8a21, pers.hdh.beans.Record@40bf7104, pers.hdh.beans.Record@68936802, pers.hdh.beans.Record@3ef76d59, pers.hdh.beans.Record@36010624, pers.hdh.beans.Record@d8d76b1, pers.hdh.beans.Record@7e2ddc7a, pers.hdh.beans.Record@7bb5eb43, pers.hdh.beans.Record@453bf237, pers.hdh.beans.Record@23652cdf]
+2017-10-03 at 14:44:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:44:59 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 0:[pers.hdh.beans.Record@9d29ec5, pers.hdh.beans.Record@9e6a9ae, pers.hdh.beans.Record@5c2a343e, pers.hdh.beans.Record@51f57de0]
+2017-10-03 at 14:45:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:45:01 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@77ae237a, pers.hdh.beans.Record@4224f80c, pers.hdh.beans.Record@5fce8e5b, pers.hdh.beans.Record@6dc03a8d, pers.hdh.beans.Record@6bf361bc, pers.hdh.beans.Record@e721056, pers.hdh.beans.Record@2565fb95, pers.hdh.beans.Record@499da9e6, pers.hdh.beans.Record@3993dfe8]
+2017-10-03 at 14:45:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:45:06 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 0:[]
+2017-10-03 at 14:45:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:45:11 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 0:[pers.hdh.beans.Record@1e5d923e, pers.hdh.beans.Record@58341593, pers.hdh.beans.Record@2ea48e75, pers.hdh.beans.Record@5d9a056b]
+2017-10-03 at 14:45:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:45:16 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@66280ccc, pers.hdh.beans.Record@21aef3d7, pers.hdh.beans.Record@49376219, pers.hdh.beans.Record@76c9bca, pers.hdh.beans.Record@2184b987, pers.hdh.beans.Record@7762d62b, pers.hdh.beans.Record@5b75574, pers.hdh.beans.Record@66663cc3, pers.hdh.beans.Record@62aae909]
+2017-10-03 at 14:47:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:47:41 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@19f12789, pers.hdh.beans.Record@aa94dbb, pers.hdh.beans.Record@3f7a5c82, pers.hdh.beans.Record@1b64971f, pers.hdh.beans.Record@b393695, pers.hdh.beans.Record@4bbd76dc, pers.hdh.beans.Record@26cebd65, pers.hdh.beans.Record@192d0acc, pers.hdh.beans.Record@5be21ae2]
+2017-10-03 at 14:47:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:47:50 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 5:[pers.hdh.beans.Record@7979831e, pers.hdh.beans.Record@10de1fbf, pers.hdh.beans.Record@19f0195a]
+2017-10-03 at 14:47:52 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:47:52 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@23df833]
+2017-10-03 at 14:48:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:48:10 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 4:[pers.hdh.beans.Record@14ce7c5b]
+2017-10-03 at 14:48:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:48:11 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@70f9dda8, pers.hdh.beans.Record@26834fac, pers.hdh.beans.Record@467ab5af, pers.hdh.beans.Record@6bb6d8d, pers.hdh.beans.Record@3891f46f, pers.hdh.beans.Record@4d332fe, pers.hdh.beans.Record@17972806, pers.hdh.beans.Record@4a1de87c, pers.hdh.beans.Record@7d184fdc, pers.hdh.beans.Record@60c1d643, pers.hdh.beans.Record@4e381545, pers.hdh.beans.Record@6b434af6, pers.hdh.beans.Record@541a8eed, pers.hdh.beans.Record@3a0739e3, pers.hdh.beans.Record@341b91db]
+2017-10-03 at 14:48:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:48:30 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@285e4585, pers.hdh.beans.Record@4078e22e, pers.hdh.beans.Record@28316f48, pers.hdh.beans.Record@4fe44d2a, pers.hdh.beans.Record@154c5b3e, pers.hdh.beans.Record@12a2b22b, pers.hdh.beans.Record@314ad418, pers.hdh.beans.Record@5caa5206, pers.hdh.beans.Record@2bc87706]
+2017-10-03 at 14:49:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:49:02 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@682516e8, pers.hdh.beans.Record@5e4d7dab, pers.hdh.beans.Record@7a784a67, pers.hdh.beans.Record@2e39dc22, pers.hdh.beans.Record@6e6b0d5b, pers.hdh.beans.Record@5bfe8518, pers.hdh.beans.Record@63edd772, pers.hdh.beans.Record@355cfe1, pers.hdh.beans.Record@35621b05]
+2017-10-03 at 14:49:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:49:07 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@4279987c, pers.hdh.beans.Record@5ca6ac, pers.hdh.beans.Record@5a09b4e0, pers.hdh.beans.Record@5c01a4bd, pers.hdh.beans.Record@52356d39, pers.hdh.beans.Record@37b9d815, pers.hdh.beans.Record@2000c4b6, pers.hdh.beans.Record@7175a847, pers.hdh.beans.Record@8505ff5, pers.hdh.beans.Record@71d0579a, pers.hdh.beans.Record@57d31862, pers.hdh.beans.Record@b38a54f, pers.hdh.beans.Record@11dfc2a, pers.hdh.beans.Record@72020714, pers.hdh.beans.Record@3d5d013e]
+2017-10-03 at 14:49:11 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:49:11 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@cfb6fa6, pers.hdh.beans.Record@39e4a663, pers.hdh.beans.Record@305a29f]
+2017-10-03 at 14:50:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:50:39 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 15:[pers.hdh.beans.Record@6fb6ed35, pers.hdh.beans.Record@7700cfcf, pers.hdh.beans.Record@34acfcc4, pers.hdh.beans.Record@e70f37c, pers.hdh.beans.Record@56f778c2, pers.hdh.beans.Record@2778ab64, pers.hdh.beans.Record@74613993, pers.hdh.beans.Record@7d83cf70, pers.hdh.beans.Record@10df996a, pers.hdh.beans.Record@721e339e, pers.hdh.beans.Record@fce21ef, pers.hdh.beans.Record@6c558729, pers.hdh.beans.Record@ad4700, pers.hdh.beans.Record@32c0648, pers.hdh.beans.Record@7d139e9b]
+2017-10-03 at 14:51:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 14:51:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:51:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 14:51:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:51:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 14:51:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 14:51:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 14:51:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 14:51:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:51:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:33 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@4e8d49e1, pers.hdh.beans.Record@35badc57, pers.hdh.beans.Record@28266d3b, pers.hdh.beans.Record@7feabd59, pers.hdh.beans.Record@5b8c3104, pers.hdh.beans.Record@38b71646, pers.hdh.beans.Record@2363fbde, pers.hdh.beans.Record@9498a9e, pers.hdh.beans.Record@33f79ea2, pers.hdh.beans.Record@33f2abbc, pers.hdh.beans.Record@f730b17, pers.hdh.beans.Record@4a2b7d1d, pers.hdh.beans.Record@4526e874, pers.hdh.beans.Record@63af1427, pers.hdh.beans.Record@749390f6]
+2017-10-03 at 14:51:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:36 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@72fc8b60]
+2017-10-03 at 14:51:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:37 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@a1dbddd, pers.hdh.beans.Record@28fbd588, pers.hdh.beans.Record@426252ca, pers.hdh.beans.Record@19d02987, pers.hdh.beans.Record@7e449c35, pers.hdh.beans.Record@8e541e0, pers.hdh.beans.Record@58c1b634, pers.hdh.beans.Record@404520ba, pers.hdh.beans.Record@1a3aa9b3, pers.hdh.beans.Record@38f20155, pers.hdh.beans.Record@6d576069, pers.hdh.beans.Record@4fecd89, pers.hdh.beans.Record@4b468b94, pers.hdh.beans.Record@6316c300, pers.hdh.beans.Record@3514b323]
+2017-10-03 at 14:51:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:40 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@6672d2e2]
+2017-10-03 at 14:51:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:41 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@1e1bc115, pers.hdh.beans.Record@35cb2004, pers.hdh.beans.Record@12b36fb0, pers.hdh.beans.Record@32c7fef1, pers.hdh.beans.Record@729492d5, pers.hdh.beans.Record@1e334783, pers.hdh.beans.Record@17f4751a, pers.hdh.beans.Record@1a492163, pers.hdh.beans.Record@4c1d1ac5, pers.hdh.beans.Record@4816439a, pers.hdh.beans.Record@7c7eb327, pers.hdh.beans.Record@2f6fc7f2, pers.hdh.beans.Record@b003be8, pers.hdh.beans.Record@71f0b381, pers.hdh.beans.Record@789ed113]
+2017-10-03 at 14:51:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:42 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@79a3ced]
+2017-10-03 at 14:51:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:44 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@e6370eb, pers.hdh.beans.Record@2e6a35, pers.hdh.beans.Record@761f9d4c, pers.hdh.beans.Record@7e94a517, pers.hdh.beans.Record@6be57606, pers.hdh.beans.Record@1869c68d, pers.hdh.beans.Record@1296dd31, pers.hdh.beans.Record@49716e69, pers.hdh.beans.Record@9646407, pers.hdh.beans.Record@5fef8608, pers.hdh.beans.Record@7bb4a791, pers.hdh.beans.Record@39f48ca8, pers.hdh.beans.Record@131a93cd, pers.hdh.beans.Record@30e69860, pers.hdh.beans.Record@6eb029c2]
+2017-10-03 at 14:51:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:45 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@26274547]
+2017-10-03 at 14:51:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:51:46 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@8067e72, pers.hdh.beans.Record@7f2a9779, pers.hdh.beans.Record@637afdbd, pers.hdh.beans.Record@60280626, pers.hdh.beans.Record@5b6601bf, pers.hdh.beans.Record@705cc4f5, pers.hdh.beans.Record@44ff5856, pers.hdh.beans.Record@64466fd9, pers.hdh.beans.Record@f46f117, pers.hdh.beans.Record@192be766, pers.hdh.beans.Record@272831fd, pers.hdh.beans.Record@7047aa66, pers.hdh.beans.Record@48b12330, pers.hdh.beans.Record@ee7ed97, pers.hdh.beans.Record@6826926f]
+2017-10-03 at 14:52:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:52:24 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@20e546b3]
+2017-10-03 at 14:52:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:52:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 14:52:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 14:52:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 14:52:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:52:44 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@3d5cf796, pers.hdh.beans.Record@1912226d]
+2017-10-03 at 14:52:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:52:45 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@e6bd28c, pers.hdh.beans.Record@579147a2, pers.hdh.beans.Record@233acdb8, pers.hdh.beans.Record@42ceedb6, pers.hdh.beans.Record@1261a8d1, pers.hdh.beans.Record@4f105168, pers.hdh.beans.Record@3ab2123f, pers.hdh.beans.Record@f24eb82, pers.hdh.beans.Record@101ced97]
+2017-10-03 at 14:52:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 14:52:45 CST DEBUG pers.hdh.web.servlet.AdminRecordServlet 53 getRecords - 16:[pers.hdh.beans.Record@6ed365f3, pers.hdh.beans.Record@6ef48f4c, pers.hdh.beans.Record@6de5b190, pers.hdh.beans.Record@3a838826, pers.hdh.beans.Record@4f0a8e78, pers.hdh.beans.Record@5cee63a, pers.hdh.beans.Record@45e7be22, pers.hdh.beans.Record@6303cc00, pers.hdh.beans.Record@7861f756, pers.hdh.beans.Record@aec3156, pers.hdh.beans.Record@72828887, pers.hdh.beans.Record@f9c291b, pers.hdh.beans.Record@7830b4f9, pers.hdh.beans.Record@133d5c28, pers.hdh.beans.Record@759d2878]
+2017-10-03 at 15:20:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 15:20:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:20:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:20:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:20:46 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
+2017-10-03 at 15:29:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:29:28 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
+2017-10-03 at 15:29:32 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 15:29:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:29:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:29:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:29:44 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
+2017-10-03 at 15:32:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-03 at 15:32:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 15:32:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:32:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:32:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:32:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:32:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:32:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:32:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:32:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:36:52 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:36:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:36:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:36:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:36:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:37:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:37:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:37:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:37:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:37:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:37:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:37:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:40:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:40:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:41:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:41:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:41:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:41:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:41:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:41:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:42:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:42:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:42:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:43:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:43:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 15:43:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:43:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:43:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:43:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:43:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:43:58 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:44:15 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:44:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:44:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:41 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:44:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:44:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:44 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:44:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：logout
+2017-10-03 at 15:44:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 15:44:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:44:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:45:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:45:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:45:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:45:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:45:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:16 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:45:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:45:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:45:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:45:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:45:38 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:45:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:45:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:45:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:45:48 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:06 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:21 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:46:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:47:24 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:47:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:47:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:47:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:49:20 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:49:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:49:39 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:49:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:50:01 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:50:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:51:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:33 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:51:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:52:07 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:18 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:22 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:29 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:31 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:52:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:53:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:53:45 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:53:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:53:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:53:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:53:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:54:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:54:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:54:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：addUI
+2017-10-03 at 15:55:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：add
+2017-10-03 at 15:55:05 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:55:13 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:55:14 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:55:17 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：addUI
+2017-10-03 at 15:55:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：add
+2017-10-03 at 15:55:23 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:55:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：delete
+2017-10-03 at 15:55:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:55:27 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:55:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:55:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:55:42 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:55:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:55:56 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:56:08 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:57:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:57:26 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:57:55 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:58:34 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getUsers
+2017-10-03 at 15:58:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:58:36 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:58:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:58:37 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getRecords
+2017-10-03 at 15:58:40 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：loginUI
+2017-10-03 at 15:58:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：login
+2017-10-03 at 15:58:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:49 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:50 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:58:51 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:53 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:54 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:58:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:58:59 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:59:00 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:02 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:59:04 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:10 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:19 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 15:59:25 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:28 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:30 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:35 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:43 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:46 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:47 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 15:59:57 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：update
+2017-10-03 at 16:00:09 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks
+2017-10-03 at 16:00:12 CST DEBUG pers.hdh.web.servlet.BaseServlet 33 service - 执行的方法：getTasks

@@ -9,14 +9,20 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/layer/layer.js"></script>
 		<script type="text/javascript">
-			function showByPage(currPage) {
-				var begin = document.getElementById("begin");
-				var end = document.getElementById("end");
-				var username = document.getElementById("username");
-				
-				location.href="${pageContext.request.contextPath }/adminApply?method=findApplys&currPage="+currPage+
-						"&begin="+begin.value+"&end="+end.value+"&username="+username.value;
-			}
+			/* 分页展示 */
+            function showByPage(currPage) {
+                var stuid = document.getElementById("stuid");
+                var category = document.getElementById("category");
+                var desc = document.getElementById("desc");
+                var state = document.getElementById("state");
+
+                location.href="${pageContext.request.contextPath }/adminRecord?method=getRecords&currPage="+currPage+
+                    "&category="+category.value+"&desc="+desc.value+"&stuid="+stuid.value+"&state="+state.value;
+            }
+			/* 改变用户状态 */
+            function chageStateTo(state, rid){
+                location.href="${pageContext.request.contextPath}/adminRecord?method=update&state="+state+"&rid="+rid;
+            }
 		</script>
 	</HEAD>
 	<body>
@@ -26,15 +32,18 @@
 				<TBODY>
 					<tr>
 						<td class="ta_01" align="center" bgColor="#afd1f3">
-							<strong>挂失记录</strong>
+							<strong>任务记录</strong>
 						</TD>
 					</tr>
 					<tr>
 						<td class="ta_01">
-							查询日期 起：<input type="date" id="begin" name="begin" value="${begin }" >
-							至：<input type="date" id="end" name="end" value="${end }" >
-							用户名：<input name="username" id="username" value="${username }" />
-							<input type="button" onclick="showByPage(1)" value="查询" /></td>
+							学号：<input name="stuid" id="stuid" value="${stuid }" style="margin-right: 20px;" />
+							任务类型：<input id="category" name="category" value="${category }" style="margin-right: 20px;" />
+							任务内容：<input  id="desc" name="desc" value="${desc }" style="margin-right: 20px;" />
+							<input type="hidden" id="state" value="${state}" />
+							<input type="button" onclick="showByPage(1)" value="查询" />
+							<label style="float: right;margin-right: 10px;margin-top: 5px;">当前记录数量：${pageBean.totalCount}</label>
+						</td>
 					</tr>
 					<tr>
 						<td class="ta_01" align="center" bgColor="#f5fafe">
@@ -44,16 +53,22 @@
 									<th align="center" width="5%">
 										序号
 									</th>
-									<th align="center" width="20%">
-										用户名
+									<th align="center" width="10%">
+										账号
 									</th>
-									<th align="center" width="40%">
-										描述
+									<th align="center" width="10%">
+										任务类型
 									</th>
-									<th align="center" width="25%">
-										创建时间
+									<th align="center" >
+										任务内容
 									</th>
-									<th align="center" width="10%" colspan="2">
+									<th align="center" width="10%">
+										任务状态
+									</th>
+									<th align="center" width="15%">
+										执行时间
+									</th>
+									<th align="center" width="6%" colspan="2">
 										操作
 									</th>
 									
@@ -65,22 +80,36 @@
 										${i.count+(pageBean.currPage-1)*pageBean.pageSize }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 25px" align="center" >
-										${item.username }
+										${item.stuid }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.adesc }
+										${item.category }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<fmt:formatDate var="time" value="${item.time }" pattern="yyyy-MM-dd HH:mm:ss"/>${time }
+										${item.desc }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<a href="${ pageContext.request.contextPath }/adminApply?method=findByAid&aid=${item.aid}">
-											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="编辑" alt="编辑" style="CURSOR: hand">
+										<c:if test="${item.state==1 }"><a href="javascript:void(0)" style="color: yellowgreen;" title="任务进行中" >进行中</a></c:if>
+										<c:if test="${item.state==2 }">
+											<a style="color: deepskyblue;" title="点击通过任务" onclick="chageStateTo(3,'${item.rid}')">审核中</a>
+											<a style="color: brown;" title="点击拒绝任务通过" onclick="chageStateTo(4,'${item.rid}')">(拒绝)</a>
+										</c:if>
+										<c:if test="${item.state==3 }"><a href="javascript:void(0)" style="color: springgreen;" title="任务已完成"  >已完成</a></c:if>
+										<c:if test="${item.state==4 }"><a href="javascript:void(0)" style="color: red;" title="放弃的任务或管理员不通过">失败</a></c:if>
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										<jsp:useBean id="dateValue" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
+										<jsp:setProperty name="dateValue" property="time" value="${item.update_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->
+										<fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd HH:mm:ss"/> <!-- 转换格式 -->
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+										<a href="javascript:void(0)">
+											<img src="${pageContext.request.contextPath}/images/i_edit.gif" title="须拥有dba权限才能修改任务记录" alt="编辑" style="CURSOR: hand">
 										</a>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<a  href="${ pageContext.request.contextPath }/adminApply?method=delete&aid=${item.aid}" >
-											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="删除" alt="删除" style="CURSOR: hand">
+										<a  href="javascript:void(0)" >
+											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="须拥有dba权限才能删除任务记录" alt="删除" style="CURSOR: hand">
 										</a>
 									</td>
 								</tr>

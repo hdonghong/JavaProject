@@ -32,11 +32,11 @@
 		d.add('010301','0103','所有任务','${pageContext.request.contextPath}/adminTask?method=getTasks&currPage=1&category=&desc=','','mainFrame');
 		
 		d.add('0105','01','任务记录管理');
-		d.add('010501','0105','所有记录','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
-		d.add('010502','0105','任务进行中','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
-		d.add('010503','0105','任务审核中','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
-		d.add('010504','0105','任务已完成','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
-		d.add('010505','0105','任务失败','${pageContext.request.contextPath}/adminApply?method=findApplys&currPage=1&begin=&end=&username=','','mainFrame');
+		d.add('010501','0105','所有记录','${pageContext.request.contextPath}/adminRecord?method=getRecords&currPage=1&category=&desc=&state=&stuid=','','mainFrame');
+		d.add('010502','0105','任务进行中','${pageContext.request.contextPath}/adminRecord?method=getRecords&currPage=1&category=&desc=&state=1&stuid=','','mainFrame');
+		d.add('010503','0105','任务审核中','${pageContext.request.contextPath}/adminRecord?method=getRecords&currPage=1&category=&desc=&state=2&stuid=','','mainFrame');
+		d.add('010504','0105','任务已完成','${pageContext.request.contextPath}/adminRecord?method=getRecords&currPage=1&category=&desc=&state=3&stuid=','','mainFrame');
+		d.add('010505','0105','任务失败','${pageContext.request.contextPath}/adminRecord?method=getRecords&currPage=1&category=&desc=&state=4&stuid=','','mainFrame');
 		document.write(d);
 	</script>
 </div>	

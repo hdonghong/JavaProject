@@ -1,11 +1,13 @@
 package pers.hdh.service.impl;
 
+import pers.hdh.beans.PageBean;
 import pers.hdh.beans.Record;
 import pers.hdh.dao.RecordDao;
 import pers.hdh.service.RecordService;
 import pers.hdh.utils.BeanFactory;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class RecordServiceImpl implements RecordService {
     /**
@@ -27,5 +29,24 @@ public class RecordServiceImpl implements RecordService {
     public void add(Record record) throws SQLException {
         RecordDao dao = (RecordDao) BeanFactory.getBean("RecordDao");
         dao.add(record);
+    }
+
+    /**
+     * 分页查询record表
+     * @param category
+     * @param desc
+     * @param state
+     * @param stuid
+     *@param currPage
+     * @param pageSize   @return
+     */
+    @Override
+    public PageBean<Record> getRecords(String category, String desc, String state, String stuid, int currPage, int pageSize) throws SQLException {
+        RecordDao dao = (RecordDao) BeanFactory.getBean("RecordDao");
+        // 查询总记录数
+        int totalCount = dao.getTotalCount(category, desc, state, stuid);
+        // 获取记录
+        List<Record> list = dao.getRecords(category, desc, state, stuid, currPage, pageSize);
+        return new PageBean<>(list, currPage, pageSize, totalCount);
     }
 }

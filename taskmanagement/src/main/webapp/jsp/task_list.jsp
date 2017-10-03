@@ -74,7 +74,7 @@
 										<a title="点击放弃任务,将视为失败" onclick="chageStateTo(4, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: brown">(放弃)</a>
 									</c:if>
 									<c:if test="${item.state == 2 }"><a title="等待管理员审核..." href="javascript:void(0)" style="cursor: pointer;color: deepskyblue;">审核中</a></c:if>
-									<c:if test="${item.state == 3 }"><a title="您已完成任务" href="javascript:void(0)" style="cursor: pointer;color: green">已完成</a></c:if>
+									<c:if test="${item.state == 3 }"><a title="您已完成任务" href="javascript:void(0)" style="cursor: pointer;color: springgreen">已完成</a></c:if>
 									<c:if test="${item.state == 4 }"><a title="放弃的任务或被管理员否决的任务，点击重新领取任务" onclick="chageStateTo(1, '${user.uid}', '${item.tid}')" style="cursor: pointer;color: red">失败</a></c:if>
 								</td>
 							</tr>
