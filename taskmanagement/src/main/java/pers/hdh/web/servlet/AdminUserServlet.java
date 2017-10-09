@@ -142,6 +142,36 @@ public class AdminUserServlet extends BaseServlet {
         response.sendRedirect(request.getContextPath()+"/adminUser?method=getUsers&currPage=1&stuid=&name=&category=");
         return null;
     }
+
+    /**
+     * 批量删除用户
+      * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    public String deleteUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        if (request.getSession().getAttribute("admin") == null) {
+            // 强行进入管理平台，提示先登录
+            return "/admin/welcome.jsp";
+        }
+
+        String uids_str = request.getParameter("uids_str"); // 获取参数
+        String[] uids = uids_str.trim().split(" ");
+
+        UserService service = (UserService) BeanFactory.getBean("UserService");
+        try {
+            service.delete(uids);
+        } catch (SQLException e) {
+            logger.error("管理员：删除user表记录失败");
+            throw e;
+        }
+
+        // 页面重定向到用户管理页面
+        response.sendRedirect(request.getContextPath()+"/adminUser?method=getUsers&currPage=1&stuid=&name=&category=");
+        return null;
+    }
+
     /**
      * 管理员登录,这里不专门写它的service层和dao层了，直接在这里完成
      * @param request

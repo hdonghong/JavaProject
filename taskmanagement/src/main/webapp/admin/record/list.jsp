@@ -22,7 +22,15 @@
             }
 			/* 改变用户状态 */
             function chageStateTo(state, rid){
-                location.href="${pageContext.request.contextPath}/adminRecord?method=update&state="+state+"&rid="+rid;
+                var arr = new Array();
+                arr[0] = "";
+                arr[1] = "";
+                arr[2] = "";
+                arr[3] = "确认通过该用户的任务吗？";
+                arr[4] = "确认拒绝该用户的任务吗？";
+                if (confirm(arr[state])) {
+                	location.href="${pageContext.request.contextPath}/adminRecord?method=update&state="+state+"&rid="+rid;
+				}
             }
 		</script>
 	</HEAD>

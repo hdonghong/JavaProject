@@ -86,4 +86,16 @@ public class UserServiceImpl implements UserService {
         UserDao dao = (UserDao) BeanFactory.getBean("UserDao");
         dao.delete(uid);
     }
+
+    /**
+     * 删除多个用户
+     * @param uids
+     */
+    @Override
+    public void delete(String[] uids) throws SQLException {
+        UserDao dao = (UserDao) BeanFactory.getBean("UserDao");
+        for (String uid: uids) {
+            dao.delete(uid);
+        }
+    }
 }

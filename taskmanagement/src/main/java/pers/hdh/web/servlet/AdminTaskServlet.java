@@ -180,4 +180,33 @@ public class AdminTaskServlet extends BaseServlet {
         response.sendRedirect(request.getContextPath()+"/adminTask?method=getTasks&currPage=1&category=&desc=");
         return null;
     }
+
+    /**
+     * 批量删除任务
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    public String deleteTasks(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        if (request.getSession().getAttribute("admin") == null) {
+            // 强行进入管理平台，提示先登录
+            return "/admin/welcome.jsp";
+        }
+
+        String tids_str = request.getParameter("tids_str"); // 获取参数
+        String[] tids = tids_str.trim().split(" ");
+
+        TaskService service = (TaskService) BeanFactory.getBean("TaskService");
+        try {
+            service.delete(tids);
+        } catch (SQLException e) {
+            logger.error("管理员：批量删除task表记录失败");
+            throw e;
+        }
+
+        // 重定向到所有任务页面
+        response.sendRedirect(request.getContextPath()+"/adminTask?method=getTasks&currPage=1&category=&desc=");
+        return null;
+    }
 }

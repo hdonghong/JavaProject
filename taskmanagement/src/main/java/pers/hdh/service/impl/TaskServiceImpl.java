@@ -93,4 +93,16 @@ public class TaskServiceImpl implements TaskService {
         TaskDao dao = (TaskDao) BeanFactory.getBean("TaskDao");
         dao.delete(tid);
     }
+
+    /**
+     * 删除多个任务
+     * @param tids
+     */
+    @Override
+    public void delete(String[] tids) throws SQLException {
+        TaskDao dao = (TaskDao) BeanFactory.getBean("TaskDao");
+        for (String tid: tids) {
+            dao.delete(tid);
+        }
+    }
 }

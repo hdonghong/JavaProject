@@ -1,9 +1,11 @@
 package pers.hdh.dao.impl;
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import pers.hdh.beans.Record;
+import pers.hdh.beans.User;
 import pers.hdh.dao.RecordDao;
 import pers.hdh.utils.DataSourceUtils;
 
@@ -32,10 +34,11 @@ public class RecordDaoImpl implements RecordDao {
     @Override
     public int update(Record record) throws SQLException {
         QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
-        String sql = "update record set state=? where 1=1 ";
+        String sql = "update record set state=?, is_read=? where 1=1 ";
 
         List<Object> paramsList = new ArrayList<>();
         paramsList.add(record.getState());
+        paramsList.add(record.getIs_read());
         if (record.getRid()!=null) { // 通过主键确认记录
             sql += " and rid=? ";
             paramsList.add(record.getRid());
@@ -82,5 +85,55 @@ public class RecordDaoImpl implements RecordDao {
                 " ORDER BY r.update_at DESC LIMIT ?, ? ";
         return qr.query(sql, new BeanListHandler<Record>(Record.class), "%"+category.trim()+"%", "%"+desc.trim()+"%",
                 "%"+state+"%", "%"+stuid.trim()+"%", (currPage-1)*pageSize, pageSize);
+    }
+
+    /**
+     * 查询该用户完成或失败的任务记录总数
+     * @param user
+     * @return
+     */
+    @Override
+    public int getTotalCount(User user) throws SQLException {
+        QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql = "select count(*) from record where uid= ? and state in (3,4) ";
+        return ((Long)qr.query(sql, new ScalarHandler<>(), user.getUid())).intValue();
+    }
+
+    /**
+     * 分页查询该用户完成或失败的任务记录
+     * @param currPage
+     * @param pageSize
+     * @param user
+     * @return
+     */
+    @Override
+    public List<Record> getRecords(int currPage, int pageSize, User user) throws SQLException {
+        QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql = "select rid, state, update_at, is_read from record where uid = ? and state in (3,4) " +
+                " order by update_at desc limit ?, ?";
+        return qr.query(sql, new BeanListHandler<>(Record.class), user.getUid(), (currPage-1)*pageSize, pageSize);
+    }
+
+    /**
+     * 获取一条记录
+     * @param rid
+     */
+    @Override
+    public Record getRecord(String rid) throws SQLException {
+        QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql = "select * from record where rid = ? limit 1";
+        return qr.query(sql, new BeanHandler<Record>(Record.class), rid);
+    }
+
+    /**
+     * 查找该用户所有任务记录
+     * @param user
+     * @return
+     */
+    @Override
+    public List<Record> getRecords(User user) throws SQLException {
+        QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql = "select * from record where uid = ? ";
+        return qr.query(sql, new BeanListHandler<Record>(Record.class), user.getUid());
     }
 }

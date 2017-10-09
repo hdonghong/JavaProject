@@ -51,4 +51,10 @@ public interface UserService {
      * @param uid
      */
     void delete(String uid) throws SQLException;
+
+    /**
+     * 通过uid批量删除用户
+     * @param uids
+     */
+    void delete(String[] uids) throws SQLException;
 }

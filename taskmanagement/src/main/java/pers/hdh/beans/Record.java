@@ -5,11 +5,12 @@ package pers.hdh.beans;
  */
 public class Record {
     private String rid;     // record的主键id
-    private Integer state;// 任务状态
+    private Integer state;  // 任务状态
     private Long create_at; // 记录创建时间
     private Long update_at; // 记录上一次修改时间
     private User user;      // 外键
     private Task task;      // 外键
+    private Integer is_read;// 消息状态
 
     // 额外提供三个javabean属性，方便获取数据，没想到更好的办法，做个标记 TODO
     private String category;
@@ -42,6 +43,7 @@ public class Record {
 
     public Record() {
         state = 0;
+        is_read = 0;
         user = new User();
         task = new Task();
     }
@@ -92,5 +94,13 @@ public class Record {
 
     public void setTask(Task task) {
         this.task = task;
+    }
+
+    public Integer getIs_read() {
+        return is_read;
+    }
+
+    public void setIs_read(Integer is_read) {
+        this.is_read = is_read;
     }
 }

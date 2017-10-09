@@ -28,7 +28,7 @@
 					<h1 align="center">请先登录</h1>
 				</c:if>
 				<c:if test="${not empty user }">
-				<table class="table table-hover" style="width: 60%; margin: 0 auto; text-align: center;">
+				<table class="table table-hover" style="width: 70%; margin: 0 auto; text-align: center;">
 					<caption style="text-align: center;">
 						<form action="${pageContext.request.contextPath }/task?method=getTasks&currPage=1" method="post">
 							任务类型：<input name="category" id="category" value="${category }" />&nbsp;&nbsp;
@@ -155,7 +155,16 @@
 		}
 
         function chageStateTo(state, uid, tid){ //改变用户状态
-            location.href="${pageContext.request.contextPath}/record?method=update&state="+state+"&uid="+uid+"&tid="+tid;
+			var arr = new Array(["", "领取", "提交", "", "放弃"]);
+			arr[0] = "";
+			arr[1] = "确认领取吗？\n提示：任务一旦被领取，必须被完成，否则视为失败的任务。";
+			arr[2] = "确认提交吗？\n提示：任务提交后须等待管理员审核。"
+			arr[3] = "";
+			arr[4] = "确认放弃吗？\n提示：任务一旦被放弃，将视为失败的任务。";
+			if (confirm([arr[state]])) {
+            	location.href="${pageContext.request.contextPath}/record?method=update&state="+
+					state+"&uid="+uid+"&tid="+tid;
+			}
         }
 	</script>
 </html>

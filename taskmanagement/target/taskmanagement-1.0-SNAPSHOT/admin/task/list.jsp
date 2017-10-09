@@ -9,12 +9,61 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/layer/layer.js"></script>
 		<script type="text/javascript">
+			// 分页显示
 			function showByPage(currPage) {
 				var category = document.getElementById("category");
 				var desc = document.getElementById("desc");
 				
 				location.href="${pageContext.request.contextPath }/adminTask?method=getTasks&currPage="+currPage+
 						"&category="+encodeURI(encodeURI(category.value))+"&desc="+encodeURI(encodeURI(desc.value));
+			}
+			// 删除任务
+			function confirmDelete(tid) {
+			    if (confirm("你确定要删除该任务吗？")){
+                	location.href="${ pageContext.request.contextPath }/adminTask?method=delete&tid="+tid;
+				}
+			}
+
+			// 批量选择删除
+			function selectTasks(obj) {
+				if (obj.value=="批量删除") {
+				    obj.value="取消删除";
+				    document.getElementById("confirm").style.display="inline";
+				    document.getElementById("all").innerHTML="<input type='checkbox' onclick='selectAll(this)' />";
+				    var arr = document.getElementsByName("number");
+				    for (var i = 0; i < arr.length; i++) {
+				        arr[i].innerHTML = "<input type='checkbox' name='box' />";
+					}
+				} else if(obj.value=="取消删除") { // 刷新页面
+                    location.reload(true);
+				}
+
+			}
+			// 删除所选任务
+			function deleteSelected(){
+			    if (confirm("你确定要删除所选择的任务吗？")) {
+					var ids_arr = new Array();
+					<c:forEach items="${pageBean.list}" var="i">
+						ids_arr.push("${i.tid}");
+					</c:forEach>
+
+					var box_arr = document.getElementsByName("box");
+					var ids_str = "";
+					for (var i = 0; i < box_arr.length; i++) {
+						if (box_arr[i].checked) {
+							ids_str += (ids_arr[i]+" ");
+						}
+					}
+                    location.href="${ pageContext.request.contextPath }/adminTask?method=deleteTasks&tids_str="+ids_str;
+				}
+            }
+			// 全选/全不选啊
+			function selectAll(obj) {
+			    var flag = obj.checked;
+			    var arr = document.getElementsByName("box");
+			    for (var i = 0; i < arr.length; i++) {
+			        arr[i].checked = flag;
+				}
 			}
 		</script>
 	</HEAD>
@@ -30,6 +79,8 @@
 					</tr>
 					<tr>
 						<td class="ta_01">
+							<input type="button" value="批量删除" onclick="selectTasks(this)" style="float:left;margin-right: 5px" />
+							<input type="button" value="确定删除" onclick="deleteSelected()" style="float:left;display: none;" id="confirm"/>
 							任务类型：<input type="text" id="category" name="category" value="${category }" style="margin-right: 20px;" >
 							任务内容：<input type="text" id="desc" name="desc" value="${desc }" style="margin-right: 20px;" >
 							<input type="button" onclick="showByPage(1)" value="查询" />
@@ -44,7 +95,7 @@
 							<table border="1" id="DataGrid1"
 								style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
 								<tr style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
-									<th align="center" width="5%">
+									<th align="center" width="5%" id="all">
 										序号
 									</th>
 									<th align="center" width="15%">
@@ -67,7 +118,7 @@
 								<c:forEach items="${pageBean.list }" var="item" varStatus="i" >
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" name="number" >
 										${i.count+(pageBean.currPage-1)*pageBean.pageSize }
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 25px" align="center" >
@@ -96,7 +147,7 @@
 										</a>
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										<a href="${ pageContext.request.contextPath }/adminTask?method=delete&tid=${item.tid}" >
+										<a onclick="confirmDelete('${item.tid}')" >
 											<img src="${pageContext.request.contextPath}/images/i_del.gif" title="删除任务" alt="删除" style="CURSOR: hand">
 										</a>
 									</td>

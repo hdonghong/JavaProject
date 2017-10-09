@@ -18,4 +18,6 @@ public interface TaskService {
     void add(Task task) throws SQLException;
 
     void delete(String tid) throws SQLException;
+
+    void delete(String[] tids) throws SQLException;
 }

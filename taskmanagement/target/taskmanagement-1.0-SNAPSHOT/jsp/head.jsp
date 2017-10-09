@@ -20,6 +20,11 @@
 					<li><a href="${pageContext.request.contextPath }/user?method=registUI">注册</a></li>
 				</c:if>
 				<c:if test="${not empty user }">
+					<li>
+						<a title="查看新消息" href="${pageContext.request.contextPath }/record?method=getMessages&currPage=1">
+							<img src="${pageContext.request.contextPath }/img/user-nav-3.png">
+						</a>
+					</li>
 					<li>${user.name }，你好</li>
 					<li><a href="${pageContext.request.contextPath }/user?method=logout">退出</a></li>
 				</c:if>
@@ -52,6 +57,7 @@
 						<ul class="nav navbar-nav" id="menuId">
 							<li id="menu_1"><a href="${pageContext.request.contextPath }/task?method=getTasks&currPage=1&category=&desc=&state=">任务列表</a></li>
 							<li id="menu_2"><a href="${pageContext.request.contextPath }/jsp/user_info.jsp">个人信息</a></li>
+							<li id="menu_3"><a href="${pageContext.request.contextPath }/record?method=getMessages&currPage=1">消息提示</a></li>
 							<%--
         					<li class="dropdown" id="menu_2">
 					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人信息<span class="caret"></span></a>
