@@ -12,8 +12,9 @@
 <hr/><br/>
 
 ## 1.percussionplayer
+<p>
 	对JavaSe基础学习知识的串联。涉及知识包含类与接口，继承与多态，集合类，JavaFx图形界面，文件IO操作，多线程，Socket流编程，正则表达式等。
-	
+</p>
 
 ## 2.store
 <p>
