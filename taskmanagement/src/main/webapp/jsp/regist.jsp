@@ -133,7 +133,7 @@
 		</div>
 		<div class="row">
 			<div class="signup-footer col-sm-6 col-sm-offset-3 form-box">
-				<div style="margin-top: 0px; text-align: center;font-size: 13px;">© 2017-？校园卡管理系统 保留所有版权.</div>
+				<div style="margin-top: 0px; text-align: center;font-size: 13px;">© 2017-？任务管理系统 保留所有版权.</div>
 			</div>
 		</div>
 	</div>

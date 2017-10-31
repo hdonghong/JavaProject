@@ -113,4 +113,18 @@ public class UserDaoImpl implements UserDao {
         String sql = "delete from user where uid=? ";
         qr.update(sql, uid);
     }
+
+    /**
+     * 通过用户账号和邮箱查询用户
+     * @param stuid
+     * @param email
+     * @return
+     */
+    @Override
+    public User getByStuidAndEmail(String stuid, String email) throws SQLException {
+        QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql = " select uid, stuid, name, password, institute, major, grade, email, category, create_at " +
+                " from user where stuid=? and email=? ";
+        return qr.query(sql, new BeanHandler<User>(User.class), stuid, email);
+    }
 }

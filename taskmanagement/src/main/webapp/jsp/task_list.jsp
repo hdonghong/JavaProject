@@ -3,6 +3,7 @@
 		 pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -61,7 +62,9 @@
 							>
 								<td>${i.count+pageBean.pageSize*(pageBean.currPage-1) }</td>
 								<td>${item.category }</td>
-								<td>${item.desc }</td>
+								<td>
+									<a title="查看详情" style="cursor: pointer;color:black;" onclick="alert('${item.desc}');" >${fn:substring(item.desc, 0, 20)}...</a>
+								</td>
 								<td>
 									<jsp:useBean id="dateValue" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->
 									<jsp:setProperty name="dateValue" property="time" value="${item.create_at}"/> <!-- 使用jsp:setProperty标签将时间戳设置到Date的time属性中 -->

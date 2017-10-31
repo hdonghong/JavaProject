@@ -20,4 +20,6 @@ public interface UserDao {
     User getByUid(String uid) throws SQLException;
 
     void delete(String uid) throws SQLException;
+
+    User getByStuidAndEmail(String stuid, String email) throws SQLException;
 }

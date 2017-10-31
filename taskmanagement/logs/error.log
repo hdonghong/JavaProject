@@ -24,3 +24,5 @@
 2017.10.03 at 15:20:46 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
 2017.10.03 at 15:29:28 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
 2017.10.03 at 15:29:44 CST ERROR pers.hdh.web.servlet.RecordServlet 50 update - record表修改记录或添加记录失败
+2017.10.24 at 21:02:37 CST ERROR pers.hdh.web.servlet.UserServlet 114 add - user表添加记录失败
+2017.10.24 at 21:03:18 CST ERROR pers.hdh.web.servlet.UserServlet 114 add - user表添加记录失败

@@ -5,6 +5,7 @@ import pers.hdh.beans.User;
 import pers.hdh.dao.UserDao;
 import pers.hdh.service.UserService;
 import pers.hdh.utils.BeanFactory;
+import pers.hdh.utils.MailUtils;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -97,5 +98,21 @@ public class UserServiceImpl implements UserService {
         for (String uid: uids) {
             dao.delete(uid);
         }
+    }
+
+    /**
+     * 申请修改密码
+     * @param stuid
+     * @param email
+     * @return
+     */
+    @Override
+    public User getByStuidAndEmail(String stuid, String email) throws Exception {
+        UserDao dao = (UserDao) BeanFactory.getBean("UserDao");
+        User user = dao.getByStuidAndEmail(stuid, email);
+        if (user != null) {
+            MailUtils.sendMail(user.getEmail(), user.getUid());
+        }
+        return user;
     }
 }

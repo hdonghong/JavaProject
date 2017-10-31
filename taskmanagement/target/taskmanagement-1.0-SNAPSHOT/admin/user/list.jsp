@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <HTML>
 	<HEAD>
 		<meta http-equiv="Content-Language" content="zh-cn">
@@ -138,8 +139,8 @@
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										${item.stuid }
 									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.password }
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" title="${item.password}" >
+										${fn:substring(item.password,0,15)}...
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										${item.name }

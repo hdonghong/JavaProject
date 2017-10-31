@@ -1,6 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <HTML>
 	<HEAD>
 		<meta http-equiv="Content-Language" content="zh-cn">
@@ -124,8 +125,8 @@
 									<td style="CURSOR: hand; HEIGHT: 25px" align="center" >
 										${item.category }
 									</td>
-									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
-										${item.desc }
+									<td style="CURSOR: hand; HEIGHT: 30px" align="center" title="${item.desc}" >
+										${fn:substring(item.desc,0,40 )}...
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 30px" align="center" >
 										<jsp:useBean id="dateValue_1" class="java.util.Date"/> <!-- 通过jsp:userBean标签引入java.util.Date日期类 -->

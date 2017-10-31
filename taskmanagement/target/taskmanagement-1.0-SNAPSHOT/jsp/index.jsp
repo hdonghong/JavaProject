@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,6 +22,11 @@
 	            display: inline-block;
 	            padding: 10px 10px 0;
 	        }
+			a:hover{
+				color: salmon;
+				font-weight: 800;
+				text-decoration: none;
+			}
 	    </style>
 		<script type="text/javascript">
             function selectAll(obj) {
@@ -60,12 +66,13 @@
 		                                    <input type="password" name="password" required="required" aria-required="true" value="${cookie.savePwd.value}" placeholder="请输入密码" class="form-password form-control" id="form-password">
 		                                </div>
 										<div style="color: black;" align="center">
-											<input type="checkbox" style="position: relative;top: 3px;" name="save" id="saveStuid" /> 记住账号
-											<input type="checkbox" style="position: relative;top: 3px;margin-left: 25%;" name="save" id="savePwd" onclick="selectAll(this)"/> 记住密码
+											<input type="checkbox" style="position: relative;top: 3px;" name="save" id="saveStuid" <c:if test="${not empty cookie.saveStuid}">checked</c:if> /> <label for="saveStuid">记住账号</label>
+											<input type="checkbox" style="position: relative;top: 3px;margin-left: 25%;" name="save" id="savePwd" <c:if test="${not empty cookie.savePwd}">checked</c:if> onclick="selectAll(this)"/> <label for="savePwd">记住密码</label>
 										</div>
 		                                <input type="submit" class="btn btn-success btn-block" value="登录">
 										<div  style="float: left;color: #DD4444;">推荐您使用谷歌浏览器访问网站</div>
 										<div style="float: right;">
+											<a href="${pageContext.request.contextPath }/jsp/applyUpdatePwd.jsp">忘记密码？</a>
 											<a href="${pageContext.request.contextPath }/user?method=registUI">注册新账号</a>
 										</div>
 		                            </form>

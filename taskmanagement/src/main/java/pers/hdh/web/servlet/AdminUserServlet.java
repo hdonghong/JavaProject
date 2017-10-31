@@ -9,6 +9,7 @@ import pers.hdh.beans.User;
 import pers.hdh.service.UserService;
 import pers.hdh.utils.BeanFactory;
 import pers.hdh.utils.DataSourceUtils;
+import pers.hdh.utils.MD5Utils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -101,6 +102,8 @@ public class AdminUserServlet extends BaseServlet {
         // 封装数据
         User user = new User();
         BeanUtils.populate(user, request.getParameterMap());
+        // 密码加密
+        user.setPassword(MD5Utils.md5(user.getPassword()));
 
         // 获取service对象处理业务逻辑
         UserService service = (UserService) BeanFactory.getBean("UserService");

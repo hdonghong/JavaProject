@@ -57,4 +57,6 @@ public interface UserService {
      * @param uids
      */
     void delete(String[] uids) throws SQLException;
+
+    User getByStuidAndEmail(String stuid, String email) throws Exception;
 }
