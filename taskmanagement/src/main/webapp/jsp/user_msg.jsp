@@ -21,7 +21,7 @@
 			<jsp:include page="/jsp/head.jsp"></jsp:include>
 			
 			<!-- 
-				账单表
+				消息表
 			 -->
 			<div class="container-fluid">
 				<c:if test="${empty user }">

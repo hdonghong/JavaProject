@@ -3,7 +3,45 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
+<head>
+	<script type="text/javascript">
+		var ws; // 一个websocket对象就是一个通信管道
+		var target = "ws://localhost:8080/taskmanagement/echo";
 
+		// 开启连接
+		function subOpen() {
+
+			if ('WebSocket' in window) {
+				ws = new WebSocket(target);
+			} else if ('MozWebSocket' in window) {
+				ws = new MozWebSocket(target);
+			} else {
+				alert('WebSocket is not supported by this browser.');
+				return;
+			}
+
+			ws.onmessage=function(event) {
+				document.getElementById("img_news").title = event.data;
+			}
+		}
+
+        window.setTimeout(subOpen,500);
+
+		// 将用户的uid发送到服务器端
+        function subSend() {
+			ws.send('${user.uid}');
+		}
+
+		// 关闭时或刷新时关闭当前socket
+        window.onunload = function() {
+            ws.close();
+        }
+
+        // 5秒轮询
+		window.setInterval("subSend()",5000);
+	</script>
+</head>
+<body>
 		<!--
         	时间：2017-09-30 21:06:27
         	描述：Logo图
@@ -21,8 +59,8 @@
 				</c:if>
 				<c:if test="${not empty user }">
 					<li>
-						<a title="查看新消息" href="${pageContext.request.contextPath }/record?method=getMessages&currPage=1">
-							<img src="${pageContext.request.contextPath }/img/user-nav-3.png">
+						<a href="${pageContext.request.contextPath }/record?method=getMessages&currPage=1">
+							<img src="${pageContext.request.contextPath }/img/user-nav-3.png" id="img_news" >
 						</a>
 					</li>
 					<li>${user.name }，你好</li>
@@ -108,3 +146,4 @@
 				<!-- /.container-fluid -->
 			</nav>
 		</div>
+</body>

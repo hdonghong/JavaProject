@@ -136,4 +136,16 @@ public class RecordDaoImpl implements RecordDao {
         String sql = "select * from record where uid = ? ";
         return qr.query(sql, new BeanListHandler<Record>(Record.class), user.getUid());
     }
+
+    /**
+     * 查询新(未读)消息数量
+     * @param user
+     * @return
+     */
+    @Override
+    public int getNews(User user) throws SQLException {
+        QueryRunner qr = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql = "select count(*) from record where uid= ? and state in (3,4) and is_read <> 1 ";
+        return ((Long)qr.query(sql, new ScalarHandler<>(), user.getUid())).intValue();
+    }
 }

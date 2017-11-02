@@ -38,5 +38,6 @@
     <orderEntry type="library" name="Maven: jaxen:jaxen:1.1.6" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.websocket:javax.websocket-api:1.1" level="project" />
   </component>
 </module>

@@ -88,4 +88,14 @@ public class RecordServiceImpl implements RecordService {
     public List<Record> getRecords(User user) throws SQLException {
         return ((RecordDao) BeanFactory.getBean("RecordDao")).getRecords(user);
     }
+
+    /**
+     * 查看新消息
+     * @param user
+     * @return
+     */
+    @Override
+    public int getNews(User user) throws SQLException {
+        return ((RecordDao) BeanFactory.getBean("RecordDao")).getNews(user);
+    }
 }

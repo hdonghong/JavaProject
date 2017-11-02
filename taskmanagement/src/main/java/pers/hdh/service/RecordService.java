@@ -19,4 +19,6 @@ public interface RecordService {
     Record getRecord(String rid) throws SQLException;
 
     List<Record> getRecords(User user) throws SQLException;
+
+    int getNews(User user) throws SQLException;
 }
