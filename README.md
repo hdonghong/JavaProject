@@ -35,3 +35,8 @@
 <p>
 	基于JavaMail实现的一个发送邮件案例。
 </p>
+
+## 6.webStore
+<p>
+	基于SSH框架实现的一个商城案例，整合了JavaMail、Alipay、Yibao等第三方API
+</p>
