@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="team.webstore.domain.Orders" table="orders">
+		<id name="oid" column="oid">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="total" column="total"></property>
+		<property name="state" column="state"></property>
+		<property name="address" column="address"></property>
+		<property name="name" column="name"></property>
+		<property name="telephone" column="telephone"></property>
+		<property name="create_at" column="create_at"></property>
+		<property name="update_at" column="update_at"></property>
+		
+		<many-to-one name="user" class="team.webstore.domain.User" column="uid" ></many-to-one>
+		<set name="orderItems" cascade="save-update" >
+			<key column="oid"></key>
+			<one-to-many class="team.webstore.domain.OrderItem"/>
+		</set>
+	</class>
+</hibernate-mapping>

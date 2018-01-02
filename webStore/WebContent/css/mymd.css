@@ -1,0 +1,60 @@
+
+
+
+
+#popularShop,#newestShop{
+	-moz-box-shadow:0px 1px 7px #333333; -webkit-box-shadow:0px 1px 7px #333333; box-shadow:0px 1px 7px #333333;
+	margin-top:20px;
+	margin-bottom:20px;
+	padding:2px;
+}
+
+.cod-md-6{
+	padding:0;
+	margin:0;
+}
+
+.spilitRow{
+	width:400px;
+	height:1px;
+	background-color:#e6e6e6;
+	position:absolute;
+	display:block;
+	margin:0;
+	padding:0;
+	top:200px;
+	left:530px;
+}
+
+.spilitCol{
+	width:1px;
+	height:350px;
+	background-color:#e6e6e6;
+	position:absolute;
+	display:block;
+	margin:0;
+	padding:0;
+	top:12px;
+	
+}
+
+
+.moveableImg{
+display: inline-block;-webkit-transition-property: transform; /* Safari and Chrome */
+-webkit-transition-duration: 0.5s;
+
+}
+
+.moveableImg:hover{
+	
+ -webkit-transform:scale(1.03);
+}
+
+
+
+.col-md-2{
+	padding:2px;
+
+	
+}
+

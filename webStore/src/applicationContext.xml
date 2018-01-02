@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop     http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx      http://www.springframework.org/schema/tx/spring-tx.xsd ">
+        
+
+	<!-- Spring整合hibernate -->
+
+	<!-- 配置加载hibernate.cfg.xml文件 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+<!-- 		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property> -->
+
+		<!-- 配置数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 配置可选项 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				
+				<!-- 开启二级缓存 -->
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<!-- 注册二级缓存区域工厂 -->
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<!-- 开启query缓存总开关 -->
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				
+			</props>
+		</property>
+		<!-- 配置映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>team/webstore/domain/user.hbm.xml</value>
+				<value>team/webstore/domain/category.hbm.xml</value>
+				<value>team/webstore/domain/product.hbm.xml</value>
+				<value>team/webstore/domain/orders.hbm.xml</value>
+				<value>team/webstore/domain/orderitem.hbm.xml</value>
+				<value>team/webstore/domain/admin.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql:///webStore?useUnicode=true&amp;characterEncoding=UTF8"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="toor"></property>
+	</bean>
+	
+	<!-- 配置平台事务管理器  -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 引入javamail -->
+	<bean id="sender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.qq.com" />
+		<property name="port" value="587" />
+		<property name="username" value="799108252" />
+		<property name="password" value="qkbylzyzvwmsbgah" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+		</property>
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	
+	<!-- 开启注解事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- 首页模块 -->
+	<bean id="indexAction" class="team.webstore.web.action.IndexAction" scope="prototype"></bean>
+	
+    <!-- 用户模块 -->
+	<bean id="userAction" class="team.webstore.web.action.UserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="userService" class="team.webstore.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+		<property name="mailSender" ref="sender"></property>
+	</bean>
+	<bean id="userDao" class="team.webstore.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+    <!-- 分类模块 -->
+	<bean id="categoryAction" class="team.webstore.web.action.CategoryAction" scope="prototype">
+		<property name="categoryService" ref="categoryService"></property>
+	</bean>
+	<bean id="categoryService" class="team.webstore.service.impl.CategoryServiceImpl">
+		<property name="categoryDao" ref="categoryDao"></property>
+	</bean>
+	<bean id="categoryDao" class="team.webstore.dao.impl.CategoryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+    <!-- 商品模块 -->
+	<bean id="productAction" class="team.webstore.web.action.ProductAction" scope="prototype">
+		<property name="productService" ref="productService"></property>
+	</bean>
+	<bean id="productService" class="team.webstore.service.impl.ProductServiceImpl">
+		<property name="productDao" ref="productDao"></property>
+	</bean>
+	<bean id="productDao" class="team.webstore.dao.impl.ProductDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	<!-- 购物车模块 -->
+	<bean id="cartAction" class="team.webstore.web.action.CartAction"  scope="prototype">
+		<property name="productService" ref="productService"></property>
+	</bean>
+	
+	<!-- 订单模块 -->
+	<bean id="orderAction" class="team.webstore.web.action.OrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"></property>
+	</bean>
+	<bean id="orderService" class="team.webstore.service.impl.OrderServiceImpl">
+		<property name="orderDao" ref="orderDao"></property>
+	</bean>
+	<bean id="orderDao" class="team.webstore.dao.impl.OrderDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 后台管理模块 -->
+	<!-- 管理员模块 -->
+	<bean id="adminAction" class="team.webstore.web.action.AdminAction" scope="prototype">
+		<property name="adminService" ref="adminService"></property>
+	</bean>
+	<bean id="adminService" class="team.webstore.service.impl.AdminServiceImpl">
+		<property name="adminDao" ref="adminDao"></property>
+	</bean>
+	<bean id="adminDao" class="team.webstore.dao.impl.AdminDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 分类管理 -->
+	<bean id="adminCategoryAction" class="team.webstore.web.action.AdminCategoryAction" scope="prototype">
+		<property name="categoryService" ref="categoryService"></property>
+	</bean>
+	<!-- 商品管理 -->
+	<bean id="adminProductAction" class="team.webstore.web.action.AdminProductAction" scope="prototype">
+		<property name="productService" ref="productService"></property>
+	</bean>
+	<!-- 订单管理 -->
+	<bean id="adminOrderAction" class="team.webstore.web.action.AdminOrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"></property>
+	</bean>
+	<!-- 用户管理 -->
+	<bean id="adminUserAction" class="team.webstore.web.action.AdminUserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+</beans>

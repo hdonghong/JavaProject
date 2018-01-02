@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="team.webstore.domain.User" table="user">
+		<id name="uid" column="uid">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="username" column="username"></property>
+		<property name="password" column="password"></property>
+		<property name="name" column="name"></property>
+		<property name="email" column="email"></property>
+		<property name="state" column="state"></property>
+		<property name="create_at" column="create_at"></property>
+		<property name="update_at" column="update_at"></property>
+	</class>
+</hibernate-mapping>

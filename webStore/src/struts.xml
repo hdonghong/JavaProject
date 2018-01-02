@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="webStore" namespace="/" extends="struts-default">
+		
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<interceptor name="UserInterceptor" class="team.webstore.web.interceptor.UserInterceptor"></interceptor>
+			<interceptor name="AdminInterceptor" class="team.webstore.web.interceptor.AdminInterceptor"></interceptor>
+		</interceptors>
+		
+		<global-results>
+			<result name="msg">/jsp/msg.jsp</result>
+			<result name="adminLogin" type="redirect">/admin/index.jsp</result>
+		</global-results>
+		
+		<!-- 前台部分 -->
+		<!-- 首页模块 -->
+		<action name="" class="indexAction" method="index" >
+			<result name="index" type="chain">product_showIndex</result>
+		</action>
+		
+		<!-- 用户模块 -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="login" type="redirect">/jsp/login.jsp</result>
+			<result name="loginOk" type="redirect">/</result>
+			<result name="person_info" type="redirect">/jsp/person_info.jsp</result>
+			<result name="resetPassword">/jsp/resetPassword.jsp</result>
+			
+			<!-- 添加拦截器 -->
+			<interceptor-ref name="UserInterceptor">
+				<param name="includeMethods" >update</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+		<!-- 分类模块 -->
+		<action name="category_*" class="categoryAction" method="{1}">
+		</action>
+		
+		<!-- 商品模块 -->
+		<action name="product_*" class="productAction" method="{1}">
+			<result name="index" >/jsp/index.jsp</result>
+			<result name="product_info" >/jsp/product_info.jsp</result>
+			<result name="product_list" >/jsp/product_list.jsp</result>
+		</action>
+		
+		<!-- 购物车模块 -->
+		<action name="cart_*" class="cartAction" method="{1}">
+			<result name="cart" type="redirect">/jsp/cart.jsp</result>
+			<!-- 添加拦截器 -->
+			<interceptor-ref name="UserInterceptor"/>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+		<!-- 订单模块 -->
+		<action name="order_*" class="orderAction" method="{1}">
+			<result name="order_info">/jsp/order_info.jsp</result>
+			<result name="order_list">/jsp/order_list.jsp</result>
+			<result name="order_comment">/jsp/order_comment.jsp</result>
+			<result name="order_findByPage" type="redirectAction">order_findByPage</result>
+			<result name="order_alipay">/jsp/alipay.index.jsp</result>
+			
+			<!-- 添加拦截器 -->
+			<interceptor-ref name="UserInterceptor"/>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+		<!-- 后台管理部分 -->
+		<!-- 管理员模块 -->
+		<action name="admin_*" class="adminAction" method="{1}">
+			<result name="loginOk" type="redirect">/admin/home.jsp</result>
+		</action>
+		<!-- 分类管理 -->
+		<action name="adminCategory_*" class="adminCategoryAction" method="{1}">
+			<result name="category_list">/admin/category/list.jsp</result>
+			<result name="category_edit">/admin/category/edit.jsp</result>
+			<result name="category_findAll" type="redirectAction">adminCategory_findAll</result>
+			<result name="category_coll">/admin/collection/category_coll.jsp</result>
+			
+			<!-- 添加拦截器 -->
+			<interceptor-ref name="AdminInterceptor"/>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		<!-- 商品管理 -->
+		<action name="adminProduct_*" class="adminProductAction" method="{1}">
+			<result name="product_list">/admin/product/list.jsp</result>
+			<result name="product_edit">/admin/product/edit.jsp</result>
+			<result name="product_findAll" type="redirectAction">adminProduct_findAll</result>
+			<result name="product_coll">/admin/collection/product_coll.jsp</result>
+			
+			<!-- 添加拦截器 -->
+			<interceptor-ref name="AdminInterceptor"/>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		<!-- 订单管理 -->
+		<action name="adminOrder_*" class="adminOrderAction" method="{1}">
+			<result name="order_list">/admin/order/list.jsp</result>
+			<result name="order_findAll" type="redirectAction">adminOrder_findAll</result>
+			
+			<!-- 添加拦截器 -->
+			<interceptor-ref name="AdminInterceptor"/>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		<!-- 用户管理 -->
+		<action name="adminUser_*" class="adminUserAction" method="{1}">
+			<result name="user_list">/admin/user/list.jsp</result>
+			<result name="user_edit">/admin/user/edit.jsp</result>
+			<result name="user_findAll" type="redirectAction">adminUser_findAll</result>
+			
+			<!-- 添加拦截器 -->
+			<interceptor-ref name="AdminInterceptor"/>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+	</package>
+</struts>
