@@ -8,6 +8,7 @@
 3. campuscard
 4. taskmanagement
 5. maildemo
+6. webStore
 
 <hr/><br/>
 
