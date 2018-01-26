@@ -9,6 +9,7 @@
 *	[4.taskmanagement](#4)
 *	[5.maildemo](#5)
 *	[6.webStore](#6)
+*	[7.webStore](#7)
 
 <hr/><br/>
 
@@ -58,4 +59,12 @@
 </p>
 <p>
 	完成于：2017-12-12
+</p>
+
+<h2 id="7">7.business_management</h2>
+<p>
+	基于SSH框架实现的商务管理平台。
+</p>
+<p>
+	完成于：2018
 </p>
