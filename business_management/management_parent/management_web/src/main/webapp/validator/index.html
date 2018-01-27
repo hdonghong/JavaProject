@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Language" content="zh-cn">
+<TITLE>  </TITLE>
+</HEAD>
+	<script language="JavaScript">
+	function preSubmit(serviceName)
+    {
+    	 if(serviceName=="返回"){
+    	 		return true;	
+    	 }else if (serviceName=="提交"){
+    	 		return _CheckAll(true);
+    	 }else if (serviceName=="bbb"){
+    	 		return _CheckAll(true);	
+    	 }
+    }
+	</script>	
+<script language="javascript" src="CheckImp.js">
+</script>
+<script language="javascript" src="CheckErrControl.js">
+</script>
+<script language="javascript" src="CheckFrame.js">
+</script>
+<BODY>
+<div id="ErrDIV" style="overflow:hidden;FILTER: alpha(opacity=80);position:absolute;left:807px;top:58px;width:300;height:150;z-index:15;display:none; margin-right:0; margin-bottom:0" ondragstart="start(event.x, event.y)" ondrag="move(event.x, event.y)" ondragend="end()">
+	<IFrame id="ErrFrame" frameborder="0" src="ErrMsg.html" style="overflow:hidden"></IFrame>
+</div>
+<form name="form1">
+
+<p>校验框架：主要通过 dataType dispName属性来实现，对特殊控件增加其他属性&nbsp; minLength, maxLength, minSelect, maxSelect, 
+maxValue, fileType</p>
+
+<table border="1" width="100%" id="table1">
+	<tr>
+		<td align="center">
+
+	1</td>
+		<td>
+
+	文本框</td>
+		<td>
+
+	年龄：<INPUT TYPE="text" NAME="iama"  dataType="非空正整数" maxValue="100" dispName="1 年龄" onchange="_CheckValidate(this)"></td>
+	</tr>
+	<tr>
+		<td align="center">
+	2</td>
+		<td>
+	单选框</td>
+		<td>
+	学历：<INPUT TYPE="radio" NAME="b" dataType="非空单选按钮" dispName="2 学历">大学
+	<INPUT TYPE="radio" NAME="b" dataType="非空单选按钮" dispName="2 学历">研究生
+	
+	</td>
+	</tr>
+	<tr>
+		<td align="center">
+	3</td>
+		<td>
+	复选框</td>
+		<td>
+	爱好：<INPUT TYPE="checkbox" NAME="c" dataType="非空复选框" value="1" dispName="3 爱好" minSelect="2" maxSelect="3"> 计算机
+	<INPUT TYPE="checkbox" NAME="c" dataType="非空复选框" value="2" dispName="3 爱好" minSelect="2" maxSelect="3"> 音乐
+	<INPUT TYPE="checkbox" NAME="c" dataType="非空复选框" value="3" dispName="3 爱好" minSelect="2" maxSelect="3"> 历史
+	<INPUT TYPE="checkbox" NAME="c" dataType="非空复选框" value="4" dispName="3 爱好" minSelect="2" maxSelect="3"> 跳舞
+	</td>
+	</tr>
+	<tr>
+		<td align="center">
+	4</td>
+		<td>
+	密码框</td>
+		<td>
+	<INPUT TYPE="password" name="f" onchange="checkValidate(this);"></td>
+	</tr>
+	<tr>
+		<td align="center">
+	
+	5</td>
+		<td>
+	
+	文件选择框</td>
+		<td>
+	
+	<input type="file" name="F1" size="20" dataType="非空文件选择" fileType="xml,html,xls" maxSize="0.1" onchange="_CheckValidate(this);" dispName="5 上传文件"></td>
+	</tr>
+	<tr>
+		<td align="center">
+	
+	6</td>
+		<td>
+	
+	下拉列表、下拉框</td>
+		<td valign="top">
+
+		
+	<SELECT NAME="i" onchange="checkValidate(this);" size="3" multiple dataType="非空下拉列表" dispName="6 下拉列表">
+	<option value="a">a</option>
+	<option value="b">b</option>
+	</SELECT>
+	
+	<SELECT NAME="h" size="1" dataType="非空下拉框" dispName="6 下拉框" >
+	<option value="">--请选择--</option>
+	<option value="a">a</option>
+	<option value="b">b</option>
+	</SELECT>	
+	
+	</td>
+	</tr>
+	<tr>
+		<td align="center">
+	
+	7</td>
+		<td>
+	
+	文本域</td>
+		<td>
+	
+	<TEXTAREA NAME="g1" ROWS="3" COLS="40" onchange="_CheckValidate(this);" dataType="非空字符串" dispName="7 文本域" minLength="2" maxLength="5">123456789</TEXTAREA></td>
+	</tr>
+	<tr>
+		<td align="center">
+			
+			8</td>
+		<td>
+			
+			日期类型</td>
+		<td>
+			
+			<input name="date1" type="text" value="" dataType="非空日期" dispName="8 日期1"/>
+			<input name="date2" type="text" value="" dataType="非空日期" dispName="8 日期2"/>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	<INPUT TYPE="button" name="d2" value="提交" onclick="_Submit('aaa',null,'bbb');">
+</p>
+</form>
+</BODY>
+</HTML>

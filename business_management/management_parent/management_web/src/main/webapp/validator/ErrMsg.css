@@ -1,0 +1,4 @@
+.errMsgDiv{
+	Z-INDEX: 3; WIDTH:300; POSITION: absolute; height:100%; top: 0px; left: 0px;
+	background:url(../skin/default/images/errmsg/err_bg.gif) no-repeat;
+}

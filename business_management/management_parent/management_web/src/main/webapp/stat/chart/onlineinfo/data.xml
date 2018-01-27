@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart>
+	<series>
+		<value xid="0">0</value>
+		<value xid="1">1</value>
+		<value xid="2">2</value>
+		<value xid="3">3</value>
+		<value xid="4">4</value>
+		<value xid="5">5</value>
+		<value xid="6">6</value>
+		<value xid="7">7</value>
+		<value xid="8">8</value>
+		<value xid="9">9</value>
+	</series>
+	<graphs>
+		<graph color="#00CC00" title="">
+			<value xid="0">16</value>
+			<value xid="1">12</value>
+			<value xid="2">14</value>
+			<value xid="3">21</value>
+			<value xid="4">40</value>
+			<value xid="5">21</value>
+			<value xid="6">21</value>
+			<value xid="7">21</value>
+			<value xid="8">24</value>
+			<value xid="9">118</value>
+
+		</graph>
+		<graph color="#ffCC00" title="">
+			<value xid="0">316</value>
+			<value xid="1">12</value>
+			<value xid="2">34</value>
+			<value xid="3">21</value>
+			<value xid="4">30</value>
+			<value xid="5">21</value>
+			<value xid="6">31</value>
+			<value xid="7">11</value>
+			<value xid="8">24</value>
+			<value xid="9">88</value>
+
+		</graph>
+	</graphs>
+</chart>

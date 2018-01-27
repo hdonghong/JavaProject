@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart>
+	<series>
+		<value xid="0">西安局(347)</value>
+		<value xid="1">咸阳局(187)</value>
+		<value xid="2">铜川局(132)</value>
+		<value xid="3">延安局(83)</value>
+		<value xid="4">商洛局(151)</value>
+		<value xid="5">汉中局(181)</value>
+		<value xid="6">宝鸡局(195)</value>
+		<value xid="7">安康局(137)</value>
+		<value xid="8">榆林供电公司(54)</value>
+		<value xid="9">安康水电厂(66)</value>
+		<value xid="10">西北电建总公司(8)</value>
+		<value xid="11">电建一公司(109)</value>
+		<value xid="12">电建三公司(60)</value>
+		<value xid="13">电建四公司(70)</value>
+		<value xid="14">送变电工程公司(90)</value>
+		<value xid="15">西北器材总厂(10)</value>
+		<value xid="16">宝鸡铁塔厂(25)</value>
+		<value xid="17">银河线材公司(24)</value>
+		<value xid="18">西安电力机械厂(61)</value>
+		<value xid="19">宝鸡电力设备厂(16)</value>
+		<value xid="20">秦川电力设备厂(13)</value>
+		<value xid="21">电力科学研究院(38)</value>
+		<value xid="22">西安电力中心医院(30)</value>
+		<value xid="23">陕西电力职工培训中心(49)</value>
+		<value xid="24">陕西电力物业管理有限公司(25)</value>
+	</series>
+	<graphs>
+		<graph gid="30" color="#FFCC00" gradient_fill_colors="#111111, #1A897C">
+			<value xid="0" description="" url="">3483</value>
+			<value xid="1" description="" url="">2061</value>			
+			<value xid="2" description="" url="">1157</value>
+			<value xid="3" description="" url="">850</value>
+			<value xid="4" description="" url="">1463</value>
+			<value xid="5" description="" url="">1844</value>
+			<value xid="6" description="" url="">2023</value>
+			<value xid="7" description="" url="">1451</value>
+			<value xid="8" description="" url="">500</value>
+			<value xid="9" description="" url="">380</value>
+			<value xid="10" description="" url="">123</value>
+			<value xid="11" description="" url="">1094</value>
+			<value xid="12" description="" url="">554</value>
+			<value xid="13" description="" url="">1514</value>
+			<value xid="14" description="" url="">1122</value>
+			<value xid="15" description="" url="">85</value>
+			<value xid="16" description="" url="">287</value>
+			<value xid="17" description="" url="">139</value>
+			<value xid="18" description="" url="">569</value>
+			<value xid="19" description="" url="">102</value>
+			<value xid="20" description="" url="">67</value>
+			<value xid="21" description="" url="">184</value>
+			<value xid="22" description="" url="">217</value>
+			<value xid="23" description="" url="">238</value>
+			<value xid="24" description="" url="">403</value>
+	</graph>
+	</graphs>
+	
+  <labels>         
+    <label lid="0">
+      <x>0</x>                   
+      <y>20</y>                  
+      <rotate></rotate>          
+      <width></width>            
+      <align>center</align>        
+      <text_color></text_color>  
+      <text_size></text_size>    
+      <text>                     
+        <![CDATA[<b>陕西公司现有班组2388个, 班组长2890名, 班组员工24236名</b>]]>
+      </text>        
+    </label>
+  </labels>	
+</chart>

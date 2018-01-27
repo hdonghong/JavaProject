@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+	<title>Destroydrop &raquo; Javascripts &raquo; Tree</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="StyleSheet" href="dtree.css" type="text/css" />
+	<script type="text/javascript" src="dtree.js"></script>
+
+</head>
+
+<body>
+
+<h1><a href="/">Destroydrop</a> &raquo; <a href="/javascripts/">Javascripts</a> &raquo; <a href="/javascripts/tree/">Tree</a></h1>
+
+<h2>Example</h2>
+
+<div class="dtree">
+
+	<p><a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a> | <a href="javascript: d.openTo('01040102',true);">open node</a></p>
+
+	<script type="text/javascript">
+		<!--
+		
+		d = new dTree('d','');
+
+d.add('01','-1',"ϵͳ�˵�","");
+d.add('0101','01',"ϵͳ��ҳ","/home/main.do");
+d.add('010101','0101',"�鿴","/workplan/dailyViewAction.do");
+d.add('010102','0101',"�½�","/workplan/dailyCreateAction.do");
+d.add('010103','0101',"�޸�","/workplan/dailyUpdateAction.do");
+d.add('010104','0101',"ɾ��","/workplan/dailyDeleteAction.do");
+d.add('010105','0101',"��ѯ","/workplan/dailySearchAction.do");
+d.add('0102','01',"֪ʶ����","/knowlege/welcome.do");
+d.add('0103','01',"������Ϣ","/base_code/welcome.do");
+d.add('0104','01',"ϵͳ����","/system_admin/welcome.do");
+d.add('010401','0104',"Ȩ�޹���","");
+d.add('01040101','010401',"��֯����","/system_admin/organizationListAction.do");
+d.add('0104010101','01040101',"�鿴","/system_admin/deptViewAction.do");
+d.add('0104010102','01040101',"�½�","/system_admin/deptCreateAction.do");
+d.add('0104010103','01040101',"�޸�","/system_admin/deptUpdateAction.do");
+d.add('0104010104','01040101',"ɾ��","/system_admin/deptDeleteAction.do");
+d.add('0104010105','01040101',"��ѯ","/system_admin/deptSearchAction.do");
+d.add('0104010106','01040101',"����","/system_admin/deptSortAction.do");
+d.add('01040102','010401',"�û�����","/system_admin/userListAction.do");
+d.add('0104010201','01040102',"�鿴","/system_admin/userViewAction.do");
+d.add('0104010202','01040102',"�½�","/system_admin/userCreateAction.do");
+d.add('0104010203','01040102',"�޸�","/system_admin/userUpdateAction.do");
+d.add('0104010204','01040102',"ɾ��","/system_admin/userDeleteAction.do");
+d.add('0104010205','01040102',"��ѯ","/system_admin/userSearchAction.do");
+d.add('0104010206','01040102',"����","/system_admin/userSortAction.do");
+d.add('0104010207','01040102',"��������","/system_admin/userResetPassAction.do");
+d.add('0104010208','01040102',"����","/system_admin/userToUseAction.do");
+d.add('0104010209','01040102',"��ֹ","/system_admin/userStopAction.do");
+d.add('01040103','010401',"��ɫ����","/system_admin/roleListAction.do");
+d.add('0104010301','01040103',"�鿴","/system_admin/roleViewAction.do");
+d.add('0104010302','01040103',"�½�","/system_admin/roleCreateAction.do");
+d.add('0104010303','01040103',"�޸�","/system_admin/roleUpdateAction.do");
+d.add('0104010304','01040103',"ɾ��","/system_admin/roleDeleteAction.do");
+d.add('0104010305','01040103',"��ѯ","/system_admin/roleSearchAction.do");
+d.add('01040104','010401',"��־����","/system_admin/roleListAction.do");
+d.add('010402','0104',"ϵͳ����","");
+d.add('01040201','010402',"ϵͳ����","/system_admin/organizationListAction.do");
+d.add('01040202','010402',"���ݹ���","/system_admin/userListAction.do");
+d.add('0105','01',"��Ŀ����","/project_sample/welcome.do");
+document.write(d);
+
+
+
+		//-->
+	</script>
+
+</div>
+
+<p><a href="mailto&#58;drop&#64;destroydrop&#46;com">&copy;2002-2003 Geir Landr&ouml;</a></p>
+
+</body>
+
+</html>

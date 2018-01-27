@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="stylesheet" rev="stylesheet" type="text/css" href="ErrMsg.css" media="all"/>
+	<script language="jscript">
+		function closeErr(){
+			parent.ErrDIV.style.display="none";
+		}
+		function movepic(img_name,img_src) {
+			document[img_name].src=img_src;
+		}
+		function dragStart(){
+			parent.ErrDIV.dragDrop(); 
+		}
+	</script>
+</head>
+<body Scroll="no">
+<DIV class="errMsgDiv">
+	  <TABLE border="0"  height="100%" cellSpacing="1" cellPadding="0"  width="100%">
+			<TR>
+			<TD vAlign="bottom" style="padding-top:3px;padding-right:2px" NOWRAP="true" >
+				<TABLE cellSpacing="0" cellPadding="1" width="100%" border="0" style="top:2px;">
+					<TR>
+						<TD onmousedown="dragStart()" style="cursor:move;"></TD>
+						<TD align="rigth" valign="bomtom" width="15">
+							<DIV align="right" style="padding-bottom:5px;margin-right:5px;">
+								<A onmouseover="movepic('button','../skin/default/images/errmsg/close.gif')" 
+									onmouseout="movepic('button','../skin/default/images/errmsg/close.gif')" href="#">
+									<IMG onClick="closeErr()" src="../skin/default/images/errmsg/close.gif" title="关闭" border="0" name="button">
+								</A>
+							</DIV>
+						</TD>
+					</TR>
+				</TABLE>
+			</TD>
+			</TR>
+			<TR>
+				<TD height="99%">
+					 <TABLE height="99%" cellSpacing="0" cellPadding="0" width="97%" border="0">
+						<TR>
+							<TD vAlign="top" >
+								<div id="ErrDiv" style="width:100%;height:91%;overflow:auto;font-size:12px;padding:18px;"></div>
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+	</TABLE>
+</DIV>
+</body>
+</html>

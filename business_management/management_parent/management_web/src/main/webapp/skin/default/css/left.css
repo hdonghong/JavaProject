@@ -1,0 +1,113 @@
+
+/* sidebar */
+.clear_left{clear:both;}
+.sidebar_t{
+	height:10px;
+}
+
+.sidebar_t_l{
+	width:10px;
+	height:10px;
+	background:url(../images/left/t_l_bg.jpg) no-repeat left top;
+	float:left;
+}
+
+.sidebar_t_r{
+	width:10px;
+	height:10px;
+	background:url(../images/left/t_r_bg.jpg) no-repeat right top;
+	float:right;
+}
+.sidebar_t_c{
+	height:10px;
+	float:left;	
+	overflow:hidden;
+}
+.sidebar_b_l{
+	width:10px;
+	height:10px;
+	background:url(../images/left/b_l_bg.jpg) no-repeat left bottom;
+	float:left;
+	
+}
+
+.sidebar_b_r{
+	width:10px;
+	height:10px;
+	background:url(../images/left/b_r_bg.jpg) no-repeat right bottom;
+	float:right;
+	
+}
+.sidebar {
+    float: left;
+    margin-bottom:10px;
+    border:1px solid #2b927d;
+    background:#e5fffb;
+    overflow:hidden;
+    width:100%;
+     zoom:1;
+   
+}
+.sidebar-hide {
+    display: none;
+    float: right;
+}
+#innerSidebar {
+    padding-top: 4px;
+}
+
+
+
+
+/****** Panel ******/
+.panel {
+    margin-bottom:5px;
+	position:relative;	
+}
+
+.panel_icon{
+	position:absolute;
+	left:5px;
+	top:3px;
+	margin:0px auto;
+}
+
+.panel-title {
+	padding-bottom: 3px;
+	text-indent:40px;
+	height:24px;
+	line-height:24px;
+	font-size: 12px;
+    color:#00544a;
+	text-align:left;
+	background:url("../images/left/left_title.jpg") no-repeat top left;
+	margin-top:5px;
+	font-weight:bold;	
+	cursor:pointer;
+}
+
+.panel-title img{
+	padding-left:5px;
+}
+.panel-content {
+	text-align:left;
+	padding:0px 20px;
+}
+.panel_content_tree{
+	margin-top:5px;
+	padding: 10px 5px;
+	text-align:left;
+}
+
+.panel-content ul {
+    padding: 0px;
+    margin: 0px;
+}
+.panel-content li {
+    overflow:hidden;
+    list-style:none;
+    margin-top:8px;
+}
+.panel-content li a{text-decoration:none; background:url("../images/left/left_bar_a.jpg") no-repeat left;width:135px;height:23px;padding-left:24px; line-height:23px;}
+.panel-content li a:hover{text-decoration:none; background:url("../images/left/left_bar_ah.jpg") no-repeat left;width:135px;height:23px;color:#218c7e;}
+.panel-content a.focus, .panel-content a.focus:hover{text-decoration:none; background:url("../images/left/left_bar_ah.jpg") no-repeat left;width:135px;height:23px;;color:#00544a; font-weight:bold;}
