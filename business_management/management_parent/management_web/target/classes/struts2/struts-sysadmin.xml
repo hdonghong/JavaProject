@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+<struts>
+	<!-- 该属性指定视图标签默认的视图主题，该属性的默认值是xhtml。 -->
+	<constant name="struts.ui.theme" value="simple"/>
+	<!-- 
+		该属性设置struts2应用是否使用开发模式。如果设置该属性为true，则可以在应用出错时显示更多、更友好的出错提示。
+		该属性只接受true和flase两个值，该属性的默认值是false。通常，应用在开发阶段，将该属性设置为true，当进入产品发布阶段后，则该属性设置为false。
+	 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 指定Web应用的默认编码集。 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<!-- 分离struts2的配置文件，包名唯一 -->
+	<package name="sysadmin" namespace="/sysadmin" extends="struts-default">
+		<action name="deptAction_*" class="deptAction" method="{1}">
+		<!-- 请求转发是服务器端发起的，能够访问到/WEB-INF虾的内容；
+			   重定向是客户端发起的，不能访问到 -->
+			<result name="list">/WEB-INF/pages/sysadmin/dept/jDeptList.jsp</result>
+		</action>
+	</package>
+</struts>

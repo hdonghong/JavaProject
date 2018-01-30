@@ -3,7 +3,7 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
     
-<hibernatee-mapping package="pers.hdh.management.domain">
+<hibernate-mapping package="pers.hdh.management.domain">
 	<class name="Dept" table="DEPT_P">
 		<id name="id" column="DEPT_ID" >
 			<generator class="uuid" />
@@ -16,4 +16,4 @@
 		<many-to-one name="parent" column="PARENT_ID" class="Dept" ></many-to-one>
 		
 	</class>
-</hibernatee-mapping>
+</hibernate-mapping>

@@ -16,11 +16,11 @@
 
 	<package name="default" namespace="/" extends="struts-default">
 	
-		<action name="login" class="pers.hdh.manament.action.LoginAction" method="login">
+		<action name="login" class="loginAction" method="login">
 			<result name="login">/WEB-INF/pages/sysadmin/login/login.jsp</result>
 			<result name="success">/WEB-INF/pages/home/fmain.jsp</result>
 		</action>
-		<action name="homeAction_*" class="pers.hdh.manament.action.HomeAction" method="{1}">
+		<action name="homeAction_*" class="homeAction" method="{1}">
 			<result name="fmain">/WEB-INF/pages/home/fmain.jsp</result>
 			<result name="title">/WEB-INF/pages/home/title.jsp</result>
 			<result name="toleft">/WEB-INF/pages/${moduleName}/left.jsp</result>
@@ -28,4 +28,6 @@
 		</action>
 		
 	</package>
+	
+	<include file="struts2/struts-sysadmin.xml"></include>
 </struts>
