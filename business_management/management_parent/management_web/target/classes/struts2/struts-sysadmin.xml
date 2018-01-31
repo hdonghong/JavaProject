@@ -20,6 +20,10 @@
 		<!-- 请求转发是服务器端发起的，能够访问到/WEB-INF虾的内容；
 			   重定向是客户端发起的，不能访问到 -->
 			<result name="list">/WEB-INF/pages/sysadmin/dept/jDeptList.jsp</result>
+			<result name="toview">/WEB-INF/pages/sysadmin/dept/jDeptView.jsp</result>
+			<result name="tocreate">/WEB-INF/pages/sysadmin/dept/jDeptCreate.jsp</result>
+			<result name="toupdate">/WEB-INF/pages/sysadmin/dept/jDeptUpdate.jsp</result>
+			<result name="alist" type="redirect">deptAction_list</result>
 		</action>
 	</package>
 </struts>

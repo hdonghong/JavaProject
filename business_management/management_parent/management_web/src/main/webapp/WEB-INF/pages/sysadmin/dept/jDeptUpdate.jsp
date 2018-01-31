@@ -34,6 +34,7 @@
 	        <tr>
 	            <td class="columnTitle">上级部门：</td>
 	            <td class="tableContent">
+	            <!-- struts2标签默认具有自动回显，原理：默认取值栈的值 -->
 	            	<s:select name="parent.id" list="deptList"
 	            		listKey="id" listValue="deptName"
 	            		headerKey="" headerValue="--请选择--"

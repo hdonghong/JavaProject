@@ -14,7 +14,7 @@ import pers.hdh.management.utils.Page;
 
 
 /**
- * @Description:
+ * @Description: 通用的持久层实现类
  * @Author:		
  */
 public class BaseDaoImpl implements BaseDao{

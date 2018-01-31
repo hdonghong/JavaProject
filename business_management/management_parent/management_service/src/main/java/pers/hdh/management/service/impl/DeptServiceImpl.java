@@ -8,6 +8,7 @@ import pers.hdh.management.dao.BaseDao;
 import pers.hdh.management.domain.Dept;
 import pers.hdh.management.service.DeptService;
 import pers.hdh.management.utils.Page;
+import pers.hdh.management.utils.UtilFuns;
 
 /**
  * @ClassName	DeptServiceImpl	
@@ -40,6 +41,10 @@ public class DeptServiceImpl implements DeptService {
 
 	@Override
 	public void saveOrUpdate(Dept entity) {
+		// 处理业务逻辑的代码
+		if (UtilFuns.isEmpty(entity.getId())) {
+			entity.setState(1); // 1:启动；0:禁用；默认开启
+		}
 		baseDao.saveOrUpdate(entity);
 	}
 
