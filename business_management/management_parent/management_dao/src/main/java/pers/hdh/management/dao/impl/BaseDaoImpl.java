@@ -46,14 +46,18 @@ public class BaseDaoImpl implements BaseDao{
 	public <T> Page<T> findPage(String hql, Page<T> page, Class<T> entityClass, Object[] params){
 		
 		Query query = this.getSession().createQuery(hql);
+		Query query4Count = this.getSession().createQuery("select count(*)" + hql);
 		if(params!=null){
 			for (int i = 0; i < params.length; i++) {
 				query.setParameter(i, params[i]);
+				query4Count.setParameter(i, params[i]);
 			}
 		}
 		
 		//查询一次，获取记录总数
-		int count = query.list().size();
+//		int count = query.list().size();
+		// 优化 select count(*) + hql
+		int count = ((List<Number>)query4Count.list()).get(0).intValue();
 		page.setTotalRecord(count);
 		
 		//设置分页

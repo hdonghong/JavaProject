@@ -108,6 +108,8 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 		super.push(dept);
 		// 查询父部门
 		List<Dept> deptList = deptService.find("from Dept where state=1", Dept.class, null);
+		// 移除本部门
+		deptList.remove(dept);
 		// 压栈
 		super.put("deptList", deptList);
 		// 跳页面
@@ -130,6 +132,18 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 		deptService.saveOrUpdate(dept);
 		
 		// 跳页面
+		return "alist";
+	}
+	
+	/**
+	 * 删除部门
+	 * 解决批量删除
+	 * @return
+	 * @throws Exception
+	 */
+	public String delete() throws Exception {
+		String[] ids = model.getId().split(", ");
+		deptService.delete(Dept.class, ids);
 		return "alist";
 	}
 }

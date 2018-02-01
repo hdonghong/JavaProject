@@ -44,7 +44,10 @@ public class DeptServiceImpl implements DeptService {
 		// 处理业务逻辑的代码
 		if (UtilFuns.isEmpty(entity.getId())) {
 			entity.setState(1); // 1:启动；0:禁用；默认开启
-		}
+		} /*else if (entity.getId().equals(entity.getParent().getId())) {
+			// 不允许用户修改时选择自己作为自己的父部门
+			entity.setParent(null);
+		}*/
 		baseDao.saveOrUpdate(entity);
 	}
 
@@ -55,12 +58,22 @@ public class DeptServiceImpl implements DeptService {
 
 	@Override
 	public void deleteById(Class<Dept> entityClass, Serializable id) {
+		// 先删除该部门下的子部门
+		List<Dept> subDeptList = baseDao.find("from Dept where parent.id=?", entityClass, new Object[] {id});
+		if (subDeptList != null && subDeptList.size() > 0) {
+			for (Dept dept : subDeptList) {
+				// 递归查询
+				deleteById(entityClass, dept.getId());
+			}
+		}
 		baseDao.deleteById(entityClass, id);
 	}
 
 	@Override
 	public void delete(Class<Dept> entityClass, Serializable[] ids) {
-		baseDao.delete(entityClass, ids);
+		for (Serializable id : ids) {
+			this.deleteById(entityClass, id);
+		}
 	}
 
 }

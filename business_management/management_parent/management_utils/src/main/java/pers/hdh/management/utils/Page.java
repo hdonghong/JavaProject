@@ -95,7 +95,7 @@ public class Page<T> {
 		//sBuf.append("		alert(document.getElementById(\"pageNo\").value);");
 		sBuf.append("	}");
 		sBuf.append("</script>");
-		sBuf.append("<input type=\"hidden\" id=\"pageNo\" name=\"page.pageNo\" value=\"").append(curPageNo).append("\">");		//分页参数：当前页隐藏域
+		sBuf.append("<input type=\"hidden\" id=\"page.pageNo\" name=\"page.pageNo\" value=\"").append(curPageNo).append("\">");		//分页参数：当前页隐藏域
 
 		
 		sBuf.append("&nbsp;第").append(curPageNo).append("页 / 共").append(this.totalPage).append("页&nbsp;");
