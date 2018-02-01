@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="pers.hdh.management.domain">
+	<class name="Role" table="ROLE_P" dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="ROLE_ID" >
+			<generator class="uuid" />
+		</id>
+		<property name="name" column="NAME"></property>
+		<property name="remark" column="REMARK"></property>
+		<property name="orderNo" column="ORDER_NO"></property>
+		
+		<property name="createBy" column="CREATE_BY"></property>
+		<property name="createDept" column="CREATE_DEPT"></property>
+		<property name="createTime" column="CREATE_TIME"></property>
+		<property name="updateBy" column="UPDATE_BY"></property>
+		<property name="updateTime" column="UPDATE_TIME"></property>
+		
+		<!-- private Set<User> users = new HashSet<>();// 角色与用户 多对多 -->
+		<set name="users" table="ROLE_USER_P">
+			<key column="ROLE_ID"></key>
+			<many-to-many class="User" column="USER_ID"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

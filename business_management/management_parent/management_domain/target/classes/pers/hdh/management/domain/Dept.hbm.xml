@@ -14,6 +14,10 @@
 		
 		<!-- 自关联，子部门与父部门，多对一 -->
 		<many-to-one name="parent" column="PARENT_ID" class="Dept" ></many-to-one>
-		
+		<!-- private Set<User> users = new HashSet<>(); // 部门与用户 一对多 -->
+		<set name="users" >
+			<key column="DEPT_ID"></key>
+			<one-to-many class="User"/>
+		</set>
 	</class>
 </hibernate-mapping>

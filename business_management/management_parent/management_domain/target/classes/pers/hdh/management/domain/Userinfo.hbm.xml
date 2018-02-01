@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="pers.hdh.management.domain">
+	<class name="Userinfo" table="USER_INFO_P" dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="USER_INFO_ID" >
+			<generator class="assigned" />
+		</id>
+		
+		<property name="name" column="NAME"></property>
+		<property name="joinDate" column="JOIN_DATE"></property>
+		<property name="salary" column="SALARY"></property>
+		<property name="birthday" column="BIRTHDAY"></property>
+		<property name="gender" column="GENDER"></property>
+		<property name="station" column="STATION"></property>
+		<property name="telephone" column="TELEPHONE"></property>
+		<property name="degree" column="DEGREE"></property>
+		<property name="remark" column="REMARK"></property>
+		<property name="orderNo" column="ORDER_NO"></property>
+
+		<property name="createBy" column="CREATE_BY"></property>
+		<property name="createDept" column="CREATE_DEPT"></property>
+		<property name="createTime" column="CREATE_TIME"></property>
+		<property name="updateBy" column="UPDATE_BY"></property>
+		<property name="updateTime" column="UPDATE_TIME"></property>
+
+		<!-- private User manager;// 用户与直属领导 多对一 -->
+		<many-to-one name="manager" column="MANAGER_ID" class="User" />
+
+	</class>
+</hibernate-mapping>

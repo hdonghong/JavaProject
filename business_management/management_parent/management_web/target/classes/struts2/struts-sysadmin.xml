@@ -25,5 +25,21 @@
 			<result name="toupdate">/WEB-INF/pages/sysadmin/dept/jDeptUpdate.jsp</result>
 			<result name="alist" type="redirect">deptAction_list</result>
 		</action>
+		
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="list">/WEB-INF/pages/sysadmin/user/jUserList.jsp</result>
+			<result name="toview">/WEB-INF/pages/sysadmin/user/jUserView.jsp</result>
+			<result name="tocreate">/WEB-INF/pages/sysadmin/user/jUserCreate.jsp</result>
+			<result name="toupdate">/WEB-INF/pages/sysadmin/user/jUserUpdate.jsp</result>
+			<result name="alist" type="redirect">userAction_list</result>
+		</action>
+		
+		<action name="roleAction_*" class="roleAction" method="{1}">
+			<result name="list">/WEB-INF/pages/sysadmin/role/jRoleList.jsp</result>
+			<result name="toview">/WEB-INF/pages/sysadmin/role/jRoleView.jsp</result>
+			<result name="tocreate">/WEB-INF/pages/sysadmin/role/jRoleCreate.jsp</result>
+			<result name="toupdate">/WEB-INF/pages/sysadmin/role/jRoleUpdate.jsp</result>
+			<result name="alist" type="redirect">roleAction_list</result>
+		</action>
 	</package>
 </struts>

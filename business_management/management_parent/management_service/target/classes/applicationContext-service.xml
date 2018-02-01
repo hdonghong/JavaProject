@@ -18,5 +18,11 @@
 	<bean id="deptService" class="pers.hdh.management.service.impl.DeptServiceImpl">
 		<property name="baseDao" ref="baseDao" />
 	</bean>
+	<bean id="userService" class="pers.hdh.management.service.impl.UserServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="roleService" class="pers.hdh.management.service.impl.RoleServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
 	
 </beans>

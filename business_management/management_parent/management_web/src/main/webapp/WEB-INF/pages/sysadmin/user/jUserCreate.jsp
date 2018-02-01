@@ -55,11 +55,11 @@
 	        </tr>
         	<tr>
 	            <td class="columnTitle">姓名：</td>
-	            <td class="tableContent"><input type="text" name="userInfo.name" value=""/></td>
+	            <td class="tableContent"><input type="text" name="userinfo.name" value=""/></td>
 	            <td class="columnTitle">直属领导：</td>
 	            <td class="tableContent">
-	            	<s:select name="userInfo.manager.id" list="userList"
-	            		listKey="id" listValue="userInfo.name"
+	            	<s:select name="userinfo.manager.id" list="userList"
+	            		listKey="id" listValue="userinfo.name"
 	            		headerKey="" headerValue="--请选择--"
 	            	></s:select>
 	            </td>
@@ -67,50 +67,50 @@
 	        <tr>
 	            <td class="columnTitle">入职时间：</td>
 	            <td class="tableContent">
-					<input type="text" style="width:90px;" name="userInfo.joinDate"
+					<input type="text" style="width:90px;" name="userinfo.joinDate"
 	            	 value=""
 	             	onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/>
 				</td>
 				<td class="columnTitle">薪水：</td>
-	            <td class="tableContent"><input type="text" name="userInfo.salary" value=""/></td>
+	            <td class="tableContent"><input type="text" name="userinfo.salary" value=""/></td>
 	        </tr>		
 	        <tr>
 	            <td class="columnTitle">等级：</td>
 	            <td class="tableContentAuto">
-	            	<input type="radio" name="userInfo.degree" value="0" class="input"/>超级管理员
-	            	<input type="radio" name="userInfo.degree" value="1" class="input"/>跨部门跨人员
-	            	<input type="radio" name="userInfo.degree" value="2" class="input"/>管理所有下属部门和人员
-	            	<input type="radio" name="userInfo.degree" value="3" class="input"/>管理本部门
-	            	<input type="radio" name="userInfo.degree" value="4" class="input"/>普通员工
+	            	<input type="radio" name="userinfo.degree" value="0" class="input"/>超级管理员
+	            	<input type="radio" name="userinfo.degree" value="1" class="input"/>跨部门跨人员
+	            	<input type="radio" name="userinfo.degree" value="2" class="input"/>管理所有下属部门和人员
+	            	<input type="radio" name="userinfo.degree" value="3" class="input"/>管理本部门
+	            	<input type="radio" name="userinfo.degree" value="4" class="input"/>普通员工
 	            </td>
 				<td class="columnTitle">性别：</td>
 	            <td class="tableContentAuto">
-	            	<input type="radio" name="userInfo.gender" value="1" class="input"/>男
-	            	<input type="radio" name="userInfo.gender" value="0" class="input"/>女
+	            	<input type="radio" name="userinfo.gender" value="1" class="input"/>男
+	            	<input type="radio" name="userinfo.gender" value="0" class="input"/>女
 	            </td>
 	        </tr>	
         	<tr>
 	            <td class="columnTitle">岗位：</td>
-	            <td class="tableContent"><input type="text" name="userInfo.station" value=""/></td>
+	            <td class="tableContent"><input type="text" name="userinfo.station" value=""/></td>
 	            <td class="columnTitle">电话：</td>
-	            <td class="tableContent"><input type="text" name="userInfo.telephone" value=""/></td>
+	            <td class="tableContent"><input type="text" name="userinfo.telephone" value=""/></td>
 	        </tr>	
         	<tr>
         	    <td class="columnTitle">邮箱：</td>
-	            <td class="tableContent"><input type="text" name="userInfo.email" value=""/></td>
+	            <td class="tableContent"><input type="text" name="userinfo.email" value=""/></td>
 	            <td class="columnTitle">出生年月：</td>
 	            <td class="tableContent">
-					<input type="text" style="width:90px;" name="userInfo.birthday"
+					<input type="text" style="width:90px;" name="userinfo.birthday"
 	            	 value=""
 	             	onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/>
 				</td>
 	        </tr>	
         	<tr>
         	    <td class="columnTitle">排序号：</td>
-	            <td class="tableContent"><input type="text" name="userInfo.orderNo" value=""/></td>
+	            <td class="tableContent"><input type="text" name="userinfo.orderNo" value=""/></td>
 	            <td class="columnTitle">说明：</td>
 	            <td class="tableContent">
-	            	<textarea name="userInfo.remark" style="height:120px;"></textarea>
+	            	<textarea name="userinfo.remark" style="height:120px;"></textarea>
 	            </td>
 	        </tr>	
 		</table>

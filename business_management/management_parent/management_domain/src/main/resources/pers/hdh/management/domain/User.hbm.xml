@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="pers.hdh.management.domain">
+	<class name="User" table="USER_P" dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="USER_ID" >
+			<generator class="assigned" />
+		</id>
+		
+		<property name="userName" column="USER_NAME"></property>
+		<property name="password" column="PASSWORD"></property>
+		<property name="state" column="STATE"></property>
+		
+		<property name="createBy" column="CREATE_BY"></property>
+		<property name="createDept" column="CREATE_DEPT"></property>
+		<property name="createTime" column="CREATE_TIME"></property>
+		<property name="updateBy" column="UPDATE_BY"></property>
+		<property name="updateTime" column="UPDATE_TIME"></property>
+
+		<!-- private Dept dept;// 用户与部门 多对一 -->
+		<many-to-one name="dept" column="DEPT_ID" class="Dept" />
+		<!-- private Userinfo userinfo; // 用户与扩展信息 一对一 -->
+		<one-to-one name="userinfo" class="Userinfo" cascade="all"></one-to-one>
+		<!-- private Set<Role> roles = new HashSet<>(); // 用户与角色 多对多 -->
+		<set name="roles" table="ROLE_USER_P">
+			<key column="USER_ID"></key>
+			<many-to-many class="Role" column="ROLE_ID"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

@@ -15,6 +15,9 @@
 		
 		<!-- 加载配置文件 -->
 		<mapping resource="pers/hdh/management/domain/Dept.hbm.xml" />
+		<mapping resource="pers/hdh/management/domain/User.hbm.xml" />
+		<mapping resource="pers/hdh/management/domain/Userinfo.hbm.xml" />
+		<mapping resource="pers/hdh/management/domain/Role.hbm.xml" />
 	
 	</session-factory>
 </hibernate-configuration>
