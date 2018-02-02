@@ -70,9 +70,9 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 	 */
 	public String toview() throws Exception {
 		// 调用service处理，根据id获取对象
-		User dept = userService.get(User.class, model.getId());
+		User user = userService.get(User.class, model.getId());
 		// 压入栈顶
-		super.push(dept);
+		super.push(user);
 		// 跳转页面
 		return "toview";
 	}
@@ -127,7 +127,7 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 	 * 修改
 	 */
 	public String update() throws Exception {
-		// 根据id获取一个User对象
+		// 根据id获取一个对象
 		User user = userService.get(User.class, model.getId());
 		// 设置需要修改的属性
 		user.setDept(model.getDept());

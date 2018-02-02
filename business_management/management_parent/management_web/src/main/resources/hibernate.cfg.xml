@@ -18,6 +18,7 @@
 		<mapping resource="pers/hdh/management/domain/User.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/Userinfo.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/Role.hbm.xml" />
+		<mapping resource="pers/hdh/management/domain/Module.hbm.xml" />
 	
 	</session-factory>
 </hibernate-configuration>

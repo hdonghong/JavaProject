@@ -24,5 +24,8 @@
 	<bean id="roleService" class="pers.hdh.management.service.impl.RoleServiceImpl">
 		<property name="baseDao" ref="baseDao" />
 	</bean>
+	<bean id="moduleService" class="pers.hdh.management.service.impl.ModuleServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
 	
 </beans>

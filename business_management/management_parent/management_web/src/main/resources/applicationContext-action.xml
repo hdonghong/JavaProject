@@ -29,5 +29,8 @@
 	<bean id="roleAction" class="pers.hdh.management.action.sysadmin.RoleAction" scope="prototype">
 		<property name="roleService" ref="roleService"></property>
 	</bean>
+	<bean id="moduleAction" class="pers.hdh.management.action.sysadmin.ModuleAction" scope="prototype">
+		<property name="moduleService" ref="moduleService"></property>
+	</bean>
 	
 </beans>

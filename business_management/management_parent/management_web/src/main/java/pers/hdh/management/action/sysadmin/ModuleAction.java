@@ -3,41 +3,41 @@ package pers.hdh.management.action.sysadmin;
 import com.opensymphony.xwork2.ModelDriven;
 
 import pers.hdh.management.action.BaseAction;
-import pers.hdh.management.domain.Role;
-import pers.hdh.management.service.RoleService;
+import pers.hdh.management.domain.Module;
+import pers.hdh.management.service.ModuleService;
 import pers.hdh.management.utils.Page;
 
 /**
- * @ClassName	RoleAction	
- * @Description	角色管理的控制器
+ * @ClassName	ModuleAction	
+ * @Description	模块管理的控制器
  * @author		hdonghong
  * @version 	v1.0 
- * @since		2018/01/30 10:13:38
+ * @since		2018/02/02 10:13:38
  */
-public class RoleAction extends BaseAction implements ModelDriven<Role> {
+public class ModuleAction extends BaseAction implements ModelDriven<Module> {
 
 	private static final long serialVersionUID = 5486033529237218292L;
 
 	// 模型驱动
-	private Role model = new Role();
+	private Module model = new Module();
 	@Override
-	public Role getModel() {
+	public Module getModel() {
 		return model;
 	}
 	
 	// 分页查询
-	private Page<Role> page = new Page<>();
-	public void setPage(Page<Role> page) {
+	private Page<Module> page = new Page<>();
+	public void setPage(Page<Module> page) {
 		this.page = page;
 	}
-	public Page<Role> getPage() {
+	public Page<Module> getPage() {
 		return page;
 	}
 	
-	// 注入RoleService
-	private RoleService roleService;
-	public void setRoleService(RoleService roleService) {
-		this.roleService = roleService;
+	// 注入ModuleService
+	private ModuleService moduleService;
+	public void setModuleService(ModuleService moduleService) {
+		this.moduleService = moduleService;
 	}
 	
 	/**
@@ -45,9 +45,9 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 	 */
 	public String list() throws Exception {
 		
-		roleService.findPage("from Role", page, Role.class, null);
+		moduleService.findPage("from Module", page, Module.class, null);
 		// 设置分页的url
-		page.setUrl("roleAction_list");
+		page.setUrl("moduleAction_list");
 		// △将page对象压入栈顶
 		super.push(page);
 		
@@ -61,9 +61,9 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 	 */
 	public String toview() throws Exception {
 		// 调用service处理，根据id获取对象
-		Role role = roleService.get(Role.class, model.getId());
+		Module module = moduleService.get(Module.class, model.getId());
 		// 压入栈顶
-		super.push(role);
+		super.push(module);
 		// 跳转页面
 		return "toview";
 	}
@@ -85,7 +85,7 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 	 */
 	public String insert() throws Exception {
 		// 添加
-		roleService.saveOrUpdate(model);
+		moduleService.saveOrUpdate(model);
 		// 跳页面
 		return "alist";
 	}
@@ -97,9 +97,9 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 	 */
 	public String toupdate() throws Exception {
 		// 根据id获取一个对象
-		Role role = roleService.get(Role.class, model.getId());
+		Module module = moduleService.get(Module.class, model.getId());
 		// 放入值栈
-		super.push(role);
+		super.push(module);
 		// 跳页面
 		return "toupdate";
 	}
@@ -109,12 +109,21 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 	 */
 	public String update() throws Exception {
 		// 根据id获取一个对象
-		Role role = roleService.get(Role.class, model.getId());
+		Module module = moduleService.get(Module.class, model.getId());
 		// 设置需要修改的属性
-    	role.setName(model.getName());
-    	role.setRemark(model.getRemark());
+		// 修改数据
+		module.setName(model.getName());
+		module.setLayerNum(model.getLayerNum());
+		module.setCpermission(model.getCpermission());
+		module.setCurl(model.getCurl());
+		module.setCtype(model.getCtype());
+		module.setState(module.getState());
+		module.setBelong(model.getBelong());
+		module.setCwhich(model.getCwhich());
+		module.setRemark(model.getRemark());
+		module.setOrderNo(model.getOrderNo());
 		// 修改
-		roleService.saveOrUpdate(role);
+		moduleService.saveOrUpdate(module);
 		// 跳页面
 		return "alist";
 	}
@@ -127,7 +136,7 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 	 */
 	public String delete() throws Exception {
 		String[] ids = model.getId().split(", ");
-		roleService.delete(Role.class, ids);
+		moduleService.delete(Module.class, ids);
 		return "alist";
 	}
 }

@@ -120,17 +120,13 @@ public class DeptAction extends BaseAction implements ModelDriven<Dept> {
 	 * 修改
 	 */
 	public String update() throws Exception {
-		
-		// 根据id获取一个Dept对象
+		// 根据id获取一个对象
 		Dept dept = deptService.get(Dept.class, model.getId());
-		
 		// 设置需要修改的属性
 		dept.setParent(model.getParent());
 		dept.setDeptName(model.getDeptName());
-		
 		// 修改
 		deptService.saveOrUpdate(dept);
-		
 		// 跳页面
 		return "alist";
 	}

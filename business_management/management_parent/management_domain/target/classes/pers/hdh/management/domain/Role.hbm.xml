@@ -23,5 +23,10 @@
 			<key column="ROLE_ID"></key>
 			<many-to-many class="User" column="USER_ID"></many-to-many>
 		</set>
+		<!-- private Set<Module> modules = new HashSet<>();// 角色与模块 多对多 -->
+		<set name="modules" table="ROLE_MODULE_P">
+			<key column="ROLE_ID"></key>
+			<many-to-many class="Module" column="MODULE_ID"></many-to-many>
+		</set>
 	</class>
 </hibernate-mapping>

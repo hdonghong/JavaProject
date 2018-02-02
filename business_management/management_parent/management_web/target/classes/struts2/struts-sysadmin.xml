@@ -41,5 +41,13 @@
 			<result name="toupdate">/WEB-INF/pages/sysadmin/role/jRoleUpdate.jsp</result>
 			<result name="alist" type="redirect">roleAction_list</result>
 		</action>
+		
+		<action name="moduleAction_*" class="moduleAction" method="{1}">
+			<result name="list">/WEB-INF/pages/sysadmin/module/jModuleList.jsp</result>
+			<result name="toview">/WEB-INF/pages/sysadmin/module/jModuleView.jsp</result>
+			<result name="tocreate">/WEB-INF/pages/sysadmin/module/jModuleCreate.jsp</result>
+			<result name="toupdate">/WEB-INF/pages/sysadmin/module/jModuleUpdate.jsp</result>
+			<result name="alist" type="redirect">moduleAction_list</result>
+		</action>
 	</package>
 </struts>
