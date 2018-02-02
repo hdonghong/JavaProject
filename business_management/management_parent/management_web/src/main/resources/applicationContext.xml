@@ -28,6 +28,9 @@
 		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
 	</bean>
 	
+	<!-- 放在事务管理器之前配置，产生shiro控制器的方式，使用cglib生成代理 -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	
 	<!-- 3.事物管理器 -->
 	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager" >
 		<property name="sessionFactory" ref="sessionFactory"></property>
@@ -57,4 +60,6 @@
 	<import resource="classpath:applicationContext-service.xml"/>
 	<import resource="classpath:applicationContext-dao.xml"/>
 
+	<!-- 添加专门配置shiro的配置文件 -->
+	<import resource="classpath:applicationContext-shiro.xml"/>
 </beans>
