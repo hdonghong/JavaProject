@@ -1,6 +1,12 @@
 package pers.hdh.management.action;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
+
+import pers.hdh.management.domain.User;
 import pers.hdh.management.utils.SysConstant;
+import pers.hdh.management.utils.UtilFuns;
 
 /**
  * @Description: 登录和退出类
@@ -31,6 +37,23 @@ public class LoginAction extends BaseAction {
 //			return SUCCESS;
 //		}
 //		return "login";
+		if (UtilFuns.isEmpty(username)) return "login";
+		
+		try {
+			// 得到Subject
+			Subject subject = SecurityUtils.getSubject();
+			// 调用登录方法
+			UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+			subject.login(token); // 执行此语句时，跳入到AuthRealm中的认证方法
+			// 登录成功，从Shiro中获取用户的登录信息
+			User user = (User) subject.getPrincipal();
+			// 将用户放入session域中
+			session.put(SysConstant.CURRENT_USER_INFO, user);
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.put("errorInfo", "对不起，用户名或密码错误");
+			return "login";
+		}
 		
 		return SUCCESS;
 	}

@@ -23,7 +23,7 @@ public class CustomCredentialsMatcher extends SimpleCredentialsMatcher {
 		UsernamePasswordToken upToken = (UsernamePasswordToken) token;
 		
 		// 将来自用户在界面输入的密码加密，这里使用用户名作盐
-		Object pwdFromClient = Encrypt.md5(upToken.getPassword().toString(), upToken.getUsername());
+		Object pwdFromClient = Encrypt.md5(new String(upToken.getPassword()), upToken.getUsername());
 		
 		// 取出数据库中的密文
 		Object pwdFromDb = info.getCredentials();
