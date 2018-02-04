@@ -8,11 +8,13 @@
 			       <!-- 遍历每个角色下的模块 -->
 			       <c:forEach items="${role.modules }" var="module">
 			            <!-- 如果该模块没有输出过，则要进行输出，否则这个模块就不输出 -->
+			            <!-- 判断是否输出过的方式：设置一个allPermissions字符串，每次判断其中包含某个permission子串，
+			            	   不存在则新增，并加入allPermissions中 -->
 			            <c:if test="${(moduleName eq module.remark) and module.ctype==1  }">
-				               <c:if test="${fn:contains(aaa,module.cpermission) eq false }">
-				                  <c:set var="aaa" value="${aaa},${module.cpermission }"/>
+				             <c:if test="${fn:contains(allPermissions,module.cpermission) eq false }">
+				                  <c:set var="allPermissions" value="${allPermissions},${module.cpermission }"/>
 			                      <li><a href="${ctx}/${module.curl}" onclick="linkHighlighted(this)" target="main" id="aa_1">${module.cpermission }</a></li>
-			                 </c:if>  
+			                 </c:if>
 			            </c:if>
 			            
 			       </c:forEach>

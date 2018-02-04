@@ -19,11 +19,13 @@ public class LoginAction extends BaseAction {
 	private String username;
 	private String password;
 
-
-
-	//SSH传统登录方式
+	/**
+	 * 采用shiro安全框架登录认证
+	 * @return
+	 * @throws Exception
+	 */
 	public String login() throws Exception {
-		
+//		SSH传统登录方式
 //		if(true){
 //			String msg = "登录错误，请重新填写用户名密码!";
 //			this.addActionError(msg);
@@ -59,7 +61,10 @@ public class LoginAction extends BaseAction {
 	}
 	
 	
-	//退出
+	/**
+	 * 退出
+	 * @return
+	 */
 	public String logout(){
 		session.remove(SysConstant.CURRENT_USER_INFO);		//删除session
 		

@@ -9,6 +9,7 @@ import pers.hdh.management.domain.Dept;
 import pers.hdh.management.domain.User;
 import pers.hdh.management.service.DeptService;
 import pers.hdh.management.service.UserService;
+import pers.hdh.management.utils.Encrypt;
 import pers.hdh.management.utils.Page;
 
 /**

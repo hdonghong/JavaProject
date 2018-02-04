@@ -26,7 +26,7 @@
 		<!-- private Set<Role> roles = new HashSet<>(); // 用户与角色 多对多 -->
 		<set name="roles" table="ROLE_USER_P">
 			<key column="USER_ID"></key>
-			<many-to-many class="Role" column="ROLE_ID"></many-to-many>
+			<many-to-many class="Role" column="ROLE_ID" order-by="ORDER_NO"></many-to-many>
 		</set>
 	</class>
 </hibernate-mapping>
