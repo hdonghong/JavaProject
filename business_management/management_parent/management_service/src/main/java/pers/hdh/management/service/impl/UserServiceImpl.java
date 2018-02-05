@@ -10,6 +10,7 @@ import pers.hdh.management.domain.User;
 import pers.hdh.management.service.UserService;
 import pers.hdh.management.utils.Encrypt;
 import pers.hdh.management.utils.Page;
+import pers.hdh.management.utils.SysConstant;
 import pers.hdh.management.utils.UtilFuns;
 
 /**
@@ -50,7 +51,7 @@ public class UserServiceImpl implements UserService {
 			entity.getUserinfo().setId(id);
 			
 			// 加入shiro框架后补充密码加密
-			entity.setPassword(Encrypt.md5(entity.getPassword(), entity.getUserName()));
+			entity.setPassword(Encrypt.md5(SysConstant.DEFAULT_PASS, entity.getUserName()));
 		}
 		baseDao.saveOrUpdate(entity);
 	}

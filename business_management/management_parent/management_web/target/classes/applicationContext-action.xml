@@ -25,9 +25,11 @@
 	<bean id="userAction" class="pers.hdh.management.action.sysadmin.UserAction" scope="prototype">
 		<property name="userService" ref="userService"></property>
 		<property name="deptService" ref="deptService"></property>
+		<property name="roleService" ref="roleService"></property>
 	</bean>
 	<bean id="roleAction" class="pers.hdh.management.action.sysadmin.RoleAction" scope="prototype">
 		<property name="roleService" ref="roleService"></property>
+		<property name="moduleService" ref="moduleService"></property>
 	</bean>
 	<bean id="moduleAction" class="pers.hdh.management.action.sysadmin.ModuleAction" scope="prototype">
 		<property name="moduleService" ref="moduleService"></property>

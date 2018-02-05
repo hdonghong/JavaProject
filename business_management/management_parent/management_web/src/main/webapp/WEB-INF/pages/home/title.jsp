@@ -85,33 +85,33 @@
 	}
 	function ShowFrameMain(passValue){
 			
-			var url = "../home/doConsoleListAction.do";	//../home/empMemoCreateAction.do
-			var topFrame = top.middle.switches;
+		var url = "../home/doConsoleListAction.do";	//../home/empMemoCreateAction.do
+		var topFrame = top.middle.switches;
 
-			document.getElementById('PositionFrame').style.display = "block";
-			top.middle.contents.left_frame.style.border = "none";
-			top.middle.contents.left_frame.style.overflow = "hidden";
-			
-			topFrame.PositionFrame_main.style.display ="block";
-			topFrame.PositionFrame.style.display ="block";
-			topFrame.PositionFrame_notebook.style.display = 'block';
-			topFrame.PositionFrame_notebook2.style.display = 'none';	
-			topFrame.PositionFrame_my_note.style.display = 'block';
-			//topFrame.note_iframe.location.href=url;
-			form1.action = url;
-			form1.method = "post";
-			form1.target = "note_iframe";
-//			alert(passValue);
-			if(passValue){
-				form1.innerHTML='<input type="hidden"  name="passTitle" value="' + passValue[0] + '"/>';
-				form1.innerHTML=form1.innerHTML + '<input type="hidden"  name="passContent" value="' +passValue[1]+ '"/>';
-			}
-			form1.submit();
-			
-			top.middle.contents.PositionFrame.style.display ="block";
-			topFrame.loading.style.display = 'none';
-			topFrame.PositionFrame_main.style.visibility = 'visible';
-			topFrame.visibility.style.display = 'block';
+		document.getElementById('PositionFrame').style.display = "block";
+		top.middle.contents.left_frame.style.border = "none";
+		top.middle.contents.left_frame.style.overflow = "hidden";
+		
+		topFrame.PositionFrame_main.style.display ="block";
+		topFrame.PositionFrame.style.display ="block";
+		topFrame.PositionFrame_notebook.style.display = 'block';
+		topFrame.PositionFrame_notebook2.style.display = 'none';	
+		topFrame.PositionFrame_my_note.style.display = 'block';
+		//topFrame.note_iframe.location.href=url;
+		form1.action = url;
+		form1.method = "post";
+		form1.target = "note_iframe";
+//		alert(passValue);
+		if(passValue){
+			form1.innerHTML='<input type="hidden"  name="passTitle" value="' + passValue[0] + '"/>';
+			form1.innerHTML=form1.innerHTML + '<input type="hidden"  name="passContent" value="' +passValue[1]+ '"/>';
+		}
+		form1.submit();
+		
+		top.middle.contents.PositionFrame.style.display ="block";
+		topFrame.loading.style.display = 'none';
+		topFrame.PositionFrame_main.style.visibility = 'visible';
+		topFrame.visibility.style.display = 'block';
 	}
 	
    
@@ -137,52 +137,52 @@
 		$(thisObj).mouseout(function(){window.clearInterval(intervalId)});
 	}
 	
-		function checkDirectionKey(){
-			var mask = $('#mask');
-			
-			var bodyWidth = $('body').width();
-			
-			//alert(bodyWidth - 450);
-			mask.width(bodyWidth - 250);	//450
-			//alert(mask.width());
-			var targetObj = $('#menuContent');
-			
-			var maxOffset = targetObj.width()-mask.width();
-			
-			var currLeft = targetObj.css('left');
-//			alert(maxOffset + " " + currLeft);
-			var currLeft = Number(currLeft.substring(0,currLeft.length-2));
-//			alert((0-currLeft) <= maxOffset);
-			if(!(0-currLeft) <= maxOffset || currLeft < 0) {
-				$("#rightKey").show("slow");
-				$("#leftKey").show("slow");
-				if(!isShow){
-					$("#prompt_div").show("slow", function(){window.setTimeout(function(){$("#prompt_div").hide("slow")}, 10000);isShow = true;});
-				}
-			} else {
-				$("#rightKey").hide();
-				$("#leftKey").hide();
-				$("#prompt_div").hide();
+	function checkDirectionKey(){
+		var mask = $('#mask');
+		
+		var bodyWidth = $('body').width();
+		
+		//alert(bodyWidth - 450);
+		mask.width(bodyWidth - 250);	//450
+		//alert(mask.width());
+		var targetObj = $('#menuContent');
+		
+		var maxOffset = targetObj.width()-mask.width();
+		
+		var currLeft = targetObj.css('left');
+//		alert(maxOffset + " " + currLeft);
+		var currLeft = Number(currLeft.substring(0,currLeft.length-2));
+//		alert((0-currLeft) <= maxOffset);
+		if(!(0-currLeft) <= maxOffset || currLeft < 0) {
+			$("#rightKey").show("slow");
+			$("#leftKey").show("slow");
+			if(!isShow){
+				$("#prompt_div").show("slow", function(){window.setTimeout(function(){$("#prompt_div").hide("slow")}, 10000);isShow = true;});
 			}
-		}
-		var isShow = false;
-		$(function(){
-			window.onresize = checkDirectionKey;
+		} else {
 			$("#rightKey").hide();
 			$("#leftKey").hide();
 			$("#prompt_div").hide();
-			checkDirectionKey();
-		});
-		
-		function logout(){
-			return formSubmit("${ctx}/logout", "_top");
 		}
-		
-		function toModule(moduleName){
-			top.leftFrame.location.href = 'homeAction_toleft.action?moduleName=' + moduleName;
-			top.main.location.href = 'homeAction_tomain.action?moduleName=' + moduleName;
-			linkHighlightMenu(this);
-		}
+	}
+	var isShow = false;
+	$(function(){
+		window.onresize = checkDirectionKey;
+		$("#rightKey").hide();
+		$("#leftKey").hide();
+		$("#prompt_div").hide();
+		checkDirectionKey();
+	});
+	
+	function logout(){
+		return formSubmit("${ctx}/logout", "_top");
+	}
+	
+	function toModule(moduleName){
+		top.leftFrame.location.href = 'homeAction_toleft.action?moduleName=' + moduleName;
+		top.main.location.href = 'homeAction_tomain.action?moduleName=' + moduleName;
+		linkHighlightMenu(this);
+	}
 </script>
 	
 </head>
@@ -220,25 +220,24 @@
 	<span id="topmenu" onclick="toModule('baseinfo');">基础信息</span><span id="tm_separator"></span>
 	<span id="topmenu" onclick="toModule('sysadmin');">系统管理</span>  -->
 	 
-	 
 	 <!-- 当jsp页面碰到shiro标签时就执行AuthRealm中授权方法 -->
 	<shiro:hasPermission name="系统首页">
-	<span id="topmenu" onclick="toModule('home');">系统首页</span><span id="tm_separator"></span>
+		<span id="topmenu" onclick="toModule('home');">系统首页</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="货运管理">
 		<span id="topmenu" onclick="toModule('cargo');">货运管理</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="统计分析">
-	<span id="topmenu" onclick="toModule('stat');">统计分析</span><span id="tm_separator"></span>
+		<span id="topmenu" onclick="toModule('stat');">统计分析</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="基础信息">
-	<span id="topmenu" onclick="toModule('baseinfo');">基础信息</span><span id="tm_separator"></span>
+		<span id="topmenu" onclick="toModule('baseinfo');">基础信息</span><span id="tm_separator"></span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="系统管理">
-	<span id="topmenu" onclick="toModule('sysadmin');">系统管理</span>
+		<span id="topmenu" onclick="toModule('sysadmin');">系统管理</span>
 	</shiro:hasPermission>
 	<shiro:hasPermission name="流程管理">
-	<span id="topmenu" onclick="toModule('activiti');">流程管理</span>
+		<span id="topmenu" onclick="toModule('activiti');">流程管理</span>
 	</shiro:hasPermission>
 
 </div>

@@ -16,9 +16,21 @@
 
 	<package name="default" namespace="/" extends="struts-default">
 	
+		<global-results>
+			<result name="error">/WEB-INF/pages/error.jsp</result>
+		</global-results>
+		<!-- 全局异常处理 -->
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="pers.hdh.management.exception.SysException"></exception-mapping>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	
 		<action name="login" class="loginAction" method="login">
 			<result name="login">/WEB-INF/pages/sysadmin/login/login.jsp</result>
 			<result name="success">/WEB-INF/pages/home/fmain.jsp</result>
+		</action>
+		<action name="logout" class="loginAction" method="logout">
+			<result name="logout">/WEB-INF/pages/sysadmin/login/logout.jsp</result>
 		</action>
 		<action name="homeAction_*" class="homeAction" method="{1}">
 			<result name="fmain">/WEB-INF/pages/home/fmain.jsp</result>

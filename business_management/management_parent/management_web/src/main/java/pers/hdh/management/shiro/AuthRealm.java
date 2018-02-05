@@ -9,8 +9,9 @@ import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
-import org.apache.shiro.realm.AuthenticatingRealm;
+import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 import pers.hdh.management.domain.Module;
@@ -25,7 +26,7 @@ import pers.hdh.management.service.UserService;
  * @version 	v1.0 
  * @since		2018/02/02 20:30:52
  */
-public class AuthRealm extends AuthenticatingRealm {
+public class AuthRealm extends AuthorizingRealm {
 
 	private UserService userService;
 	public void setUserService(UserService userService) {
@@ -35,11 +36,12 @@ public class AuthRealm extends AuthenticatingRealm {
 	/**
 	 * 授权，jsp页面使用shiro标签时，执行此方法
 	 * 获取当前用户所拥有的角色，在获取其角色所有模块，将模块名加入权限中，视为该用户拥有的权限
-	 * @param arg0
+	 * @param pc
 	 * @return
 	 * @throws AuthenticationException
 	 */
-	protected AuthenticationInfo doGetAuthenticationInfo(PrincipalCollection pc) {
+	@Override
+	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection pc) {
 		User user = (User) pc.fromRealm(this.getName()).iterator().next();// 根据realm的名字去找对应的realm
 		
 		Set<Role> roles = user.getRoles();// 对象导航
@@ -54,7 +56,7 @@ public class AuthRealm extends AuthenticatingRealm {
 		}
 		SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
 		info.addStringPermissions(permissions);// 添加用户的模块（权限）
-		return null;
+		return info;
 	}
 	
 	/**
@@ -72,9 +74,9 @@ public class AuthRealm extends AuthenticatingRealm {
 			User user = list.get(0);
 			/*
 			 * SimpleAuthenticationInfo(Object principal, Object credentials, String realmName)
-			 * Object principal
-			 * Object credentials
-			 * String realmName
+			 * Object principal		认为是当前用户对象
+			 * Object credentials	这里是密码
+			 * String realmName		realm的名字
 			 */
 			AuthenticationInfo info = new SimpleAuthenticationInfo(user, user.getPassword(), this.getName());
 			return info;// 返回info后进入密码比较器，即CustomCredentialsMatcher

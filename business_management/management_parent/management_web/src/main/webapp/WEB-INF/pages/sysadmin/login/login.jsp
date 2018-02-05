@@ -45,6 +45,9 @@
 
 <script type="text/JavaScript">
 	document.getElementById('login_main').userName.focus();
+	if (self.location != top.location) {
+		top.location = self.location;
+	}
 </script>
 
 </body>

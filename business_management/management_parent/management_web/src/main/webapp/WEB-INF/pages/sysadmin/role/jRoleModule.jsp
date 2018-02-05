@@ -24,25 +24,25 @@
 		};
 		
 		$(document).ready(function() {
-			$.ajax( {
-				url : "${ctx}/sysadmin/roleAction_roleModuleJsonStr.action?id=${id}",
-				type : "get",
-				dataType : "text",
-				success : initZtree
-			});
+
+			$.post(
+				"${ctx}/sysadmin/roleAction_roleModuleJsonStr.action",
+				{"id":"${id}"},
+				function(data){
+					zTreeObj = $.fn.zTree.init($('#jkTree'), setting, data);//jkTree 树的id，支持多个树
+					zTreeObj.expandAll(true);//展开所有树节点
+				},
+				"json");
 		});
 		
 		//初始化ZTree树
 		function initZtree(data) {
-			var zNodes = eval("(" + data + ")");		//动态js语句
-			zTreeObj = $.fn.zTree.init($('#jkTree'), setting, zNodes);	//jkTree 树的id，支持多个树
-			zTreeObj.expandAll(true);		//展开所有树节点
 		}
 		
 		//获取所有选择的节点
 		function submitCheckedNodes() {
 			var nodes = new Array();
-			nodes = zTreeObj.getCheckedNodes(true);		//取得选中的结点
+			nodes = zTreeObj.getCheckedNodes(true);//取得选中的结点
 			var str = "";
 			for (i = 0; i < nodes.length; i++) {
 				if (str != "") {
@@ -63,10 +63,10 @@
 <div id="middleMenubar">
 <div id="innerMenubar">
   <div id="navMenubar">
-<ul>
-<li id="save"><a href="#" onclick="submitCheckedNodes();formSubmit('roleAction_module','_self');this.blur();">保存</a></li>
-<li id="back"><a href="#" onclick="formSubmit('roleAction_list','_self');this.blur();">返回</a></li>
-</ul>
+	<ul>
+		<li id="save"><a href="#" onclick="submitCheckedNodes();formSubmit('roleAction_module','_self');this.blur();">保存</a></li>
+		<li id="back"><a href="#" onclick="formSubmit('roleAction_list','_self');this.blur();">返回</a></li>
+	</ul>
   </div>
 </div>
 </div>

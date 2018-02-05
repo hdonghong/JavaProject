@@ -15,7 +15,7 @@
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 
 	<!-- 分离struts2的配置文件，包名唯一 -->
-	<package name="sysadmin" namespace="/sysadmin" extends="struts-default">
+	<package name="sysadmin" namespace="/sysadmin" extends="default">
 		<action name="deptAction_*" class="deptAction" method="{1}">
 		<!-- 请求转发是服务器端发起的，能够访问到/WEB-INF虾的内容；
 			   重定向是客户端发起的，不能访问到 -->
@@ -31,6 +31,7 @@
 			<result name="toview">/WEB-INF/pages/sysadmin/user/jUserView.jsp</result>
 			<result name="tocreate">/WEB-INF/pages/sysadmin/user/jUserCreate.jsp</result>
 			<result name="toupdate">/WEB-INF/pages/sysadmin/user/jUserUpdate.jsp</result>
+			<result name="torole">/WEB-INF/pages/sysadmin/user/jUserRole.jsp</result>
 			<result name="alist" type="redirect">userAction_list</result>
 		</action>
 		
@@ -39,6 +40,7 @@
 			<result name="toview">/WEB-INF/pages/sysadmin/role/jRoleView.jsp</result>
 			<result name="tocreate">/WEB-INF/pages/sysadmin/role/jRoleCreate.jsp</result>
 			<result name="toupdate">/WEB-INF/pages/sysadmin/role/jRoleUpdate.jsp</result>
+			<result name="tomodule">/WEB-INF/pages/sysadmin/role/jRoleModule.jsp</result>
 			<result name="alist" type="redirect">roleAction_list</result>
 		</action>
 		
