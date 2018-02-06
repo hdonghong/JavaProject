@@ -20,6 +20,8 @@
 	</bean>
 	<bean id="userService" class="pers.hdh.management.service.impl.UserServiceImpl">
 		<property name="baseDao" ref="baseDao" />
+		<property name="mailMessage" ref="mailMessage" ></property>
+		<property name="mailSender" ref="mailSender"></property>
 	</bean>
 	<bean id="roleService" class="pers.hdh.management.service.impl.RoleServiceImpl">
 		<property name="baseDao" ref="baseDao" />

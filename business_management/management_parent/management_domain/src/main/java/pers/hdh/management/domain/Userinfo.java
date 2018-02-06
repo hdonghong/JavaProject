@@ -21,6 +21,7 @@ public class Userinfo extends BaseEntity {
 	private Date birthday;// 出生年月
 	private String gender;// 性别
 	private String station;// 岗位
+	private String email;// 邮箱
 	private String telephone;// 电话
 	private Integer degree;// 等级
 	private String remark;// 备注
@@ -98,5 +99,10 @@ public class Userinfo extends BaseEntity {
 	public void setOrderNo(Integer orderNo) {
 		this.orderNo = orderNo;
 	}
-	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 }

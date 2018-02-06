@@ -59,7 +59,8 @@
 	<import resource="classpath:applicationContext-action.xml"/>
 	<import resource="classpath:applicationContext-service.xml"/>
 	<import resource="classpath:applicationContext-dao.xml"/>
-
 	<!-- 添加专门配置shiro的配置文件 -->
 	<import resource="classpath:applicationContext-shiro.xml"/>
+	<!-- 配置Javamail -->
+	<import resource="classpath:applicationContext-mail.xml"/>
 </beans>

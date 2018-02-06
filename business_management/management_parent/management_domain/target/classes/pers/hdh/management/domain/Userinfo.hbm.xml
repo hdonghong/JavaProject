@@ -14,6 +14,7 @@
 		<property name="salary" column="SALARY"></property>
 		<property name="birthday" column="BIRTHDAY"></property>
 		<property name="gender" column="GENDER"></property>
+		<property name="email" column="EMAIL"></property>
 		<property name="station" column="STATION"></property>
 		<property name="telephone" column="TELEPHONE"></property>
 		<property name="degree" column="DEGREE"></property>
