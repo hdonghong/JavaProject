@@ -43,6 +43,7 @@ public class ModuleServiceImpl implements ModuleService {
 	public void saveOrUpdate(Module entity) {
 		// 处理业务逻辑的代码
 		if (UtilFuns.isEmpty(entity.getId())) {
+			
 		}
 		baseDao.saveOrUpdate(entity);
 	}

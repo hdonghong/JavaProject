@@ -35,4 +35,17 @@
 		<property name="moduleService" ref="moduleService"></property>
 	</bean>
 	
+	<!-- cargo -->
+	<bean id="contractAction" class="pers.hdh.management.action.cargo.ContractAction" scope="prototype">
+		<property name="contractService" ref="contractService"></property>
+	</bean>
+	<bean id="contractProductAction" class="pers.hdh.management.action.cargo.ContractProductAction" scope="prototype">
+		<property name="contractProductService" ref="contractProductService"></property>
+		<property name="factoryService" ref="factoryService"></property>
+	</bean>
+	<bean id="extCproductAction" class="pers.hdh.management.action.cargo.ExtCproductAction" scope="prototype">
+		<property name="extCproductService" ref="extCproductService"></property>
+		<property name="factoryService" ref="factoryService"></property>
+	</bean>
+	
 </beans>

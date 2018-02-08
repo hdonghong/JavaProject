@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="pers.hdh.management.domain">
+	<class name="Factory" table="FACTORY_C" dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="FACTORY_ID" type="string">
+			<generator class="uuid"/>
+		</id>
+		<property name="ctype" column="CTYPE"/>
+		<property name="fullName" column="FULL_NAME"/>
+		<property name="factoryName" column="FACTORY_NAME"/>
+		<property name="contacts" column="CONTACTS"/>
+		<property name="phone" column="PHONE"/>
+		<property name="mobile" column="MOBILE"/>
+		<property name="fax" column="FAX"/>
+		<property name="address" column="ADDRESS"/>
+		<property name="inspector" column="INSPECTOR"/>
+		<property name="remark" column="REMARK"/>
+		<property name="orderNo" column="ORDER_NO"/>
+		<property name="state" column="STATE"/>
+		
+		<property name="createBy" column="CREATE_BY"/>
+		<property name="createDept" column="CREATE_DEPT"/>
+		<property name="createTime" column="CREATE_TIME"/>
+		<property name="updateBy" column="UPDATE_BY"/>
+		<property name="updateTime" column="UPDATE_TIME"/>
+	</class>
+</hibernate-mapping>

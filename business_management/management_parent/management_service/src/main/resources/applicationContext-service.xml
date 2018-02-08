@@ -29,5 +29,17 @@
 	<bean id="moduleService" class="pers.hdh.management.service.impl.ModuleServiceImpl">
 		<property name="baseDao" ref="baseDao" />
 	</bean>
+	<bean id="contractService" class="pers.hdh.management.service.impl.ContractServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="contractProductService" class="pers.hdh.management.service.impl.ContractProductServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="extCproductService" class="pers.hdh.management.service.impl.ExtCproductServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="factoryService" class="pers.hdh.management.service.impl.FactoryServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
 	
 </beans>

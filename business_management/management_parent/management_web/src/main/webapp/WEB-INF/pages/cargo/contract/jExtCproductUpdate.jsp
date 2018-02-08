@@ -13,9 +13,9 @@
 
 <body>
 <form name="icform" method="post">
-	<input type="text" name="id" value="${id}"/>
-	<input type="text" name="contractProduct.contract.id" value="${contractProduct.contract.id}"/>
-	<input type="text" name="contractProduct.id" value="${contractProduct.id}"/>
+	<input type="hidden" name="id" value="${id}"/>
+	<input type="hidden" name="contractProduct.contract.id" value="${contractProduct.contract.id}"/>
+	<input type="hidden" name="contractProduct.id" value="${contractProduct.id}"/>
 	
 	<input type="hidden" name="amount" value="${amount }"/>
 <div id="menubar">
