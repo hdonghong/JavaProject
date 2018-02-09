@@ -35,5 +35,9 @@
 			<result name="tocreate">/WEB-INF/pages/cargo/contract/jExtCproductCreate.jsp</result>
 			<result name="toupdate">/WEB-INF/pages/cargo/contract/jExtCproductUpdate.jsp</result>
 		</action>
+		
+		<action name="outProductAction_*" class="outProductAction" method="{1}">
+			<result name="toedit">/WEB-INF/pages/cargo/outproduct/jOutProduct.jsp</result>
+		</action>
 	</package>
 </struts>

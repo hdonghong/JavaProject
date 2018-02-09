@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ModelDriven;
 
 import pers.hdh.management.action.BaseAction;
 import pers.hdh.management.domain.Contract;
+import pers.hdh.management.domain.User;
 import pers.hdh.management.service.ContractService;
 import pers.hdh.management.utils.Page;
 
@@ -44,8 +45,22 @@ public class ContractAction extends BaseAction implements ModelDriven<Contract> 
 	 * 分页查询
 	 */
 	public String list() throws Exception {
+		User currUser = super.getCurrUser();// 当前用户
+		Integer degree = currUser.getUserinfo().getDegree();// 用户级别
+		String hql = "from Contract where 1=1 ";
+		if (degree == 4) {// 员工
+			hql += " and createBy='" + currUser.getId() + "'";
+		} else if (degree == 3) {// 部门经理
+			hql += " and createDept='" + currUser.getDept().getId() + "'";
+		} else if (degree == 2) {// 管理本部门和下属部门
+			
+		} else if (degree == 1) {// 副总
+			
+		} else if (degree == 0) {// 总经理
+			
+		}
 		
-		contractService.findPage("from Contract", page, Contract.class, null);
+		contractService.findPage(hql, page, Contract.class, null);
 		// 设置分页的url
 		page.setUrl("contractAction_list");
 		// △将page对象压入栈顶
@@ -84,6 +99,9 @@ public class ContractAction extends BaseAction implements ModelDriven<Contract> 
 	 * @throws Exception
 	 */
 	public String insert() throws Exception {
+		// 增加细粒度权限控制的数据
+		model.setCreateBy(super.getCurrUser().getId());
+		model.setCreateDept(super.getCurrUser().getDept().getId());
 		// 添加
 		contractService.saveOrUpdate(model);
 		// 跳页面

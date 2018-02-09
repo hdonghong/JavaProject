@@ -18,34 +18,45 @@
 	<bean id="homeAction" class="pers.hdh.management.action.HomeAction" scope="prototype"></bean>
 	<bean id="loginAction" class="pers.hdh.management.action.LoginAction" scope="prototype"></bean>
 	
-	<!-- sysadmin -->
+	<!-- sysadmin，系统管理 -->
+	<!-- 部门管理 -->
 	<bean id="deptAction" class="pers.hdh.management.action.sysadmin.DeptAction" scope="prototype">
 		<property name="deptService" ref="deptService"></property>
 	</bean>
+	<!-- 用户管理 -->
 	<bean id="userAction" class="pers.hdh.management.action.sysadmin.UserAction" scope="prototype">
 		<property name="userService" ref="userService"></property>
 		<property name="deptService" ref="deptService"></property>
 		<property name="roleService" ref="roleService"></property>
 	</bean>
+	<!-- 角色管理 -->
 	<bean id="roleAction" class="pers.hdh.management.action.sysadmin.RoleAction" scope="prototype">
 		<property name="roleService" ref="roleService"></property>
 		<property name="moduleService" ref="moduleService"></property>
 	</bean>
+	<!-- 模块管理 -->
 	<bean id="moduleAction" class="pers.hdh.management.action.sysadmin.ModuleAction" scope="prototype">
 		<property name="moduleService" ref="moduleService"></property>
 	</bean>
 	
-	<!-- cargo -->
+	<!-- cargo，货物管理 -->
+	<!-- 购销合同管理 -->
 	<bean id="contractAction" class="pers.hdh.management.action.cargo.ContractAction" scope="prototype">
 		<property name="contractService" ref="contractService"></property>
 	</bean>
+	<!-- 购销合同下货物管理 -->
 	<bean id="contractProductAction" class="pers.hdh.management.action.cargo.ContractProductAction" scope="prototype">
 		<property name="contractProductService" ref="contractProductService"></property>
 		<property name="factoryService" ref="factoryService"></property>
 	</bean>
+	<!-- 购销合同下附件管理 -->
 	<bean id="extCproductAction" class="pers.hdh.management.action.cargo.ExtCproductAction" scope="prototype">
 		<property name="extCproductService" ref="extCproductService"></property>
 		<property name="factoryService" ref="factoryService"></property>
+	</bean>
+	<!-- 出货表管理 -->
+	<bean id="outProductAction" class="pers.hdh.management.action.cargo.OutProductAction" scope="prototype">
+		<property name="contractProductService" ref="contractProductService"></property>
 	</bean>
 	
 </beans>
