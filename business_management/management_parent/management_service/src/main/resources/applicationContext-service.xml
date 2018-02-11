@@ -29,6 +29,8 @@
 	<bean id="moduleService" class="pers.hdh.management.service.impl.ModuleServiceImpl">
 		<property name="baseDao" ref="baseDao" />
 	</bean>
+	
+	
 	<bean id="contractService" class="pers.hdh.management.service.impl.ContractServiceImpl">
 		<property name="baseDao" ref="baseDao" />
 	</bean>
@@ -39,6 +41,17 @@
 		<property name="baseDao" ref="baseDao" />
 	</bean>
 	<bean id="factoryService" class="pers.hdh.management.service.impl.FactoryServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	
+	
+	<bean id="exportService" class="pers.hdh.management.service.impl.ExportServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="exportProductService" class="pers.hdh.management.service.impl.ExportProductServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="extEproductService" class="pers.hdh.management.service.impl.ExtEproductServiceImpl">
 		<property name="baseDao" ref="baseDao" />
 	</bean>
 	

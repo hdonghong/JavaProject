@@ -39,5 +39,15 @@
 		<action name="outProductAction_*" class="outProductAction" method="{1}">
 			<result name="toedit">/WEB-INF/pages/cargo/outproduct/jOutProduct.jsp</result>
 		</action>
+		
+		<action name="exportAction_*" class="exportAction" method="{1}">
+			<result name="list">/WEB-INF/pages/cargo/export/jContractList.jsp</result>
+			<result name="toview">/WEB-INF/pages/cargo/export/jExportView.jsp</result>
+			<result name="tocreate">/WEB-INF/pages/cargo/export/jExportCreate.jsp</result>
+			<result name="toupdate">/WEB-INF/pages/cargo/export/jExportUpdate.jsp</result>
+			<result name="contractList">/WEB-INF/pages/cargo/export/jContractList.jsp</result>
+			<result name="alist" type="redirectAction">exportAction_list</result>
+		</action>
+		
 	</package>
 </struts>

@@ -1,14 +1,10 @@
 package pers.hdh.management.action.cargo;
 
-import static java.io.File.separator;
-
 import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.CellRangeAddress;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -16,6 +12,7 @@ import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.apache.struts2.ServletActionContext;
 
 import pers.hdh.management.action.BaseAction;
@@ -59,7 +56,7 @@ public class OutProductAction extends BaseAction {
 	 * @return
 	 * @throws Exception
 	 */
-	public String print() throws Exception {
+/*	public String print() throws Exception {
 		int cellNo = 1;// 单元格下标
 		Cell cell = null;// 单元格对象
 		int rowNo = 0;// 行下标
@@ -139,21 +136,25 @@ public class OutProductAction extends BaseAction {
 		downloadUtil.download(outputStream, response, "出货表.xls");
 		
 		return NONE;
-	}
+	}*/
 	
 	/**
 	 * 打印出货表，不使用模板
 	 * @return
 	 * @throws Exception
 	 */
-/*	public String print() throws Exception {
+	public String print() throws Exception {
 		int cellNo = 1;// 单元格下标
 		Cell cell = null;// 单元格对象
 		int rowNo = 0;// 行下标
 		Row row = null;// 行对象
 		
 		// 创建工作簿
-		Workbook workbook = new HSSFWorkbook();
+//		Workbook workbook = new HSSFWorkbook();// 操作excel2003，xls扩展名
+//		Workbook workbook = new XSSFWorkbook();// 支持excel2007及以上的版本，xlsx扩展名
+		Workbook workbook = new SXSSFWorkbook(500);// 补充XSSFWorkbook，但不支持模板；可以将产生的一部分对象从内存存储到磁盘中，
+												   // 500指的是内存中对象达到500时转移到磁盘中，默认是100个。
+		
 		// 创建工作表
 		Sheet sheet = workbook.createSheet();
 		// 设置单元格宽
@@ -234,10 +235,11 @@ public class OutProductAction extends BaseAction {
 		workbook.write(outputStream);// 将excel表格中的内容输出到缓存中
 		outputStream.close();// 刷新缓冲区
 		HttpServletResponse response = ServletActionContext.getResponse();
-		downloadUtil.download(outputStream, response, "出货表.xls");
+//		downloadUtil.download(outputStream, response, "出货表.xls");
+		downloadUtil.download(outputStream, response, "出货表.xlsx");
 		
 		return NONE;
-	}*/
+	}
 	
 	/**
 	 * 大标题的样式

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pers.hdh.management.domain">
+	<!-- 配置类的映射 -->
+	<class name="Export" table="EXPORT_C">
+		<!-- 1.配置主键生成策略 -->
+		<id name="id" column="EXPORT_ID" type="string">
+			<generator class="uuid"/>
+		</id>
+		
+		<!-- 2.配置其他属性 -->
+		<property name="inputDate" column="INPUT_DATE" type="date"/>
+		<property name="contractIds" column="CONTRACT_IDS" type="string"/>
+		<property name="customerContract" column="CUSTOMER_CONTRACT" type="string"/>
+		<property name="lcno" column="LCNO" type="string"/>
+		<property name="consignee" column="CONSIGNEE" type="string"/>
+		<property name="marks" column="MARKS" type="string"/>
+		<property name="shipmentPort" column="SHIPMENT_PORT" type="string"/>
+		<property name="destinationPort" column="DESTINATION_PORT" type="string"/>
+		<property name="transportMode" column="TRANSPORT_MODE" type="string"/>
+		<property name="priceCondition" column="PRICE_CONDITION" type="string"/>
+		<property name="remark" column="REMARK" type="string"/>
+		<property name="boxNums" column="BOX_NUMS" type="integer"/>
+		<property name="grossWeights" column="GROSS_WEIGHTS" type="double"/>
+		<property name="measurements" column="MEASUREMENTS" type="double"/>
+		<property name="state" column="STATE" type="integer"/>
+
+		
+		<!-- 3.配置对象关联关系； -->
+		<set name="exportProducts" cascade="all" inverse="true" order-by="ORDER_NO">
+			<key column="EXPORT_ID"/>
+			<one-to-many class="ExportProduct"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

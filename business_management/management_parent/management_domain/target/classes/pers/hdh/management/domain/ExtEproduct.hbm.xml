@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pers.hdh.management.domain">
+	<!-- 配置类的映射 -->
+	<class name="ExtEproduct" table="EXT_EPRODUCT_C">
+		<!-- 1.配置主键生成策略 -->
+		<id name="id" column="EXT_EPRODUCT_ID" type="string">
+			<generator class="uuid"/>
+		</id>
+		
+		<!-- 2.配置其他属性 -->
+		<property name="productNo" column="PRODUCT_NO" type="string"/>
+		<property name="productImage" column="PRODUCT_IMAGE" type="string"/>
+		<property name="productDesc" column="PRODUCT_DESC" type="string"/>
+		<property name="cnumber" column="CNUMBER" type="integer"/>
+		<property name="packingUnit" column="PACKING_UNIT" type="string"/>
+		<property name="price" column="PRICE" type="double"/>
+		<property name="amount" column="AMOUNT" type="double"/>
+		<property name="productRequest" column="PRODUCT_REQUEST" type="string"/>
+		<property name="orderNo" column="ORDER_NO" type="integer"/>
+
+		
+		<!-- 3.配置对象关联关系； -->
+		<many-to-one name="exportProduct" class="ExportProduct" column="EXPORT_PRODUCT_ID"/>
+		<many-to-one name="factory" class="Factory" column="FACTORY_ID"/>
+	</class>
+
+</hibernate-mapping>

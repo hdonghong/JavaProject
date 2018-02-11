@@ -58,5 +58,10 @@
 	<bean id="outProductAction" class="pers.hdh.management.action.cargo.OutProductAction" scope="prototype">
 		<property name="contractProductService" ref="contractProductService"></property>
 	</bean>
+	<!-- 报运管理 -->
+	<bean id="exportAction" class="pers.hdh.management.action.cargo.ExportAction" scope="prototype">
+		<property name="exportService" ref="exportService"></property>
+		<property name="contractService" ref="contractService"></property>
+	</bean>
 	
 </beans>

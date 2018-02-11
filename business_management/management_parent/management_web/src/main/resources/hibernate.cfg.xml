@@ -19,10 +19,15 @@
 		<mapping resource="pers/hdh/management/domain/Userinfo.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/Role.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/Module.hbm.xml" />
+		
 		<mapping resource="pers/hdh/management/domain/Contract.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/ContractProduct.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/ExtCproduct.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/Factory.hbm.xml" />
+		
+		<mapping resource="pers/hdh/management/domain/Export.hbm.xml" />
+		<mapping resource="pers/hdh/management/domain/ExportProduct.hbm.xml" />
+		<mapping resource="pers/hdh/management/domain/ExtEproduct.hbm.xml" />
 	
 	</session-factory>
 </hibernate-configuration>

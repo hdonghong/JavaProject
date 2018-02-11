@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pers.hdh.management.domain">
+	<!-- 配置类的映射 -->
+	<class name="ExportProduct" table="EXPORT_PRODUCT_C">
+		<!-- 1.配置主键生成策略 -->
+		<id name="id" column="EXPORT_PRODUCT_ID" type="string">
+			<generator class="uuid"/>
+		</id>
+		
+		<!-- 2.配置其他属性 -->
+		<property name="productNo" column="PRODUCT_NO" type="string"/>
+		<property name="packingUnit" column="PACKING_UNIT" type="string"/>
+		<property name="cnumber" column="CNUMBER" type="integer"/>
+		<property name="boxNum" column="BOX_NUM" type="integer"/>
+		<property name="grossWeight" column="GROSS_WEIGHT" type="double"/>
+		<property name="netWeight" column="NET_WEIGHT" type="double"/>
+		<property name="sizeLength" column="SIZE_LENGTH" type="double"/>
+		<property name="sizeWidth" column="SIZE_WIDTH" type="double"/>
+		<property name="sizeHeight" column="SIZE_HEIGHT" type="double"/>
+		<property name="exPrice" column="EX_PRICE" type="double"/>
+		<property name="price" column="PRICE" type="double"/>
+		<property name="tax" column="TAX" type="double"/>
+		<property name="orderNo" column="ORDER_NO" type="integer"/>
+
+		
+		<!-- 3.配置对象关联关系； -->
+		<set name="extEproducts" cascade="all" inverse="true">
+			<key column="EXPORT_PRODUCT_ID"/>
+			<one-to-many class="ExtEproduct"/>
+		</set>
+		
+		<many-to-one name="export" class="Export" column="EXPORT_ID"/>
+		<many-to-one name="factory" class="Factory" column="FACTORY_ID"/>
+		
+	</class>
+
+</hibernate-mapping>
