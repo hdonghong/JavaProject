@@ -48,7 +48,7 @@ function setSelectOption(obj, curValue ){
 /* 设置此行是否更新 by tony 20091110 
 */	    
 function setTRUpdateFlag( obj ){
-	//alert(obj.type);
+	alert(obj.type);
 	//alert(obj.defaultValue);
 	var currTr = obj.parentElement.parentElement;
 	if(currTr.innerHTML.toLowerCase().indexOf("<span")==0){

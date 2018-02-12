@@ -14,7 +14,6 @@
 		//发送ajax请求-------------返回json------------后面就去组织数据（调用函数）
 		//当进入更新页面时-----------直接获取服务器返回的串
 		
-		
     });
     
 
@@ -39,13 +38,13 @@
 		//this.style.background="#0099cc url(../images/arroww.gif) 4px 9px no-repeat";
 		oTD.innerHTML = "&nbsp;&nbsp;";	
 		oTD = oTR.insertCell(1);
-		oTD.innerHTML = "<input class=\"input\" type=\"checkbox\" name=\"del\" value=\""+id+"\"><input type=\"hidden\" name=\"mr_id\" value=\""+id+"\"><input class=\"input\" type=\"hidden\" id=\"mr_changed\" name=\"mr_changed\">";
+		oTD.innerHTML = "<input class=\"input\" type=\"checkbox\" name=\"del\" value=\""+id+"\"><input type=\"hidden\" name=\"mr_id\" value=\""+id+"\"><input class=\"input\" type=\"text\" id=\"mr_changed\" name=\"mr_changed\">";
 		oTD = oTR.insertCell(2);
 		oTD.innerHTML = "<input class=\"input\" type=\"text\" name=\"mr_orderNo\" readonly size=\"3\" value=\"\">";
 		oTD = oTR.insertCell(3);
 		oTD.innerHTML = "<b><font face='微软雅黑'><font color='blue'>"+productNo;+"</font></font></b> "
 		oTD = oTR.insertCell(4);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_cnumber\" maxLength=\"10\" value=\""+cnumber+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_cnumber\" maxLength=\"10\" value=\""+cnumber+"\" onblur=\"setTRUpdateFlag(this);\" size=\"15\" />";
 		oTD = oTR.insertCell(5);
 		oTD.innerHTML = "<input type=\"text\" name=\"mr_grossWeight\" maxLength=\"10\" value=\""+grossWeight+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
 		oTD = oTR.insertCell(6);

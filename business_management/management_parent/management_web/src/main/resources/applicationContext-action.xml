@@ -62,6 +62,7 @@
 	<bean id="exportAction" class="pers.hdh.management.action.cargo.ExportAction" scope="prototype">
 		<property name="exportService" ref="exportService"></property>
 		<property name="contractService" ref="contractService"></property>
+		<property name="exportProductService" ref="exportProductService"></property>
 	</bean>
 	
 </beans>

@@ -78,7 +78,7 @@
 	        </tr>		
 	        <tr>
 	            <td class="columnTitle">要求：</td>
-	            <td class="tableContent"><pre>${crequest }</pre></td>
+	            <td class="tableContent"><textarea cols="30">${crequest }</textarea></td>
 	            <td class="columnTitle">说明：</td>
 	            <td class="tableContent"><pre>${remark }</pre></td>
 	        </tr>		

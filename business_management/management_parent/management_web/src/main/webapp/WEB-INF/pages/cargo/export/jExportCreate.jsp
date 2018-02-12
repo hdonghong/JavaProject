@@ -8,7 +8,7 @@
 <body>
 <form name="icform" method="post">
    <!-- 保存的是购销合同的id,用逗号空格进行分隔 -->
-   <input type="hidden" name="id" value="${id }" />
+   <input type="hidden" name="contractIds" value="${id }" />
 <div id="menubar">
 <div id="middleMenubar">
 <div id="innerMenubar">
