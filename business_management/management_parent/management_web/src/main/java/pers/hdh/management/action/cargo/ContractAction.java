@@ -1,5 +1,11 @@
 package pers.hdh.management.action.cargo;
 
+import java.io.File;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ModelDriven;
 
 import pers.hdh.management.action.BaseAction;
@@ -185,5 +191,21 @@ public class ContractAction extends BaseAction implements ModelDriven<Contract> 
 		// 遍历ids，通过id取出每个购销合同对象，再取消提交状态
 		contractService.changeState(ids, 0);
 		return "alist";
+	}
+	
+	/**
+	 * 打印购销合同
+	 * @return
+	 * @throws Exception
+	 */
+	public String print() throws Exception {
+		// 根据ID获取对象
+		Contract entity = contractService.get(Contract.class, model.getId());
+		// 调用打印工具进行打印
+		String path = ServletActionContext.getServletContext().getRealPath(File.separator);// 上下文的根路径
+		HttpServletResponse response = ServletActionContext.getResponse();
+		new ContractPrinter().print(entity, path, response);
+		
+		return NONE;
 	}
 }

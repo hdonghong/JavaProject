@@ -63,4 +63,6 @@
 	<import resource="classpath:applicationContext-shiro.xml"/>
 	<!-- 配置Javamail -->
 	<import resource="classpath:applicationContext-mail.xml"/>
+	<!-- quartz -->
+	<import resource="classpath:applicationContext-job.xml"/>
 </beans>

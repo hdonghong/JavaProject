@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xmlns:context="http://www.springframework.org/schema/context"   
+	xmlns:tx="http://www.springframework.org/schema/tx"  
+	xmlns:aop="http://www.springframework.org/schema/aop"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+	http://www.springframework.org/schema/beans/spring-beans.xsd    
+	http://www.springframework.org/schema/aop    
+	http://www.springframework.org/schema/aop/spring-aop.xsd    
+	http://www.springframework.org/schema/tx    
+	http://www.springframework.org/schema/tx/spring-tx.xsd    
+	http://www.springframework.org/schema/context    
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<description>Quartz的配置</description>
+	
+	<!-- 定义一个任务类 -->
+	<bean id="mailJob" class="pers.hdh.management.job.MailJob"></bean>
+	
+	<!-- 任务类描述MethodInvokingJobDetailFactoryBean -->
+	<bean id="mailJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" >
+		<property name="targetObject" ref="mailJob"></property>
+		<property name="targetMethod" value="send"></property>
+	</bean>
+	
+	<!-- 触发器，指定时间 -->
+	<bean id="mailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="mailJobDetail" ></property>
+		<!-- 表达式，每10s执行一个，秒 分 时 日 月 周    问号指日与周二选一 -->
+		<property name="cronExpression" value="0 30 8 * * ?" ></property>
+	</bean>
+	
+	<!-- 总管理容器 -->
+	<bean id="startQuartz" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="mailTrigger" />
+			</list>
+		</property>
+	</bean>
+	
+</beans>

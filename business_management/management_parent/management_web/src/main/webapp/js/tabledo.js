@@ -48,7 +48,7 @@ function setSelectOption(obj, curValue ){
 /* 设置此行是否更新 by tony 20091110 
 */	    
 function setTRUpdateFlag( obj ){
-	alert(obj.type);
+//	alert(obj.type);
 	//alert(obj.defaultValue);
 	var currTr = obj.parentElement.parentElement;
 	if(currTr.innerHTML.toLowerCase().indexOf("<span")==0){
@@ -73,6 +73,7 @@ function setTRUpdateFlagTrue( obj ){
 	if(currTr.innerHTML.toLowerCase().indexOf("<span")==0){
 		currTr = obj.parentElement.parentElement.parentElement;
 	}
+//	alert(currTr.cells[1].all.mr_changed.value);
 	currTr.cells[1].all.mr_changed.value = "1";	//当填写的框内容发生变化时,设置本行记录发生变化标识
 }
 

@@ -38,11 +38,13 @@
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.9.1</version>
 		</dependency>
+		<!-- quartz，作业调度框架 -->
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz</artifactId>
 			<version>2.2.1</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>

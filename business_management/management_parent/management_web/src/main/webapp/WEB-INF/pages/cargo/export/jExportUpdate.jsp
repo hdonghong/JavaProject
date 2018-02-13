@@ -1,14 +1,14 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ include file="../../base.jsp"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<title></title>
     <script type="text/javascript" src="${ctx}/components/jquery-ui/jquery-1.2.6.js"></script>
     <script type="text/javascript" src="${ctx}/js/tabledo.js"></script>	
 	<script type="text/javascript" src="${ctx}/js/datepicker/WdatePicker.js"></script>
 
-<script language="JavaScript">
+<script type="text/javascript">
     $().ready(function(){
 		${mRecordData}
 		//发送ajax请求-------------返回json------------后面就去组织数据（调用函数）
@@ -21,6 +21,23 @@
 	function sortnoTR(){
 		sortno('mRecordTable', 2, 1);
 	}
+	
+    //鼠标抬起时为该行添加更改标记  
+    function setTRUpdateFlag(obj){  
+          
+        var currTr = obj.parentElement.parentElement;  
+        if(currTr.innerHTML.toLowerCase().indexOf("<span")==0){  
+             currTr=obj.parentElement.parentElement.parentElement;  
+        }  
+          
+        if(obj.value!=obj.defaultValue){      
+            //当填写的框内容发生变化时,设置本行记录发生变化标识  
+            currTr.cells[1].childNodes[2].value = "1";  
+        } /* else { // 考虑一组共用该值，故不可以这样处理
+        	currTr.cells[1].childNodes[2].value = "";
+        } */
+          
+    } 
 		
 	function addTRRecord(objId, id, productNo, cnumber, grossWeight, netWeight, sizeLength, sizeWidth, sizeHeight, exPrice, tax) {
 		
@@ -38,27 +55,27 @@
 		//this.style.background="#0099cc url(../images/arroww.gif) 4px 9px no-repeat";
 		oTD.innerHTML = "&nbsp;&nbsp;";	
 		oTD = oTR.insertCell(1);
-		oTD.innerHTML = "<input class=\"input\" type=\"checkbox\" name=\"del\" value=\""+id+"\"><input type=\"hidden\" name=\"mr_id\" value=\""+id+"\"><input class=\"input\" type=\"text\" id=\"mr_changed\" name=\"mr_changed\">";
+		oTD.innerHTML = "<input class=\"input\" type=\"checkbox\" name=\"del\" value=\""+id+"\"><input type=\"hidden\" name=\"mr_id\" value=\""+id+"\"><input class=\"input\" type=\"hidden\" id=\"mr_changed\" name=\"mr_changed\">";
 		oTD = oTR.insertCell(2);
 		oTD.innerHTML = "<input class=\"input\" type=\"text\" name=\"mr_orderNo\" readonly size=\"3\" value=\"\">";
 		oTD = oTR.insertCell(3);
 		oTD.innerHTML = "<b><font face='微软雅黑'><font color='blue'>"+productNo;+"</font></font></b> "
 		oTD = oTR.insertCell(4);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_cnumber\" maxLength=\"10\" value=\""+cnumber+"\" onblur=\"setTRUpdateFlag(this);\" size=\"15\" />";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_cnumber\" maxLength=\"10\" value=\""+cnumber+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\" />";
 		oTD = oTR.insertCell(5);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_grossWeight\" maxLength=\"10\" value=\""+grossWeight+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_grossWeight\" maxLength=\"10\" value=\""+grossWeight+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\">";
 		oTD = oTR.insertCell(6);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_netWeight\" maxLength=\"10\" value=\""+netWeight+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_netWeight\" maxLength=\"10\" value=\""+netWeight+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\">";
 		oTD = oTR.insertCell(7);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_sizeLength\" maxLength=\"10\" value=\""+sizeLength+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_sizeLength\" maxLength=\"10\" value=\""+sizeLength+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\">";
 		oTD = oTR.insertCell(8);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_sizeWidth\" maxLength=\"10\" value=\""+sizeWidth+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_sizeWidth\" maxLength=\"10\" value=\""+sizeWidth+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\">";
 		oTD = oTR.insertCell(9);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_sizeHeight\" maxLength=\"10\" value=\""+sizeHeight+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_sizeHeight\" maxLength=\"10\" value=\""+sizeHeight+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\">";
 		oTD = oTR.insertCell(10);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_exPrice\" maxLength=\"10\" value=\""+exPrice+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_exPrice\" maxLength=\"10\" value=\""+exPrice+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\">";
 		oTD = oTR.insertCell(11);
-		oTD.innerHTML = "<input type=\"text\" name=\"mr_tax\" maxLength=\"10\" value=\""+tax+"\" onBlur=\"setTRUpdateFlag(this);\" size=\"15\">";
+		oTD.innerHTML = "<input type=\"text\" name=\"mr_tax\" maxLength=\"10\" value=\""+tax+"\" onchange=\"setTRUpdateFlag(this);\" size=\"15\">";
 
 		dragtableinit();	//拖动表格行
 		sortnoTR();			//排序号
@@ -131,7 +148,6 @@
 	        </tr>
 		</table>
 	</div>
-
 	<div class="listTablew">
 		<table class="commonTable_main" cellSpacing="1" id="mRecordTable">
 			<tr class="rowTitle" align="middle">
@@ -155,16 +171,12 @@
 		</table>
 	</div>
 
-
-						</div>
-						<div class="textbox-bottom">
-							<div class="textbox-inner-bottom">
-								<div class="textbox-go-top">
-								</div>
-							</div>
-						</div>
-					</div>
- 
+	<div class="textbox-bottom">
+		<div class="textbox-inner-bottom">
+			<div class="textbox-go-top">
+			</div>
+		</div>
+	</div>
 </form>
 </body>
 </html>
