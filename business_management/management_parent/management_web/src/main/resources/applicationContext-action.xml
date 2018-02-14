@@ -65,4 +65,9 @@
 		<property name="exportProductService" ref="exportProductService"></property>
 	</bean>
 	
+	<!-- 统计分析 -->
+	<bean id="statChartAction" class="pers.hdh.management.action.stat.StatChartAction" scope="prototype">
+		<property name="sqlDao" ref="sqlDao"></property>
+	</bean>
+	
 </beans>

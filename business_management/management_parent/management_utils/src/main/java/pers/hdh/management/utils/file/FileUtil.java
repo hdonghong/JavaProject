@@ -319,7 +319,7 @@ public class FileUtil {
   	}
   	
 	try {
-      FileWriter fw = new FileWriter(sPath + "\\" + sFile,true);
+      FileWriter fw = new FileWriter(sPath + File.separator + sFile,true);
       BufferedWriter bfw = new BufferedWriter(fw);
       bfw.write(sContent);
       bfw.flush();
@@ -342,7 +342,7 @@ public class FileUtil {
   	}
   	
 	try {
-      FileWriter fw = new FileWriter(sPath + "\\" + sFile,false);
+      FileWriter fw = new FileWriter(sPath + File.separator + sFile,false);
       BufferedWriter bfw = new BufferedWriter(fw);
       bfw.write(sContent);
       bfw.flush();
@@ -362,7 +362,7 @@ public class FileUtil {
 	  }
 	  
 	  try {
-		  FileWriter fw = new FileWriter(sPath + "\\" + sFile,false);
+		  FileWriter fw = new FileWriter(sPath + File.separator + sFile,false);
 		  BufferedWriter bfw = new BufferedWriter(fw);
 		  bfw.write(sContent);
 		  bfw.flush();
@@ -382,7 +382,7 @@ public class FileUtil {
   	}
   	
 	try {
-		OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(sPath + "\\" + sFile), enCoding);
+		OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(sPath + File.separator + sFile), enCoding);
 	    out.write(sContent);
 	    out.flush();
 	    out.close();
@@ -401,7 +401,7 @@ public class FileUtil {
 	  }
 	  
 	  try {
-		  OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(sPath + "\\" + sFile, false), enCoding);
+		  OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(sPath + File.separator + sFile, false), enCoding);
 		  out.write(sContent);
 		  out.flush();
 		  out.close();

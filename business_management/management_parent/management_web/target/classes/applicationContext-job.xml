@@ -28,7 +28,7 @@
 	<!-- 触发器，指定时间 -->
 	<bean id="mailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="mailJobDetail" ></property>
-		<!-- 表达式，每10s执行一个，秒 分 时 日 月 周    问号指日与周二选一 -->
+		<!-- 表达式，每10s执行一个，秒 分 时 日 月 周    问号指日与周 二选一 -->
 		<property name="cronExpression" value="0 30 8 * * ?" ></property>
 	</bean>
 	
