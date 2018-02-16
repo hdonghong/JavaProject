@@ -9,7 +9,8 @@
 *	[4.taskmanagement](#4)
 *	[5.maildemo](#5)
 *	[6.webStore](#6)
-*	[7.webStore](#7)
+*	[7.webservice_demo](#7)
+*	[8.business_management](#8)
 
 <hr/><br/>
 
@@ -34,7 +35,7 @@
 	基于jsp/servlet+javabean+c3p0开发的校园卡管理系统。采用视图层(servelet+jsp)，服务层(service)，持久层(dao)结构开发的一个简单的curd系统。
 </p>
 <p>
-	完成于：2018-08-26
+	完成于：2017-08-26
 </p>
 
 <h2 id="4">4.taskmanagement</h2>
@@ -42,7 +43,7 @@
 	基于jsp/servlet+javabean+c3p0开发的任务管理系统。
 </p>
 <p>
-	完成于：2018-10-09
+	完成于：2017-10-09
 </p>
 
 <h2 id="5">5.maildemo</h2>
@@ -61,7 +62,15 @@
 	完成于：2017-12-12
 </p>
 
-<h2 id="7">7.business_management</h2>
+<h2 id="7">7.wsdemo</h2>
+<p>
+	一个简单基于CXF框架实现webservice的demo
+</p>
+<p>
+	完成于：2018-02-16
+</p>
+
+<h2 id="8">8.business_management</h2>
 <p>
 	基于SSH框架实现的商务管理平台。
 </p>
