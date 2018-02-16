@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.itcast.export.domain">
+	<!-- 配置类的映射 -->
+	<class name="Export" table="EXPORT_C">
+		<!-- 1.配置主键生成策略 -->
+		<id name="id" column="EID" type="string">
+			<generator class="uuid"/>
+		</id>
+		
+		<!-- 2.配置其他属性 -->
+		<property name="exportId" column="EXPORT_ID" type="string"/>
+		<property name="inputDate" column="INPUT_DATE" type="date"/>
+		<property name="shipmentPort" column="SHIPMENT_PORT" type="string"/>
+		<property name="destinationPort" column="DESTINATION_PORT" type="string"/>
+		<property name="transportMode" column="TRANSPORT_MODE" type="string"/>
+		<property name="priceCondition" column="PRICE_CONDITION" type="string"/>
+		<property name="boxNums" column="BOX_NUMS" type="integer"/>
+		<property name="grossWeights" column="GROSS_WEIGHTS" type="double"/>
+		<property name="measurements" column="MEASUREMENTS" type="double"/>
+		<property name="state" column="STATE" type="integer"/>
+		<property name="reason" column="REASON" type="string"/>
+		<property name="orderNo" column="ORDER_NO" type="integer"/>
+		<property name="exportDate" column="EXPORT_DATE" type="date"/>
+
+		<!-- private Set<ExportProduct> products = new HashSet<ExportProduct>(); -->
+		<set name="products" cascade="all" inverse="true">
+		    <key column="EID"></key>
+		    <one-to-many class="ExportProduct"/>
+		</set>
+	</class>
+
+</hibernate-mapping>
