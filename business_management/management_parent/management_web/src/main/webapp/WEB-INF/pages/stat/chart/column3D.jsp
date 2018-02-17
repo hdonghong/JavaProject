@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -11,8 +11,8 @@
         <script src="${pageContext.request.contextPath }/components/chart/amcharts_3.14.4/amcharts/serial.js" type="text/javascript"></script>
         <script>
             var chart;
-
-            var chartData = [
+			var chartData = ${result};
+/*             var chartData = [
                 {
                     "country": "USA",
                     "visits": 4025,
@@ -98,13 +98,14 @@
                     "visits": 328,
                     "color": "#000000"
                 }
-            ];
+            ]; */
 
             AmCharts.ready(function () {
                 // SERIAL CHART
                 chart = new AmCharts.AmSerialChart();
                 chart.dataProvider = chartData;
-                chart.categoryField = "country";
+                /* chart.categoryField = "country"; */
+                chart.categoryField = "factory";// 修改为json串中的参数
                 // the following two lines makes chart 3D
                 chart.depth3D = 20;
                 chart.angle = 30;
@@ -118,13 +119,15 @@
 
                 // value
                 var valueAxis = new AmCharts.ValueAxis();
-                valueAxis.title = "Visitors";
+               /*  valueAxis.title = "Visitors"; */
+               valueAxis.title = "Sales";// 改为相应的标题
                 valueAxis.dashLength = 5;
                 chart.addValueAxis(valueAxis);
 
                 // GRAPH
                 var graph = new AmCharts.AmGraph();
-                graph.valueField = "visits";
+                /* graph.valueField = "visits"; */
+                graph.valueField = "amount";// 修改为json串中的参数
                 graph.colorField = "color";
                 graph.balloonText = "<span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>";
                 graph.type = "column";

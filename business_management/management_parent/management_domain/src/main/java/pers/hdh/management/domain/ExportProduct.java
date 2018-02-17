@@ -3,13 +3,37 @@ package pers.hdh.management.domain;
 import java.io.Serializable;
 import java.util.Set;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
+/*
+     {
+       exportProductId:"",
+       productNo:"",
+       packingUnit:"",
+       cnumber:"",
+       boxNum:"",
+       grossWeight:"",
+       netWeight:"",
+       sizeLength:"",
+       sizeWidth:"",
+       sizeHeight:"",
+       exPrice:"",
+       price:"",
+       tax:""
+    }
+ 
+ */
 public class ExportProduct extends BaseEntity implements Serializable{
+	@JSONField(serialize=false)
 	private static final long serialVersionUID = 1L;
-	
+	@JSONField(serialize=false)
 	private Export export;			//报运货物和报运的关系，多对一
+	@JSONField(serialize=false)
 	private Factory factory;		//报运货物和厂家的关系，多对一
+	@JSONField(serialize=false)
 	private Set<ExtEproduct> extEproducts;		//报运货物和报运附件的关系，一对多
 
+	@JSONField(name="exportProductId")
 	private String id;	  	
 	private String productNo;			
 	private String packingUnit;			//PCS/SETS
@@ -23,6 +47,7 @@ public class ExportProduct extends BaseEntity implements Serializable{
 	private Double exPrice;			//sales confirmation 中的价格（手填）
 	private Double price;			
 	private Double tax;			//收购单价=合同单价
+	@JSONField(serialize=false)
 	private Integer orderNo;			
 
 	

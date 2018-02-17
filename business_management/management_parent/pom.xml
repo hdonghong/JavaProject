@@ -171,6 +171,7 @@
 			<version>${c3p0.version}</version>
 		</dependency>
 
+		<!-- cxf框架实现webservice -->
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-frontend-jaxws</artifactId>

@@ -20,6 +20,7 @@
 <li id="delete"><a href="#" onclick="formSubmit('exportAction_delete','_self');this.blur();">删除</a></li>
 <li id="new"><a href="#" onclick="formSubmit('exportAction_submit','_self');this.blur();">提交</a></li>
 <li id="new"><a href="#" onclick="formSubmit('exportAction_cancel','_self');this.blur();">取消</a></li>
+<li id="work_assign"><a href="#" onclick="formSubmit('exportAction_export','_self');this.blur();">电子报运</a></li>
 </ul>
   </div>
 </div>
@@ -78,7 +79,7 @@ ${links}
 		<td>${o.transportMode}</td>
 		<td>${o.priceCondition}</td>
 		<td><fmt:formatDate value="${o.inputDate }" pattern="yyyy-MM-dd"/></td>
-		<td>${o.state==0?"草稿":"已上报"}</td>
+		<td>${o.state==0?"草稿":o.state==1?"已上报":"已报运"}</td>
 	</tr>
 	</c:forEach>
 	

@@ -3,8 +3,11 @@ package pers.hdh.management.action.cargo;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.opensymphony.xwork2.ModelDriven;
 
+import cn.itcast.export.webservice.IEpService;
 import pers.hdh.management.action.BaseAction;
 import pers.hdh.management.domain.Contract;
 import pers.hdh.management.domain.Export;
@@ -283,6 +286,30 @@ public class ExportAction extends BaseAction implements ModelDriven<Export> {
 		String[] ids = model.getId().split(", ");
 		// 遍历ids，通过id取出每个购销合同对象，再取消提交状态
 		exportService.changeState(ids, 0);
+		return "alist";
+	}
+	
+
+	private IEpService epService;
+	public void setEpService(IEpService epService) {
+		this.epService = epService;
+	}
+	/**
+	 * 海关报运
+	 * @return
+	 * @throws Exception
+	 */
+	public String export() throws Exception {
+		// 1.确定出选中的报运单对象
+		Export export = exportService.get(Export.class, model.getId());
+		// 2.将这个报运单对象及它包含的商品列表转成json串
+		String jsonStr = JSON.toJSONString(export);
+		// 3.调用远程的webservice，将json串传递给海关报运平台
+		String jsonResult = epService.exportE(jsonStr);
+		// 4.处理海关报运平台相应的结果（json串）
+		Export entity = JSON.parseObject(jsonResult, Export.class);
+		exportService.updateE(entity);
+		// 5.再次查询
 		return "alist";
 	}
 }

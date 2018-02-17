@@ -14,5 +14,16 @@
 			<artifactId>management_service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.codehaus.xfire</groupId>
+			<artifactId>xfire-core</artifactId>
+			<version>1.2.6</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.ws.commons</groupId>
+					<artifactId>XmlSchema</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 </project>

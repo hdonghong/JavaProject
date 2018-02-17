@@ -29,6 +29,11 @@ public class StatChartAction extends BaseAction {
 	
 	/**
 	 * 新版amcharts
+        {
+            "country": "Poland",
+            "visits": 328,
+            "color": "#000000"
+        }
 	 * 厂家销量排名
 	 * @return
 	 * @throws Exception
@@ -39,11 +44,19 @@ public class StatChartAction extends BaseAction {
 		// 执行sql语句，获取统计结果
 		List<String> list = sqlDao.executeSQL(sql);
 		
-		// 拼接成xml文件字符串
-		String xmlContent = genPieDataSource(list);
+		// 拼接成json格式字符串
+		StringBuilder jsonContent = new StringBuilder();
+		String[] colors = {"#FF0F00", "#FF6600", "#FF9E01", "#FCD202", "#F8FF01", "#B0DE09", "#04D215", "#0D8ECF", "#0D52D1", "#2A0CD0", "#8A0CCF", "#CD0D74", "#754DEB"};
+		jsonContent.append("[");
+		for (int i = 0; i < list.size(); i++) {
+			jsonContent.append("{").append("\"factory\":\"").append(list.get(i)).append("\",")
+			                       .append("\"amount\":\"").append(list.get(++i)).append("\",")
+			                       .append("\"color\":\"").append(colors[i/2%colors.length]).append("\"},");
+		}
+		jsonContent.replace(jsonContent.length()-1, jsonContent.length(), "]");
 		
-		// 将拼接好的字符串写入到data.xml中
-		writeXML("stat/chart/factorysale/data.xml", xmlContent);
+		// 将json放入值栈中
+		super.put("result", jsonContent);
 		
 		return "factorysale";
 	}

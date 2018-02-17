@@ -63,6 +63,7 @@
 		<property name="exportService" ref="exportService"></property>
 		<property name="contractService" ref="contractService"></property>
 		<property name="exportProductService" ref="exportProductService"></property>
+		<property name="epService" ref="exportClient"></property>
 	</bean>
 	
 	<!-- 统计分析 -->

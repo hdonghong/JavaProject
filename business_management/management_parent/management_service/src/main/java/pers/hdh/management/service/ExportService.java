@@ -75,4 +75,10 @@ public interface ExportService {
 	 * @param state
 	 */
 	public void changeState(String[] ids, int state);
+	
+	/**
+	 * 电子报运后更新数据
+	 * @param entity
+	 */
+	void updateE(Export entity);
 }

@@ -65,4 +65,6 @@
 	<import resource="classpath:applicationContext-mail.xml"/>
 	<!-- quartz -->
 	<import resource="classpath:applicationContext-job.xml"/>
+	<!-- webservice cxf -->
+	<import resource="classpath:applicationContext-ws.xml"/>
 </beans>

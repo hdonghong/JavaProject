@@ -135,4 +135,27 @@ public class ExportServiceImpl implements ExportService {
 		}
 	}
 
+	@Override
+	public void updateE(Export entity) {
+		// 1.加载出报运单对象
+		Export export = baseDao.get(Export.class, entity.getId());
+		
+		// 2.修改报运单的属性
+		export.setState(entity.getState());
+		export.setRemark(entity.getRemark());
+		
+		// 3.加载出报运单下的每个商品
+		Set<ExportProduct> epSet = entity.getExportProducts();
+		for (ExportProduct ep : epSet) {
+			ExportProduct temp = baseDao.get(ExportProduct.class, ep.getId());
+			// 4.修改报运单下的每个商品的税金
+			temp.setTax(ep.getTax());
+			// 5.保存报运单下每个商品的修改数据
+			baseDao.saveOrUpdate(temp);
+		}
+		// 6.保存报运单修改结果
+		baseDao.saveOrUpdate(export);
+		
+	}
+
 }
