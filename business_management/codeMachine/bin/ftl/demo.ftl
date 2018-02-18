@@ -1,0 +1,1 @@
+${ className }.hbm.xml

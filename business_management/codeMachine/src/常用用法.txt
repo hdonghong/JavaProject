@@ -1,0 +1,128 @@
+前提：将数据封装到map中，每个元素可以是个对象，有属性，有关联的对象
+
+properties 为准备好的Map对象集合，
+
+
+注意：freeMarker控制较严格，数据如果为null会报错。
+
+
+== 常用方法
+
+${ package }					packge为变量，为map的key，${}后可以直接显示内容；
+${.now}							当前时间
+${ className?cap_first }		首字母大写
+${ className?uncap_first }		首字母小写
+lower_case						全小写
+<#if (list.title?length>15)>	字符串长度
+
+${ package?replace(".","/") }	替换
+
+== html
+
+html 用于将字符串中的<、>、&和“替换为对应得&lt;&gt;&quot:&amp
+
+== 特殊字符替换
+
+$		${'$'}
+#		${'#'}
+
+== FreeMarker不会自动进行类型的转换
+ 
+常见的转换：
+ 
+String -> int            ?eval
+int  -> String           ?c
+
+
+
+
+== for循环
+properties 为准备好的Map对象集合，
+
+<#list properties as pro>  
+	private  ${pro.proType} ${pro.proName};			<#if pro.proComment != "">//${pro.proComment}</#if>
+</#list>
+
+== 定义变量，显示变量
+
+	<#assign x=pro.proName?index_of("createBy")>
+	${x}
+	
+	布尔类型转换为字符串显示
+	<#assign x=pro.primary?string('yes', 'no')>
+	${x}
+	
+==布尔判断
+	<#if pro.primary>
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	</#if>
+	<#if pro.primary?string('yes', 'no')=="no">
+	<#if "createBy,createDept,createTime,updateBy,updateTime"?index_of(pro.proName) == -1>
+	public ${pro.proType} get${pro.proName?cap_first}() {
+		return this.${pro.proName};
+	}
+	public void set${pro.proName?cap_first}(${pro.proType} ${pro.proName}) {
+		this.${pro.proName} = ${pro.proName};
+	}	
+	</#if>
+	</#if>
+
+==判断空串
+
+<#if pro.proComment != "">//${pro.proComment}</#if>
+
+
+1. 判断对象是否存在(null)
+
+经常会用到，如果对象 != null 则xxxx，在freemarker中表达比较奇怪，例如判断 target 是否为null，如果不为 nll 则做xxx动作
+
+<#if target??>
+    xxxx
+</#if>
+ 
+(目标变量后面连续两个??)
+ 
+
+2. 字符串或数字比较
+ 
+java里标准字符串比较需要 .equals() 方法，在freemarkder中进行了简化，字符串的比较方法和数字做到完全一样
+ 
+<#if str == "success">
+    xxx
+</#if>
+
+<#if str !== "error">
+    xxx
+</#if>
+
+	
+==判断是否包含子串：
+
+pro.proName为子串
+
+<#if "CreateBy,CreateDept,CreateTime"?index_of(pro.proName)==-1>
+
+
+== 高级应用：宏
+
+业务：实现每个文件引入版本
+
+CopyRight.ftl
+<#macro CopyRight> 
+/**
+ * @Description:	${ className }Service接口
+ * @Author:			传智播客 java学院	传智宋江
+ * @Company:		http://java.itcast.cn
+ * @CreateDate:		${.now}
+ */
+ </#macro>
+
+调用：
+
+<#import "CopyRight.ftl" as my>
+<@my.CopyRight/>
