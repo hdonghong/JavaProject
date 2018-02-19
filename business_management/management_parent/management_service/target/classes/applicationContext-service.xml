@@ -54,5 +54,10 @@
 	<bean id="extEproductService" class="pers.hdh.management.service.impl.ExtEproductServiceImpl">
 		<property name="baseDao" ref="baseDao" />
 	</bean>
+	<bean id="packingListService" class="pers.hdh.management.service.impl.PackingListServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	
+	
 	
 </beans>

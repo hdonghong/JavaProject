@@ -28,6 +28,8 @@
 		<mapping resource="pers/hdh/management/domain/Export.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/ExportProduct.hbm.xml" />
 		<mapping resource="pers/hdh/management/domain/ExtEproduct.hbm.xml" />
+		
+		<mapping resource="pers/hdh/management/domain/PackingList.hbm.xml" />
 	
 	</session-factory>
 </hibernate-configuration>

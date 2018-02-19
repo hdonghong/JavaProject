@@ -49,5 +49,13 @@
 			<result name="alist" type="redirectAction">exportAction_list</result>
 		</action>
 		
+		<action name="packingListAction_*" method="{1}" class="packingListAction">
+			<result name="alist" type="redirect">packingListAction_list</result>
+			<result name="plist">/WEB-INF/pages/cargo/packinglist/jPackingListListPage.jsp</result>
+			<result name="pcreate">/WEB-INF/pages/cargo/packinglist/jPackingListCreate.jsp</result>
+			<result name="pupdate">/WEB-INF/pages/cargo/packinglist/jPackingListUpdate.jsp</result>
+			<result name="pview">/WEB-INF/pages/cargo/packinglist/jPackingListView.jsp</result>
+		</action>
+		
 	</package>
 </struts>

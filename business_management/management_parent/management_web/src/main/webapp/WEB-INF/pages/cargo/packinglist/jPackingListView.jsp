@@ -22,7 +22,7 @@
    
   <div class="textbox-title">
 	<img src="${ctx }/skin/default/images/icon/currency_yen.png"/>
-   浏览装箱单
+    装箱单详情
   </div>
   
 
@@ -40,9 +40,9 @@
 	        <tr>
 	            <td class="columnTitle">发票号：</td>
 	            <td class="tableContent">${invoiceNo}</td>
-	        
+	       
 	            <td class="columnTitle">发票日期：</td>
-	            <td class="tableContent">${invoiceDate}</td>
+	            <td class="tableContent"><fmt:formatDate value="${invoiceDate}" pattern="yyyy-MM-dd"/></td>
 	        </tr>	
 	        <tr>
 	            <td class="columnTitle">唛头：</td>
@@ -51,15 +51,15 @@
 	            <td class="columnTitle">描述：</td>
 	            <td class="tableContent">${descriptions}</td>
 	        </tr>	
-	        
+	       
 	        <tr>
 	            <td class="columnTitle">状态：</td>
 	            <td class="tableContent">
-	           <c:if test="${state==0}">草稿</c:if>
-				<c:if test="${state==1}"><b><font color="green">已上报</font></b></c:if>
+	            <c:if test="${state==0}">草稿</c:if>
+				<c:if test="${state==1}">已上报</c:if>
+				<c:if test="${state==2}">已装箱</c:if>
 	            </td>
 	        </tr>	
-	       
 		</table>
 	</div>
  

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pers.hdh.management.domain">
+	<!-- 配置类的映射 -->
+	<class name="PackingList" table="PACKING_LIST_C">
+		<!-- 1.配置主键生成策略 -->
+		<id name="id" column="PACKING_LIST_ID" type="string">
+			<generator class="uuid"/>
+		</id>
+		
+		<!-- 2.配置其他属性 -->
+		<property name="seller" column="SELLER" type="string"/>
+		<property name="buyer" column="BUYER" type="string"/>
+		<property name="invoiceNo" column="INVOICE_NO" type="string"/>
+		<property name="invoiceDate" column="INVOICE_DATE" type="date"/>
+		<property name="marks" column="MARKS" type="string"/>
+		<property name="descriptions" column="DESCRIPTIONS" type="string"/>
+		<property name="exportIds" column="EXPORT_IDS" type="string"/>
+		<property name="exportNos" column="EXPORT_NOS" type="string"/>
+		<property name="state" column="STATE" type="double"/>
+		<property name="createBy" column="CREATE_BY" type="string"/>
+		<property name="createDept" column="CREATE_DEPT" type="string"/>
+		<property name="createTime" column="CREATE_TIME" type="date"/>
+
+	</class>
+
+</hibernate-mapping>

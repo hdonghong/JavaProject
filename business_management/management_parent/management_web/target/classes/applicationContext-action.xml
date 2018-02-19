@@ -70,5 +70,8 @@
 	<bean id="statChartAction" class="pers.hdh.management.action.stat.StatChartAction" scope="prototype">
 		<property name="sqlDao" ref="sqlDao"></property>
 	</bean>
-	
+	<!-- 装箱管理 -->
+	<bean id="packingListAction" class="pers.hdh.management.action.cargo.PackingListAction" scope="prototype">
+		<property name="packingListService" ref="packingListService"/>
+	</bean>
 </beans>

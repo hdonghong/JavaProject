@@ -23,42 +23,53 @@
 </div>
 </div>
    
-  <div class="textbox-title">
-	<img src="${ctx }/skin/default/images/icon/currency_yen.png"/>
-   修改装箱单
+  <div class="textbox-title">修改装箱信息
   </div> 
   
 
  
     <div>
 		<table class="commonTable" cellspacing="1">
-	        
+	        <tr>
+	            <td class="columnTitle">装箱号：</td>
+	            <td class="tableContent">${id}</td>
+	            <td class="columnTitle">制单日期：</td>
+	            <td class="tableContent">
+<%-- 					<input type="text" style="width:90px;" name="inputDate"
+	            	 value="<fmt:formatDate value="${createTime}" pattern="yyyy-MM-dd"/>"
+	             	onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/> --%>
+				</td>
+	        </tr>	
 	        <tr>
 	            <td class="columnTitle">卖方：</td>
 	            <td class="tableContent"><input type="text" name="seller" value="${seller}"/></td>
-	      
 	            <td class="columnTitle">买方：</td>
 	            <td class="tableContent"><input type="text" name="buyer" value="${buyer}"/></td>
 	        </tr>	
 	        <tr>
 	            <td class="columnTitle">发票号：</td>
 	            <td class="tableContent"><input type="text" name="invoiceNo" value="${invoiceNo}"/></td>
-	        
 	            <td class="columnTitle">发票日期：</td>
 	            <td class="tableContent">
-	             <input type="text" style="width:90px;" name="invoiceDate"
-	            	 value="${invoiceDate}"
-	             	onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/>
-	            </td>
+		            <input type="text" style="width:90px;" name="invoiceDate"
+		            	 value="${invoiceDate}"
+		             	onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/>
+		        </td>
 	        </tr>	
 	        <tr>
 	            <td class="columnTitle">唛头：</td>
 	            <td class="tableContent"><input type="text" name="marks" value="${marks}"/></td>
-	      
 	            <td class="columnTitle">描述：</td>
 	            <td class="tableContent"><input type="text" name="descriptions" value="${descriptions}"/></td>
 	        </tr>	
-	       
+	        <tr>
+	            <td class="columnTitle">报运ID集合：</td>
+	            <td class="tableContent"><input type="text" name="exportIds" value="${exportIds}"/></td>
+	        </tr>	
+	        <tr>
+	            <td class="columnTitle">报运NO集合x,y|z,h：</td>
+	            <td class="tableContent"><input type="text" name="exportNos" value="${exportNos}"/></td>
+	        </tr>	
 		</table>
 	</div>
  
