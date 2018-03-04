@@ -1,0 +1,113 @@
+案例1-查询我的订单(将所包含的订单项也展示出来)
+需求：
+	点击页面上的"我的订单",分页展示所有的订单及其所包含的订单项
+技术分析：
+	多表的查询
+		内连接
+			格式1：
+				select * from a join b on [condition];
+			格式2:
+				select * from a,b where [condition];
+		外连接
+			左外连接(展示a的所有数据)
+				select * from a left join b on [condition];
+		子查询
+步骤分析：
+	1.修改head.jsp的链接 我的订单
+		/store/order?method=findAllByPage&currPage=
+	2.在orderservlet中编写findAllByPage
+		获取用户(session)
+		获取当前页
+		固定pagesize
+		调用orderservice根据用户查询所有订单 返回值:PageBean
+		将pagebean放入request域中,请求转发到/jsp/orderlist
+	3.在orderservlet中findAllByPage方法的操作：返回一个pagebean
+		封装一个pagebean
+			new PageBean(currPage,pageSize,list,totalCount)
+		调用dao查询list和totalCount 将 user.uid传递过去
+	4.在orderDao中查询所有的订单
+		select * from orders where uid = ? limit m,n 查询到所有的订单
+			List<Order> list
+		遍历所有的订单,根据订单id
+			查询订单项表和商品表
+				select * from orderitem oi, product p where oi.pid = p.pid;
+			用maplisthandler封装结果集,然后使用beanutils封装成指定的bean对象
+	细节：
+		MapListHandler
+		BeanUtils.populate();
+	
+案例2-查询订单的详情
+需求：
+	未付款的订单,点击"付款",跳转到订单的详情页面
+步骤分析：
+	1.在订单列表中,点击付款
+		/store/order?method=getById&oid=?
+	2.在orderservlet中编写getById()
+		接收oid
+		调用service 返回Order
+		将Order放入域中,请求转发order_info.jsp
+	3.在orderdao中 通过订单号,查看订单详情
+		select * from orderitem a, product b where a.pid=b.pid and a.oid=?;
+			
+案例3-在线支付
+支付方式
+	1.银行对接(商城->各大银行)
+		优点：
+			免费 资金回笼快
+		缺点：
+			开发成本高 维护成本高
+	2.第三方对接(商城->第三方支付->各大银行)
+		优点：
+			开发成本低 维护成本低
+		缺点：
+			收费的 资金回笼较慢
+在线支付：
+	1.发送哪些数据？
+		第三方规定
+	2.如何保证数据安全？
+		数字签名
+			需要商城将第三方需要的数据,及加密后的数据发送给第三方支付
+			第三方获取所有的数据之后,将商城发送过来的数据重新按照分配给商城的密钥和算法重新生成一个数据
+			然后和商城传递过来的加密后的数据做对比,若一致,就代表没有问题
+		商城在第三方开的账户
+		第三方给商城的密钥
+		第三方给商城的算法
+步骤分析：
+	在order_info.jsp页面上 填写收货人信息,然后点击 确认订单
+		/store/order?method=pay
+	在orderservlet中的pay操作：
+		1.获取收货人信息	更新数据库中的orders表
+		2.拼装url 给第三方的数据
+		3.重定向 第三方
+		
+	在用户完成支付之后,银行通知第三方,第三方需要通知 用户和商城 支付成功
+		要求商城必须由固定的ip
+		
+	支付结果需要通知商城和用户
+		url:回调函数
+		http://localhost:8080/store/order?method=callback
+	在callback中
+		获取第三方发送过来的数据
+		判断数据是否被篡改
+			若没有,修改订单状态
+			若被篡改,提示信息被篡改
+	
+扩展:权限控制(粗粒度)-通过filter
+过滤器编写步骤
+	1.编写一个类
+		实现filter接口
+	2.编写配置文件
+		<filter>
+		<filter-mapping>
+	
+	编写一个privilegeFilter
+		判断用户是否登录(session)
+		若为空
+			请求转发到msp.jsp 携带信息
+	
+扩展:弹出层
+	
+	
+	
+	
+	

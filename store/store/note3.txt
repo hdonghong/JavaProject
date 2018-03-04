@@ -1,0 +1,114 @@
+案例1-将商品添加到购物车
+需求：
+	在商品详情页面上,输入购买数量,点击加入购物车,在购物车页面上展示里面所有的商品
+分析：
+	涉及的实体：
+		购物车 购物车项 商品
+		购物车中的内容	Cart
+			购物车项的map集合(map<商品id,购物车项>)
+			总金额
+			
+			add2Cart(购物车项)
+			removeFromCart(String 商品id)
+			clearCart()
+		
+		购物车项的内容	CartItem
+			商品对象	product
+			购买数量	count
+			小计		subtotal
+			
+步骤分析：
+	1.商品详情页面,输入购买的数量,点击加入购物车
+		/store/cart?method=add&pid= &count= 
+	2.在cartservlet中的add方法操作
+		先获取两个参数 pid和count
+		调用ProductService 通过id获取商品
+		拼装CartItem
+			Product--查询
+			count--传递
+			subtotal--计算
+	3.获取购物车,调用 add2Cart(cartItem)
+	4.页面跳转
+		重定向(使用请求转发时地址栏会奇怪)
+		/jsp/cart.jsp
+		
+	细节：
+		提交编号pid——使用隐藏域
+			<input type="hidden" name="pid" value="${product.pid }">
+		普通按钮添加表单提交事件
+			document.getElementById("formId").submit();
+		将购物车放到session中
+		
+案例2-对购物车进行操作(删除)	
+步骤分析：
+	1.在购物车页面上,点击删除
+		/store/cart?method=remove&pid= 
+	2.在cartservlet中编写remove
+		先获取商品的pid
+		获取购物车
+		删除购物车项
+	3.重定向回到cart.jsp页面
+		
+	细节：
+		不直接发送链接,而使用onclick事件,来二次确认
+		
+案例3-对购物车进行操作(清空购物车)
+	1.在购物车页面上,点击 清空购物车
+		/store/cart?method=clear
+	2.在cartservlet
+		
+	细节：
+		c:if标签提示
+	
+案例4-生成订单
+需求：
+	在购物车页面上,有一个提交订单,点击后,将用户购物车中的商品添加到数据库中
+实体:
+	用户
+	订单
+	订单项(中间表)
+	商品
+创建bean
+	需要在order实体中提供user对象和list<orderItem>
+	需要在orderItem实体中提供product对象和order对象
+步骤分析：
+	点击生成订单：
+		/store/order?method=add
+		创建OrderServlet
+			add方法中：
+				1.判断用户是否登录
+				2.封装数据 order
+					oid			随机生成
+					total		购物车中的总金额
+					ordertime	当前时间
+					User		session中的当前用户
+					订单项集合	创建OrderItem——>获取cartitem的内容
+					name		
+					address
+					telephone
+				3.调用orderservice 生成订单
+					开启事务
+					先往订单表中插入一条数据 add
+					往订单项表中插入n条数据 addItem
+					提交事务
+				4.订单放入request域中后请求转发
+
+		细节：
+			new QueryRunner();
+			SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//24小时制 
+				sdformat.format(new Date);
+				Date类，已经很少用了。更多使用的是Calendar   
+				Calendar date = Calendar.getInstance();   
+				date.get(Calendar.HOUR_OF_DAY);//得到24小时机制的   
+				date.get(Calendar.HOUR);//得到12小时机制的 
+			
+扩展：数据库的备份和还原
+	图形化工具备份
+		右键-备份/导出-
+		右键-导入-执行sql脚本-选中文件
+	mysql命令备份
+		mysqldump -uroot -p密码 store28>g:\1.sql;
+		还原：前提-手动创建数据库
+			方式1(不登录)：mysql -uroot -p密码 bak<g:\1.sql
+			方式2(已登录,并使用指定数据库)：source g:\1.sql
+		

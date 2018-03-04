@@ -1,0 +1,260 @@
+项目-商城
+
+商城的实体：
+	用户
+	订单
+	商品
+	分类
+	
+user表
+	|--用户id
+	|--用户名
+	|--密码
+	|--真实名称
+	|--email
+	|--性别
+	|--电话
+	|--生日
+	|--用户状态
+	|--激活码
+1
+/
+N	
+orders表
+	|--订单id
+	|--总金额
+	|--订单状态
+	|--姓名
+	|--地址
+	|--电话
+	|--用户id
+
+orderitem
+	|--订单项id
+	|--订单id
+	|--商品id
+	|--商品购买数量
+	|--小计
+	
+product表
+	|--商品id
+	|--名称
+	|--商城价
+	|--市场价
+	|--库存
+	|--热门
+	|--最新
+	|--图片
+	|--描述
+	|--分类id
+N
+/
+1	
+category
+	|--分类id
+	|--名称
+	
+准备工作
+	数据库和表
+		create database store28;
+		user store28;
+		CREATE TABLE `user` (
+		  `uid` varchar(32) NOT NULL,
+		  `username` varchar(20) DEFAULT NULL,
+		  `password` varchar(100) DEFAULT NULL,
+		  `name` varchar(20) DEFAULT NULL,
+		  `email` varchar(30) DEFAULT NULL,
+		  `telephone` varchar(20) DEFAULT NULL,
+		  `birthday` date DEFAULT NULL,
+		  `sex` varchar(10) DEFAULT NULL,
+		  `state` int(11) DEFAULT NULL,
+		  `code` varchar(64) DEFAULT NULL,
+		  PRIMARY KEY (`uid`)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	项目
+		包结构
+			com.itheima.web.servlet
+			com.itheima.web.filter
+			com.itheima.service			---service的接口
+			com.itheima.service.impl	---service的实现类
+			com.itheima.dao				---dao的接口
+			com.itheima.dao.impl		---dao的实现类
+			com.itheima.domain
+			com.itheima.utils
+			com.itheima.constant
+		jar包
+			驱动
+			c3p0
+			dbutils
+			beanutils
+			jstls
+			邮件
+		工具类和配置文件
+			datasourceutils 和 c3p0配置文件
+			uuidutils
+			uploadutils
+			md5utils
+			mailutls
+		前台页面和图片
+		
+用户模块：
+	注册
+		发送邮件的方式发送激活码
+	激活
+	登录
+	退出
+
+通用servlet设计
+	
+	只定义一个UserServlet
+		重写doget和dopost
+		
+	eg:添加用户
+		以前：/store/addUser
+		现在：/store/user?method=add
+	   修改用户
+		以前：/store/updateUser
+		现在：/store/user?method=update
+	
+	在userservlet doGet方法中
+		String m = request.getParameter("method");
+		if("add".equals(m)) {
+			add(HttpServletRequest,HttpServletResponse);
+		} else if("update".equals(m)) {
+			update(HttpServletRequest,HttpServletResponse);
+		} else if() {
+			...
+		}	
+	
+	可以直接重写service方法
+		在service方法中编写上面的判断代码
+	
+	BaseServlet extents HttpServlet()
+	其它的servlet继承BaseServlet
+	
+	在BaseServlet中重写service方法
+		1.获取请求的方法
+		2.找到相应的子类 父类中this代表的是子类
+			Class clazz = this.getClass()
+		3.子类调用方法
+			通过方法名称 获取一个指定的方法 
+				Method m=clazz.getMethod(方法名,HttpServletRequest.class,HttpServletResponse.class);
+			执行方法
+				m.invoke(this,HttpServletRequest,HttpServletResponse);
+		
+		以前在servlet中
+			请求转发 request.getRequestDispatcher().forward()
+			
+			继续完善BaseServlet中service
+				在第3步中,方法执行的返回值
+				所有方法都返回一个字符串
+					字符串代表请求转发的路径
+					若该方法不转发则返回null
+				String s=(String)m.invoke(this,HttpServletRequest,HttpServletResponse);
+				if(s!=null) {request.getRequestDispatcher(s).forward(...);}
+	
+案例1-用户注册
+	1.regist
+		封装数据
+			设置id
+			设置state
+			设置code
+		调用service完成注册操作
+		请求转发 /jsp/msg.jsp
+	2.userservice中的service
+		调用dao
+		发送激活邮件
+	3.userdao dao 添加一条数据
+步骤实现：
+	1.在index.jsp上点击 注册 跳转到register.jsp
+	2.点击注册
+		<a href="/store/user?method=registUI"></a>
+	3.在userservlet中编写一个registUI 方法
+		请求转发到 register.jsp即可
+	4.register.jsp中表单提交到/user?method=regist
+	5.register中进行用户注册后请求转发到/jsp/msg.jsp
+	
+	注意:封装数据时出错:
+		字符串转成时间类型出错,因为BeanUtils不支持转换
+	解决:自定义转换器
+		1.编写一个类 实现Converter接口
+		2.实现方法
+			convert(转换成的类型,前台页面传入的字符串)
+		3.注册转换器 在封装数据之前注册
+			ConvertUtils.regist(new MyConventer(), Date.class);
+	解决2:?
+		导java.sql.Date的包
+	
+扩展：
+	使用算法加密密码
+	md5加密	不对称的加密,不可逆
+	在数据库中可以使用 md5(字段|值)
+	java中api
+	
+电子邮箱:邮件服务器上开启的一块空间
+服务器:提供邮件服务
+协议:规定数据格式
+
+发送邮件的协议:smtp
+接收邮件的协议:pop/pop3 imap
+	
+本地的服务器:
+		易邮邮件服务器
+			设置域名 store.com
+		新增普通账户
+			jack
+			tom
+		新增管理员账户
+			service
+	
+案例2-用户激活
+	邮箱的链接点击
+		http://localhost:8080/store/user?method=active&code=
+	需要在UserServlet编写active方法
+		获取激活码
+		调用service完成激活
+		页面跳转,请求转发 jsp/msg.jsp
+	UserService中
+		active(code)
+			1.通过激活码获取一个用户
+				用户可能为空
+			2.若非空,修改用户的state 0->1
+	
+案例3-用户登录
+步骤分析：
+	1.在index.jsp上登录链接 点击 跳转到login.jsp
+		通过UserServlet进行请求转发 loginUI
+	2.修改页面上的form表单 action method 每个标签添加name属性
+		action:/store/user?method=login
+	3.login操作:
+		获取用户名和密码
+		调用service 获取一个user
+			判断用户是否为空
+				若为空
+				若非空
+					继续判断用户是否激活
+			已激活:将用户放入session中
+	4.页面重定向到首页上
+		展示用户名 退出 我的订单
+	
+案例4-用户退出
+步骤分析：
+	点击用户退出,
+		/store/user?method=logout
+	编写logout方法
+		销毁session
+		页面重定向
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

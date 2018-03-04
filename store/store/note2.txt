@@ -1,0 +1,184 @@
+案例1-分类展示
+	初始设计
+		点击 首页 时,查询分类信息
+	步骤分析:
+		1.创建分类表
+		2.在indexservlet上查询分类信息
+		3.调用categoryservice.findAll() 返回值:list
+	
+	完成之后发现,只有访问首页才能分类展示列表,怎么办？
+	要让所有页面上都有分类,只需要将页面上logo和菜单部分包含进来
+	只需要在页面加载成功之后,发送一个ajax请求,异步查询所有的分类信息即可
+		技术：
+			json
+			包含
+			ajax
+		
+		步骤分析:
+			1.编写一个 CategoryServlet
+			2.findAll方法查询所有
+				list通过json返回到页面上
+			3.在head.jsp加载成功之后发送一个ajax请求
+				$.get(url, params, function(){}, "json");
+	
+	通过上面的操作,我们已经可以在每个页面上查看到分类信息,但是每换一次页面就查询数据库,增加了服务器的压力
+	对于数据不常变化的情况,可以使用缓存技术
+		常见的缓存技术
+			ehcache:hibernate底层使用
+			memcache:
+			redis:
+		ehcache使用步骤:
+			1.导入jar包
+			2.编写配置文件
+			3.使用api
+				获取数据先从缓存中获取
+				若获取的值为null
+					再去查询数据库
+					将数据放入缓存中
+/*---------------------------------------------------------------------------*/
+		//1.在classes目录下获取流
+		InputStream is = this.getClass().getClassLoader().getResourceAsStream("ehcache.xml");
+		
+		//2.获取缓存管理器
+		CacheManager cm = CacheManager.create(is);
+		
+		//3.获取指定的缓存对象
+		Cache cache = cm.getCache("categoryCache");
+		
+		//4.将cache看作map，通过缓存获取数据
+		Element element = cache.get("clist");
+		List<Category> clist = null;
+		
+		//5.判断数据
+		if (element == null) {
+			//缓存中没有该数据时需要查询数据库，并将数据放入缓存中
+			CategoryDao dao = new CategoryDaoImpl();
+			clist = dao.findAll();
+			cache.put(new Element("clist", clist));
+			System.out.println("缓存中没有数据，查询数据库");
+		} else {
+			clist = (List<Category>) element.getObjectValue();
+			System.out.println("缓存中存在数据");
+		}
+/*---------------------------------------------------------------------------*/
+案例2-首页上的热门商品和最新商品
+步骤分析：
+	页面加载的时候 查询最新商品 和热门商品即可
+	在indexservlet的index方法实现
+		查询的结果两个list,将两个list放入request域中,请求转发到index.jsp即可
+		在index.jsp中展示
+准备工作：
+	数据库和表
+	javabean product
+	productservice
+	productdao
+	
+案例3-查询商品的详情
+	步骤分析：
+		在首页上 点击每个商品
+			<a href="/store/product?method=getById&pid=${p.pid}"></a>
+		编写 getById 方法
+			获取点击商品的id
+			调用service查找商品 返回值:product
+			将product放入request域中,请求转发 product_info.jsp
+	
+案例4-分页展示商品
+	按类别 分页展示
+	步骤分析：
+		在首页菜单上 点击一个分类 head.jsp
+			<a href="/store/product?method=findByPage&cid=${}&currPage=1"></a>
+	findByPage操作：
+		1.接收 cid currPage 设定一个每页显示的条数 pageSize
+		2.调用productservice返回一个PageBean
+			pagebean中
+				list currPage pageSize totalPage totalCount
+		3.将pagebean放入request域中,请求转发
+	在productservice需要封装成pagebean
+	
+	在product_list.jsp展示数据
+
+细节：
+	<a href="javascript:void(0)">
+	el内置对象param获取地址栏上的参数
+		${param.cid}
+	页面前五后四 
+		begin="${pageBean.currPage-5>5? pageBean.currPage-5:1 }" 
+		end="${pageBean.currPage+4>pageBean.totalPage? pageBean.totalPage: pageBean.currPage+4}"
+	
+扩展:浏览记录
+	技术分析:cookie
+	步骤分析：
+		进入一个商品详情页面的时候记录当前的商品id
+			<a href="/store/product?method=getById&pid=xx"></a>
+		在getById方法中处理cookie
+		规定 cookie的名称:ids value: 2-1-3
+		1.获取指定的cookie
+			CookieUtils.getCookieByName()
+		2.判断cookie是否为空
+			若非空:获取value值
+				继续判断value值中有无该商品的id(将字符串切割成list)
+					若有:
+						先移除,然后将商品id放入list的最前面
+					若无:
+						继续判断list的长度是否>=3
+							若>=3:移除最后一个,将当前商品id放入list的最前面
+							否则:将当前商品的id放入list的最前面
+						最后将list变成字符串即可
+			若为空:
+				将当前商品的id放入ids中即可
+				
+		细节：
+			Cookie c = new Cookie("ids", ids);
+			c.setMaxAge(int);
+			c.setPath(request.getContextPath()+"/");
+			
+			response.addCookie(c);
+			
+			在product_list.jsp
+				1.需要在jsp中获取指定cookie
+				2.判断cookie是否为空
+					若不为空:获取value 例如:value=1-3-2
+						切割字符串获取没一个商品的id
+							通过id去数据库中查找,获取商品的所有信息
+					
+解耦和
+	原来
+		ProductDao dao = new ProductDaoImpl();
+	一旦需要使用别的实现类,则要修改大量代码
+	耦合度太高
+
+	可以使用工厂模式
+		class BeanFactory {
+			public static Object getProductDao() {
+				return new ProductDaoImpl();
+			}
+		}
+		BeanFactory.getProductDao();
+	但是，仍需要修改Java代码
+	我们希望使用一个更通用的方法,不需要修改任何Java代码
+	而可以随意的修改dao层的实现类(修改配置文件)
+	
+	例如:配置文件名称为 bean.xml
+	<beans>
+		<beans id="ProductDao" class="com.itheima.dao.impl.ProductDaoImpl" />
+		<beans id="UserDao" class="com.itheima.dao.impl.UserDaoImpl" />
+		<beans id="CategoryDao" class="com.itheima.dao.impl.CategoryDaoImpl" />
+	</beans>
+	此时工产类
+	class BeanFactory {
+		Object getBean(String) {
+			return ..;
+		}
+	}
+	
+	思路：
+		通过参数给定的id去bean.xml文件中查找id为指定值的bean标签
+		获取bean标签的class属性 
+	
+		通过Class.forName(class属性值).newInstance();
+	
+		以后修改实现类的时候,只需要将指定的bean标签中的class改变即可
+	
+	IOC
+	
+	

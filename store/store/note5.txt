@@ -1,0 +1,207 @@
+案例1-分类信息的curd
+步骤分析：
+	左边的dtree:
+		1.导入dtree.js
+		2.导入dtree.css
+		3.创建一个div <div class="dtree">
+		4.在div中编写js代码
+			创建一棵树
+				d = new dTree('d');
+			添加根节点
+				通过 d.add(当前节点的id,父节点的id,显示的名称,点击后打开的链接,放上去显示的名称,在哪个地方打开这个链接)
+				注意：
+					根节点的父节点的id写出 -1
+			添加其它节点
+		5.最后通过document.write(d) 写到页面上即可
+	
+	分类信息添加
+		1.应该在做i按的dtree上添加链接(展示所有的分类信息)
+			d.add(..., "/store/adminCategory?method=findAll", "", "mainFrame")
+		2.创建adminCategoryServlet,编写findAll()
+			查询的结果是一个list,将list放入request域中,然后请求转发/admin/category/list.jsp
+	
+	添加分类的步骤
+		1.编写一个链接
+			/store/adminCategory?method=addUI
+		2.请求转发到/admin/category/add.jsp
+		3.add.jsp就是一个表单页面
+			编写表单的action属性 /store/adminCategory?method=add
+				给分类的名称字段添加一个name属性 name="cname"
+		4.adminCategoryServlet的add方法
+			获取分类的名称
+			封装成category 设置id 
+			调用categoryservice的add方法
+			页面重定向 /store/adminCategory?method=findAll
+		5.categoryservice的add方法
+			暂时调用dao
+		6.dao种添加一条数据
+	
+	细节：
+		更新缓存
+		
+	修改分类的步骤
+		1.在list.jsp页面点击 编辑
+			/store/adminCategory?method=getById&cid=
+		2.在getById方法中
+			获取cid
+			调用service 通过id获取一个分类
+			将category放入request域中
+			请求转发 edit.jsp
+		3.edit页面 表单
+			添加action属性 /store/adminCategory?method=update
+			修改内容 点击提交
+			添加隐藏域 cid
+		4.在update方法中
+			获取cid和cname
+			封装成category
+			调用service的update方法
+			页面重定向 /store/adminCategory?method=findAll
+		5.在service的update方法中
+			调用dao更新
+			清空缓存
+		6.dao中更新数据
+	细节：
+		更新缓存
+		
+	删除分类的步骤
+		1.在list.jsp上编写 删除链接
+			/store/adminCategory?method=delete&cid=
+		2.在delete方法中
+			获取cid
+			调用service的delete方法
+			页面重定向/store/adminCategory?method=findAll
+		3.service中delete
+			添加事务
+			通过cid先更新所有的商品分类信息
+			调用dao 删除分类
+			提交事务
+			清空缓存
+	细节：
+		置空分类下的商品所属分类
+	
+案例2-商品管理-添加商品
+技术分析：
+	文件上传(fileUpload)
+	浏览器端要求：
+		post请求
+		input type="file"
+		表单的 enctype="multipart/form-data"
+	服务器要求
+		通过request.getParameterxxx()获取的参数为空
+		使用步骤：
+			导入jar包
+			创建一个磁盘文件项工厂
+			创建一个核心文件上传对象 servletupload
+			上传对象调用方法解析请求 获取一个List<FileItem>
+展示所有商品的步骤分析：
+	1.修改left.jsp页面的链接
+		/store/adminProduct?method=findAll
+	2.在adminProductServlet的findAll方法中
+		获取productservice 查询所有的商品
+		将list放入request域中 请求转发到/admin/product/list.jsp
+	
+添加商品(上传图片)
+	1.修改页面上的链接
+		/store/adminProduct?method=addUI
+	2.在addUI中请求转发到 添加页面
+	3.在表单页面上
+		修改action /store/addProductServlet
+		提交方式 method="post"
+		添加enctype属性 enctype="multipart/form-data"
+		给每个字段添加name属性
+	4.addproductservlet的add方法
+		通过request.getParameterMap获取的信息全部为空
+		想通过beanutils.populate()封装数据
+		需要创建一个map集合,将前台接收过来的信息手动put到map中
+		注意：
+			商品的图片：1.保存到服务器的磁盘上
+						2.在数据库中添加图片的位置
+		调用productservice完成添加商品操作
+		重定向到所有的商品展示页面
+	细节：
+		在addUI中查询分类
+		
+		使用fileload技术：
+		创建磁盘文件项工厂
+			DiskFileItemFactory factory = new DiskFileItemFactory();
+		创建核心上传对象
+			ServletFileUpload upload = new ServletFileUpload(factory);
+		解析请求 获取一个List<FileItem>
+			List<FileItem> list = upload.parseRequest(request);
+		遍历list获取每个文件项
+			isFormFiled():判断是否普通上传组件
+			getFiledName():获取表单子标签的name属性值
+			若是普通上传组件
+				getString("utf-8"):获取用户输入的值
+			若是文件上传组件
+				getName():获取上传文件的名称
+				getInputStream():获取上传文件流
+				最后删除临时文件
+				delete()
+	
+案例3-订单管理
+查询订单
+	所有的订单 不区分用户
+	基本的sql select * from orders where 1=1
+		判断是否有state 若有则添加state 最后order by ordertime desc
+	1.在left.jsp上添加5个链接
+		/store/adminOrder?method=findAllByState&state=
+	2.adminorderservlet的findAllByState中
+		接收state
+		调用orderservice查询,list
+		将list放入request域中,请求转发list.jsp
+	3.orderdao
+		先写一个基本的sql
+		判断state是否为空
+		最后添加order by
+	
+扩展：
+	查询订单详情
+		点击每一个订单后面的订单详情,将该订单的oid通过ajax传递到后台查询
+	步骤分析：
+		给按钮添加事件
+		
+细节：
+	弹出层
+	<script type="text/javascript" src="layer/layer.js" ></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn11").click(function(){
+				layer.open({
+			        type: 1,//0:信息框; 1:页面; 2:iframe层;	3:加载层;	4:tip层
+			        title:"我自信,我骄傲!",//标题
+			        area: ['400px', '300px'],//大小
+			        shadeClose: false, //点击弹层外区域 遮罩关闭
+			        content: '我是黑马的一员'//内容
+			    });
+			});
+		})
+	</script>
+	
+更新状态
+	例如:后台页面点击 发货
+		 在客户的页面 确认收货
+	
+	1.点击 修改状态
+		/store/adminOrder?method=updateState&oid= &state=
+	2.在updateState方法中
+		接收参数 oid state
+		调用service 修改状态
+		重定向 查询所有订单已支付的订单列表
+		
+扩展：
+	在所有的添加方法上记录一下(添加操作)
+	在工厂类中通过代理增强方法
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

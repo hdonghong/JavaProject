@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="UserService" class="team.xg2.service.impl.UserServiceImpl"/>
+	<bean id="UserDao" class="team.xg2.dao.impl.UserDaoImpl"/>
+	
+	<bean id="BillService" class="team.xg2.service.impl.BillServiceImpl"/>
+	<bean id="BillDao" class="team.xg2.dao.impl.BillDaoImpl"/>
+	
+	<bean id="ApplyService" class="team.xg2.service.impl.ApplyServiceImpl"/>
+	<bean id="ApplyDao" class="team.xg2.dao.impl.ApplyDaoImpl"/>
+</beans>
