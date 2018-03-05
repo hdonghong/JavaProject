@@ -1,4 +1,8 @@
 
+<br>
+<img src="https://github.com/hdonghong/JavaProject/blob/master/logo.png" alt="" width="225"/>
+<br>
+
 ![npm (tag)](https://img.shields.io/badge/author-hdonghong-blue.svg) ![Travis](https://img.shields.io/badge/maven-3.5.0-brightgreen.svg) ![Travis](https://img.shields.io/badge/java-1.8-brightgreen.svg)
 
 # JavaProject—learning
@@ -35,7 +39,7 @@ Hibernate 5.0.7
 <p>
 	完成于：2017-06-04
 </p>
-<img src="https://github.com/hdonghong/JavaProject/blob/master/percussionplayer/PercussionPlayer/2.PNG" alt="" height="160"/>
+<img src="https://github.com/hdonghong/JavaProject/blob/master/percussionplayer/PercussionPlayer/2.PNG" alt="" height="240"/>
 <br>
 
 <h2 id="2">2.<a href="https://github.com/hdonghong/JavaProject/tree/master/store">store</a></h2>
@@ -45,7 +49,7 @@ Hibernate 5.0.7
 <p>
 	完成于：2017-08-20
 </p>
-<img src="https://github.com/hdonghong/JavaProject/blob/master/store/store/show.jpg" alt="" height="160"/>
+<img src="https://github.com/hdonghong/JavaProject/blob/master/store/store/show.jpg" alt="" height="240"/>
 
 <h2 id="3">3.<a href="https://github.com/hdonghong/JavaProject/tree/master/campuscard">campuscard</a></h2>
 <p>
@@ -54,7 +58,7 @@ Hibernate 5.0.7
 <p>
 	完成于：2017-08-26
 </p>
-<img src="https://github.com/hdonghong/JavaProject/blob/master/campuscard/show.png" alt="" height="160"/>
+<img src="https://github.com/hdonghong/JavaProject/blob/master/campuscard/show.png" alt="" height="240"/>
 
 <h2 id="4">4.<a href="https://github.com/hdonghong/JavaProject/tree/master/taskmanagement">taskmanagement</a></h2>
 <p>
@@ -63,7 +67,7 @@ Hibernate 5.0.7
 <p>
 	完成于：2017-10-09
 </p>
-<img src="https://github.com/hdonghong/JavaProject/blob/master/taskmanagement/show.png" alt="" height="160"/>
+<img src="https://github.com/hdonghong/JavaProject/blob/master/taskmanagement/show.png" alt="" height="240"/>
 
 <h2 id="5">5.<a href="https://github.com/hdonghong/JavaProject/tree/master/maildemo">maildemo</a></h2>
 <p>
@@ -80,7 +84,7 @@ Hibernate 5.0.7
 <p>
 	完成于：2017-12-12
 </p>
-<img src="https://github.com/hdonghong/JavaProject/blob/master/webStore/show.jpg" alt="" height="160"/>
+<img src="https://github.com/hdonghong/JavaProject/blob/master/webStore/show.jpg" alt="" height="240"/>
 
 <h2 id="7">7.<a href="https://github.com/hdonghong/JavaProject/tree/master/wsdemo">wsdemo</a></h2>
 <p>
@@ -97,4 +101,4 @@ Hibernate 5.0.7
 <p>
 	完成于：2018-02-19
 </p>
-<img src="https://github.com/hdonghong/JavaProject/blob/master/business_management/resouces/show.jpg" alt="" height="160"/>
+<img src="https://github.com/hdonghong/JavaProject/blob/master/business_management/resouces/show.jpg" alt="" height="240"/>
